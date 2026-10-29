@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="vorevia_brand_assets" inherit_id="website.layout" name="Vorevia Brand Assets" priority="100">
+        <xpath expr="//link[@rel='shortcut icon']" position="replace">
+            <link rel="shortcut icon" type="image/x-icon" href="/website_vorevia/static/src/img/favicon/favicon.ico"/>
+            <link rel="icon" type="image/png" sizes="32x32" href="/website_vorevia/static/src/img/favicon/favicon-32x32.png"/>
+            <link rel="icon" type="image/png" sizes="16x16" href="/website_vorevia/static/src/img/favicon/favicon-16x16.png"/>
+            <link rel="apple-touch-icon" sizes="180x180" href="/website_vorevia/static/src/img/favicon/apple-touch-icon.png"/>
+            <link rel="manifest" href="/website_vorevia/static/src/img/favicon/site.webmanifest"/>
+            <meta name="theme-color" content="#ffffff"/>
+        </xpath>
+    </template>
+
+    <template id="vorevia_header" inherit_id="website.layout" name="Vorevia Header" priority="99">
+        <xpath expr="//header" position="replace">
+            <header id="top" class="vov-site-header" data-name="Header">
+                <nav class="vov-nav" aria-label="Main navigation">
+                    <div class="vov-nav-inner">
+                        <a class="vov-wordmark" href="/" aria-label="Vorevia Technologies home">
+                            <span class="vov-logo-part vov-logo-symbol" aria-hidden="true">
+                                <img src="/website_vorevia/static/src/img/logo1.webp" alt=""
+                                     width="300" height="300" loading="eager" fetchpriority="high"/>
+                            </span>
+                            <span class="vov-logo-part vov-logo-type" aria-hidden="true">
+                                <img src="/website_vorevia/static/src/img/logo2.webp" alt=""
+                                     width="300" height="300" loading="eager" fetchpriority="high"/>
+                            </span>
+                        </a>
+                        <div class="vov-nav-links" aria-label="Desktop navigation">
+                            <a href="/">Home</a>
+                            <a href="/#solutions">Solutions</a>
+                            <a href="/#services">Services</a>
+                            <a href="/#why-vorevia">About</a>
+                            <a href="/blog">Blogs</a>
+                        </div>
+                        <a class="vov-nav-cta" href="/#consultation">Let's Talk <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                        <button class="vov-menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#vovMobileMenu"
+                                aria-controls="vovMobileMenu" aria-expanded="false" aria-label="Open navigation">
+                            <span/><span/>
+                        </button>
+                    </div>
+                    <div class="collapse vov-mobile-menu" id="vovMobileMenu">
+                        <div class="vov-mobile-menu-inner">
+                            <a href="/">Home</a><a href="/#solutions">Solutions</a><a href="/#services">Services</a>
+                            <a href="/#why-vorevia">About</a><a href="/blog">Blogs</a>
+                            <a class="vov-button vov-button-primary" href="/#consultation">Let's Talk</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </xpath>
+    </template>
+
+    <template id="vorevia_footer" inherit_id="website.layout" name="Vorevia Footer" priority="99">
+        <xpath expr="//footer" position="replace">
+            <footer id="bottom" class="vov-site-footer" data-name="Footer">
+                <div id="footer" class="oe_structure" t-if="not no_footer">
+                    <section class="vov-footer-main s_text_block" data-snippet="s_text_block" data-name="Vorevia Footer">
+                        <div class="vov-container vov-footer-grid">
+                            <div class="vov-footer-brand">
+                                <a class="vov-wordmark" href="/" aria-label="Vorevia Technologies home">
+                                    <span class="vov-logo-part vov-logo-symbol" aria-hidden="true">
+                                        <img src="/website_vorevia/static/src/img/logo1.webp" alt=""
+                                             width="300" height="300" loading="lazy"/>
+                                    </span>
+                                    <span class="vov-logo-part vov-logo-type" aria-hidden="true">
+                                        <img src="/website_vorevia/static/src/img/logo2.webp" alt=""
+                                             width="300" height="300" loading="lazy"/>
+                                    </span>
+                                </a>
+                                <p>Odoo ERP implementation, customization and support shaped around how your business works.</p>
+                            </div>
+                            <div class="vov-footer-links"><h2>Explore</h2><a href="/#solutions">Solutions</a><a href="/#services">Services</a><a href="/#process">Our process</a></div>
+                            <div class="vov-footer-links"><h2>Company</h2><a href="/#why-vorevia">About Vorevia</a><a href="/#faq">FAQ</a><a href="/#consultation">Contact</a></div>
+                            <div class="vov-footer-conversation">
+                                <p class="vov-kicker">START A CONVERSATION</p>
+                                <a href="/#consultation">Tell us what needs to work better <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="vov-footer-bottom"><div class="vov-container"><span>Copyright © Vorevia Technologies. All rights reserved.</span><span>Built for connected operations.</span></div></div>
+                </div>
+            </footer>
+        </xpath>
+    </template>
+
+    <template id="vorevia_homepage" inherit_id="website.homepage" name="Vorevia Homepage">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap" class="oe_structure o_vorevia_homepage">
+                <style id="vovHeroRefinement">
+                    .vov-nav-cta, .vov-mobile-menu .vov-button { border-radius: 12px; }
+                    .vov-hero-grid { grid-template-columns: minmax(0, .95fr) minmax(480px, 1.05fr); }
+                    .vov-hero-visual { display: grid; min-height: 470px; align-items: center; justify-items: center; margin: 0; }
+                    .vov-hero-visual img { display: block; width: 600px; max-width: 100%; height: auto; image-rendering: auto; filter: drop-shadow(0 26px 30px rgba(31, 58, 77, .18)); transform: translateY(-6px) scale(1); transform-origin: center; transition: filter 280ms ease, transform 280ms cubic-bezier(.2, .75, .2, 1); will-change: transform; }
+                    .vov-hero-visual:hover img { filter: drop-shadow(0 42px 46px rgba(31, 58, 77, .28)); transform: translateY(-18px) scale(1.08); }
+                    @media (max-width: 1199.98px) { .vov-hero-grid { grid-template-columns: minmax(0, .9fr) minmax(400px, 1.1fr); } .vov-hero-visual { min-height: 400px; } }
+                    @media (max-width: 991.98px) { .vov-hero-grid { grid-template-columns: 1fr; } .vov-hero-visual { width: 100%; max-width: 720px; min-height: 360px; } }
+                    @media (max-width: 767.98px) { .vov-hero-visual { min-height: 320px; } }
+                    @media (max-width: 575.98px) { .vov-hero-visual { min-height: 300px; } .vov-hero-visual img { width: 360px; } }
+                    @media (prefers-reduced-motion: reduce) { .vov-hero-visual:hover img { transform: translateY(-6px); } }
+                </style>
+                <section class="vov-hero s_text_block" data-snippet="s_text_block" data-name="Vorevia Hero">
+                    <div class="vov-container vov-hero-grid">
+                        <div class="vov-hero-copy">
+                            <p class="vov-kicker">ERP IMPLEMENTATION <span>|</span> CUSTOMIZATION <span>|</span> SUPPORT</p>
+                            <h1>Your Entire Business.<br/><span>One Connected System.</span></h1>
+                            <p class="vov-hero-lead">Vorevia helps businesses streamline operations, improve efficiency, and drive growth through tailored technology solutions designed around their unique needs.</p>
+                            <div class="vov-actions">
+                                <a class="vov-button vov-button-primary" href="#solutions">Explore Solutions <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                                <a class="vov-button vov-button-secondary" href="#process">See How It Works <i class="fa fa-arrow-down" aria-hidden="true"/></a>
+                            </div>
+                        </div>
+                        <figure class="vov-hero-visual">
+                            <img src="/website_vorevia/static/src/img/homepage_tablet_image.webp" width="1535" height="1024" alt="Tablet displaying an Odoo operations dashboard" loading="eager" fetchpriority="high" decoding="sync"/>
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="services" class="vov-intro vov-section s_text_block" data-snippet="s_text_block" data-name="What Vorevia Does" data-anchor="true">
+                    <div class="vov-container">
+                        <div class="vov-section-heading vov-section-heading-split">
+                            <div><p class="vov-kicker">WHAT VOREVIA DOES</p><h2>ERP that follows the way your business actually works.</h2></div>
+                            <p>We implement, build and refine Odoo systems so information moves cleanly between people, teams and decisions.</p>
+                        </div>
+                        <div class="vov-capability-layout">
+                            <div class="vov-capability-list">
+                                <article><span>01</span><div><h3>ERP Implementation</h3><p>Structure the right applications, access and workflows around real operating needs.</p></div></article>
+                                <article><span>02</span><div><h3>Custom Odoo Modules</h3><p>Extend standard Odoo behavior when your process needs a more precise fit.</p></div></article>
+                                <article><span>03</span><div><h3>Workflow Automation</h3><p>Remove repeated handoffs and keep important actions moving with clear rules.</p></div></article>
+                                <article><span>04</span><div><h3>Integrations and Migration</h3><p>Bring necessary data and connected systems into a coherent operating model.</p></div></article>
+                                <article><span>05</span><div><h3>Training and Support</h3><p>Help teams adopt the system and improve it as the business evolves.</p></div></article>
+                            </div>
+                            <div class="vov-capability-evidence">
+                                <div class="vov-ui-window">
+                                    <div class="vov-ui-toolbar"><span/><span/><span/><b>Vorevia delivery workspace</b></div>
+                                    <div class="vov-delivery-summary"><div><small>WORKFLOW COVERAGE</small><strong>Connected from lead to ledger</strong></div><span>5 workstreams</span></div>
+                                    <div class="vov-delivery-track">
+                                        <article><i class="fa fa-search" aria-hidden="true"/><span><b>Discover</b><small>Process mapped</small></span><em>Complete</em></article>
+                                        <article><i class="fa fa-sliders" aria-hidden="true"/><span><b>Configure</b><small>Core modules aligned</small></span><em>In progress</em></article>
+                                        <article><i class="fa fa-exchange" aria-hidden="true"/><span><b>Integrate</b><small>Data pathways defined</small></span><em>Planned</em></article>
+                                        <article><i class="fa fa-users" aria-hidden="true"/><span><b>Adopt</b><small>Role-based training</small></span><em>Planned</em></article>
+                                    </div>
+                                </div>
+                                <p class="vov-illustration-note">Illustrative project workspace · sample content</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="solutions" class="vov-showcase-section vov-section s_text_block" data-snippet="s_text_block" data-name="Interactive Odoo Showcase" data-anchor="true">
+                    <div class="vov-container">
+                        <div class="vov-section-heading vov-section-heading-center"><p class="vov-kicker">CONNECTED OPERATIONS</p><h2>Your Operations. Connected.</h2><p>Explore how different business functions work together inside one ERP system.</p></div>
+                        <div class="vov-showcase" data-vov-showcase="true">
+                            <div class="vov-showcase-tabs" role="tablist" aria-label="Odoo business functions">
+                                <button id="vov-tab-sales" class="vov-showcase-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="vov-panel-sales" tabindex="0" data-showcase-target="sales"><i class="fa fa-handshake-o" aria-hidden="true"/><span><strong>Sales and CRM</strong><small>Opportunity to order</small></span><em>01</em></button>
+                                <button id="vov-tab-inventory" class="vov-showcase-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-panel-inventory" tabindex="-1" data-showcase-target="inventory"><i class="fa fa-cubes" aria-hidden="true"/><span><strong>Inventory and Operations</strong><small>Demand to movement</small></span><em>02</em></button>
+                                <button id="vov-tab-accounting" class="vov-showcase-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-panel-accounting" tabindex="-1" data-showcase-target="accounting"><i class="fa fa-calculator" aria-hidden="true"/><span><strong>Accounting and Finance</strong><small>Transaction to ledger</small></span><em>03</em></button>
+                                <button id="vov-tab-hr" class="vov-showcase-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-panel-hr" tabindex="-1" data-showcase-target="hr"><i class="fa fa-users" aria-hidden="true"/><span><strong>Human Resources</strong><small>People to planning</small></span><em>04</em></button>
+                            </div>
+                            <div class="vov-showcase-preview">
+                                <div id="vov-panel-sales" class="vov-showcase-panel is-active" role="tabpanel" aria-labelledby="vov-tab-sales" data-showcase-panel="sales">
+                                    <div class="vov-preview-header"><div><small>SALES WORKSPACE</small><h3>Opportunity → Quotation → Order</h3></div><span>Illustrative data</span></div>
+                                    <div class="vov-sales-summary"><article><small>OPEN PIPELINE</small><strong>12 opportunities</strong><span>Across 3 stages</span></article><article><small>NEXT ACTION</small><strong>Review quotation</strong><span>Today, 2:30 PM</span></article></div>
+                                    <div class="vov-kanban">
+                                        <div class="vov-kanban-column"><header><b>Qualified</b><span>3</span></header><article><small>Northwind Retail</small><b>ERP rollout</b><em>Discovery complete</em></article></div>
+                                        <div class="vov-kanban-column is-focus"><header><b>Quotation</b><span>2</span></header><article><small>Summit Foods</small><b>Operations suite</b><em>Quotation ready</em></article></div>
+                                        <div class="vov-kanban-column"><header><b>Won</b><span>7</span></header><article><small>Atlas Services</small><b>Support workflow</b><em>Order confirmed</em></article></div>
+                                    </div>
+                                </div>
+                                <div id="vov-panel-inventory" class="vov-showcase-panel" role="tabpanel" aria-labelledby="vov-tab-inventory" data-showcase-panel="inventory" hidden="hidden">
+                                    <div class="vov-preview-header"><div><small>INVENTORY WORKSPACE</small><h3>Confirmed demand becomes stock movement</h3></div><span>Illustrative data</span></div>
+                                    <div class="vov-stock-route"><article><i class="fa fa-shopping-cart" aria-hidden="true"/><span><small>SALES ORDER</small><b>SO-1042</b></span></article><i class="fa fa-long-arrow-right" aria-hidden="true"/><article class="is-current"><i class="fa fa-cubes" aria-hidden="true"/><span><small>RESERVATION</small><b>2 units ready</b></span></article><i class="fa fa-long-arrow-right" aria-hidden="true"/><article><i class="fa fa-truck" aria-hidden="true"/><span><small>DELIVERY</small><b>Waiting</b></span></article></div>
+                                    <div class="vov-stock-table"><header><span>Product</span><span>On hand</span><span>Reserved</span><span>Status</span></header><div><span><b>Assembly A</b><small>Main warehouse</small></span><span>18</span><span>2</span><em>Available</em></div><div><span><b>Component B</b><small>Main warehouse</small></span><span>42</span><span>6</span><em>Available</em></div><div><span><b>Kit C</b><small>Secondary stock</small></span><span>7</span><span>4</span><em class="is-low">Review</em></div></div>
+                                </div>
+                                <div id="vov-panel-accounting" class="vov-showcase-panel" role="tabpanel" aria-labelledby="vov-tab-accounting" data-showcase-panel="accounting" hidden="hidden">
+                                    <div class="vov-preview-header"><div><small>ACCOUNTING WORKSPACE</small><h3>Operational activity creates financial context</h3></div><span>Illustrative data</span></div>
+                                    <div class="vov-finance-grid">
+                                        <article class="vov-invoice-card"><header><span><small>DRAFT INVOICE</small><b>INV/2026/1042</b></span><em>Draft</em></header><div><span>Related order</span><b>SO-1042</b></div><div><span>Invoice basis</span><b>Delivered items</b></div><div class="vov-invoice-total"><span>Total</span><strong>Ready for review</strong></div></article>
+                                        <article class="vov-ledger-card"><small>TRANSACTION PATH</small><div><span>Sales</span><i/><b>Confirmed</b></div><div><span>Delivery</span><i/><b>Recorded</b></div><div><span>Receivable</span><i/><b>Prepared</b></div><p>Each entry keeps its operational source attached.</p></article>
+                                    </div>
+                                </div>
+                                <div id="vov-panel-hr" class="vov-showcase-panel" role="tabpanel" aria-labelledby="vov-tab-hr" data-showcase-panel="hr" hidden="hidden">
+                                    <div class="vov-preview-header"><div><small>PEOPLE WORKSPACE</small><h3>Employee planning in one clear view</h3></div><span>Illustrative data</span></div>
+                                    <div class="vov-people-summary"><article><small>TODAY</small><strong>Team availability</strong><span>12 active · 2 on leave</span></article><article><small>REQUESTS</small><strong>3 to review</strong><span>Leave and attendance</span></article></div>
+                                    <div class="vov-schedule"><header><b>Operations team</b><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></header><div><strong>Alex M.</strong><i/><i/><i/><i/><i class="is-leave"/></div><div><strong>Sara K.</strong><i/><i/><i/><i class="is-leave"/><i class="is-leave"/></div><div><strong>Ravi P.</strong><i/><i/><i/><i/><i/></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="process" class="vov-process-section vov-section s_text_block" data-snippet="s_text_block" data-name="Odoo Implementation Process" data-anchor="true">
+                    <div class="vov-container">
+                        <div class="vov-section-heading vov-section-heading-split"><div><p class="vov-kicker">HOW WE WORK</p><h2>Five clear stages. One connected system.</h2></div><p>Progress stays visible from initial discovery through deployment and ongoing support.</p></div>
+                        <div class="vov-process" data-vov-process="true">
+                            <div class="vov-process-steps" role="tablist" aria-label="Implementation stages">
+                                <button id="vov-process-tab-discover" class="vov-process-step is-active" type="button" role="tab" aria-selected="true" aria-controls="vov-process-panel-discover" data-process-target="discover"><span>01</span><div><h3>Discover</h3><p>Understand business processes, friction and priorities.</p></div></button>
+                                <button id="vov-process-tab-configure" class="vov-process-step" type="button" role="tab" aria-selected="false" aria-controls="vov-process-panel-configure" data-process-target="configure"><span>02</span><div><h3>Configure</h3><p>Adapt Odoo modules, roles and workflows to the operating model.</p></div></button>
+                                <button id="vov-process-tab-customize" class="vov-process-step" type="button" role="tab" aria-selected="false" aria-controls="vov-process-panel-customize" data-process-target="customize"><span>03</span><div><h3>Customize</h3><p>Build the focused extensions and integrations the approved workflow requires.</p></div></button>
+                                <button id="vov-process-tab-deploy" class="vov-process-step" type="button" role="tab" aria-selected="false" aria-controls="vov-process-panel-deploy" data-process-target="deploy"><span>04</span><div><h3>Deploy</h3><p>Validate data, prepare users and move into the live environment.</p></div></button>
+                                <button id="vov-process-tab-support" class="vov-process-step" type="button" role="tab" aria-selected="false" aria-controls="vov-process-panel-support" data-process-target="support"><span>05</span><div><h3>Support</h3><p>Resolve issues, refine workflows and plan useful improvements.</p></div></button>
+                            </div>
+                            <div class="vov-process-preview">
+                                <div id="vov-process-panel-discover" class="vov-process-panel is-active" role="tabpanel" aria-labelledby="vov-process-tab-discover" data-process-panel="discover">
+                                    <header><span>01 / DISCOVER</span><em>Process intelligence</em></header>
+                                    <div class="vov-discovery-map"><article><i class="fa fa-phone" aria-hidden="true"/><b>Customer request</b><small>Entry point</small></article><span>→</span><article class="is-primary"><i class="fa fa-random" aria-hidden="true"/><b>Current workflow</b><small>Mapped together</small></article><span>→</span><article><i class="fa fa-flag-checkered" aria-hidden="true"/><b>Clear priority</b><small>Defined outcome</small></article></div>
+                                    <div class="vov-process-insight"><i class="fa fa-lightbulb-o" aria-hidden="true"/><span><small>OUTPUT</small><b>A shared view of what the system must improve.</b></span></div>
+                                </div>
+                                <div id="vov-process-panel-configure" class="vov-process-panel" role="tabpanel" aria-labelledby="vov-process-tab-configure" data-process-panel="configure" hidden="hidden">
+                                    <header><span>02 / CONFIGURE</span><em>System design</em></header>
+                                    <div class="vov-config-grid"><article class="is-enabled"><i class="fa fa-handshake-o" aria-hidden="true"/><b>CRM</b><small>Stages aligned</small></article><article class="is-enabled"><i class="fa fa-cubes" aria-hidden="true"/><b>Inventory</b><small>Routes defined</small></article><article><i class="fa fa-file-text-o" aria-hidden="true"/><b>Accounting</b><small>Rules reviewed</small></article><article><i class="fa fa-users" aria-hidden="true"/><b>Access</b><small>Roles prepared</small></article></div>
+                                    <div class="vov-process-insight"><i class="fa fa-sliders" aria-hidden="true"/><span><small>OUTPUT</small><b>A configured workspace that reflects the approved process.</b></span></div>
+                                </div>
+                                <div id="vov-process-panel-customize" class="vov-process-panel" role="tabpanel" aria-labelledby="vov-process-tab-customize" data-process-panel="customize" hidden="hidden">
+                                    <header><span>03 / CUSTOMIZE</span><em>Focused extension</em></header>
+                                    <div class="vov-config-grid"><article class="is-enabled"><i class="fa fa-code" aria-hidden="true"/><b>Workflow logic</b><small>Approved rules</small></article><article class="is-enabled"><i class="fa fa-check-square-o" aria-hidden="true"/><b>Approvals</b><small>Clear ownership</small></article><article><i class="fa fa-exchange" aria-hidden="true"/><b>Integration</b><small>Required systems</small></article><article><i class="fa fa-file-o" aria-hidden="true"/><b>Documents</b><small>Business formats</small></article></div>
+                                    <div class="vov-process-insight"><i class="fa fa-wrench" aria-hidden="true"/><span><small>OUTPUT</small><b>Only the custom behavior needed for the agreed operating model.</b></span></div>
+                                </div>
+                                <div id="vov-process-panel-deploy" class="vov-process-panel" role="tabpanel" aria-labelledby="vov-process-tab-deploy" data-process-panel="deploy" hidden="hidden">
+                                    <header><span>04 / DEPLOY</span><em>Go-live readiness</em></header>
+                                    <div class="vov-process-checklist"><article><i class="fa fa-check" aria-hidden="true"/><span><b>Validated data</b><small>Reviewed before migration</small></span></article><article><i class="fa fa-check" aria-hidden="true"/><span><b>Role-based training</b><small>Prepared for each team</small></span></article><article><i class="fa fa-check" aria-hidden="true"/><span><b>Go-live plan</b><small>Owners and fallback agreed</small></span></article></div>
+                                    <div class="vov-process-insight"><i class="fa fa-rocket" aria-hidden="true"/><span><small>OUTPUT</small><b>A controlled deployment with teams ready to work.</b></span></div>
+                                </div>
+                                <div id="vov-process-panel-support" class="vov-process-panel" role="tabpanel" aria-labelledby="vov-process-tab-support" data-process-panel="support" hidden="hidden">
+                                    <header><span>05 / SUPPORT</span><em>Continuous improvement</em></header>
+                                    <div class="vov-process-checklist"><article><i class="fa fa-life-ring" aria-hidden="true"/><span><b>Issue support</b><small>Clear route for operational questions</small></span></article><article><i class="fa fa-sliders" aria-hidden="true"/><span><b>Workflow refinement</b><small>Changes based on real use</small></span></article><article><i class="fa fa-map-o" aria-hidden="true"/><span><b>Improvement roadmap</b><small>Prioritized next steps</small></span></article></div>
+                                    <div class="vov-process-insight"><i class="fa fa-refresh" aria-hidden="true"/><span><small>OUTPUT</small><b>A system that continues to fit as the business evolves.</b></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="industries" class="vov-solutions vov-section s_text_block" data-snippet="s_text_block" data-name="Solutions by Industry" data-anchor="true">
+                    <div class="vov-container">
+                        <div class="vov-section-heading vov-section-heading-split"><div><span class="vov-section-pill">INDUSTRY EXPERTISE</span><h2>Odoo shaped around how your industry operates.</h2></div><p>Start with connected Odoo applications, then configure the workflows, roles and documents that make each operating model distinct.</p></div>
+                        <div class="vov-industry-grid">
+                            <article class="vov-industry-card"><span class="vov-industry-icon"><i class="fa fa-shopping-cart" aria-hidden="true"/></span><small>01</small><h3>Retail</h3><p>Connect point of sale, purchasing, stock and customer information across stores and channels.</p><div><span>POS</span><span>Inventory</span><span>CRM</span></div></article>
+                            <article class="vov-industry-card"><span class="vov-industry-icon"><i class="fa fa-cogs" aria-hidden="true"/></span><small>02</small><h3>Manufacturing</h3><p>Coordinate materials, production orders, quality checks and maintenance in one operating flow.</p><div><span>MRP</span><span>Quality</span><span>Maintenance</span></div></article>
+                            <article class="vov-industry-card"><span class="vov-industry-icon"><i class="fa fa-truck" aria-hidden="true"/></span><small>03</small><h3>Distribution</h3><p>Keep purchasing, warehouse movements, delivery commitments and invoicing in context.</p><div><span>Purchase</span><span>Warehouse</span><span>Delivery</span></div></article>
+                            <article class="vov-industry-card"><span class="vov-industry-icon"><i class="fa fa-briefcase" aria-hidden="true"/></span><small>04</small><h3>Service businesses</h3><p>Move from lead and quotation to project delivery, timesheets and customer billing.</p><div><span>CRM</span><span>Projects</span><span>Billing</span></div></article>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="why-vorevia" class="vov-why vov-section s_text_block" data-snippet="s_text_block" data-name="Why Vorevia" data-anchor="true">
+                    <div class="vov-container">
+                        <div class="vov-why-grid">
+                            <div class="vov-why-intro"><p class="vov-kicker">WHY VOREVIA</p><h2>Built around operating reality—not a generic software checklist.</h2><p>Our focus is a usable Odoo system: connected processes, practical delivery and room to evolve as your business changes.</p><a class="vov-text-link" href="#consultation">Discuss your workflow <span aria-hidden="true">↗</span></a></div>
+                            <div class="vov-value-list"><article><span>01</span><div><h3>Tailored Odoo workflows</h3><p>Configuration and development aligned to the process teams need to run.</p></div></article><article><span>02</span><div><h3>Connected business processes</h3><p>Shared context between customer, operational and financial work.</p></div></article><article><span>03</span><div><h3>Practical implementation support</h3><p>Clear stages, usable training and support through adoption.</p></div></article><article><span>04</span><div><h3>Long-term adaptability</h3><p>A system that can be refined as roles, workflows and priorities change.</p></div></article></div>
+                        </div>
+                        <div class="vov-case-study-slot"><span>CASE STUDIES</span><p>A dedicated place for verified project stories when approved details are available.</p><em>Reserved for real outcomes</em></div>
+                    </div>
+                </section>
+
+                <section id="faq" class="vov-faq vov-section s_text_block" data-snippet="s_text_block" data-name="Frequently Asked Questions" data-anchor="true">
+                    <div class="vov-container vov-faq-grid">
+                        <div class="vov-faq-intro"><p class="vov-kicker">FREQUENTLY ASKED QUESTIONS</p><h2>Questions, answered.</h2><p>A practical starting point for planning an Odoo implementation or improvement project.</p><a class="vov-text-link" href="#consultation">Ask another question <span aria-hidden="true">↗</span></a></div>
+                        <div class="accordion accordion-flush vov-accordion" id="vovFaqAccordion">
+                            <div class="accordion-item"><h3 class="accordion-header" id="vovFaqHeadingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#vovFaqOne" aria-expanded="true" aria-controls="vovFaqOne">What is Odoo ERP?</button></h3><div id="vovFaqOne" class="accordion-collapse collapse show" aria-labelledby="vovFaqHeadingOne" data-bs-parent="#vovFaqAccordion"><div class="accordion-body">Odoo is a suite of connected business applications that can bring areas such as sales, inventory, accounting and people operations into one system.</div></div></div>
+                            <div class="accordion-item"><h3 class="accordion-header" id="vovFaqHeadingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vovFaqTwo" aria-expanded="false" aria-controls="vovFaqTwo">Can Odoo be customized for our business?</button></h3><div id="vovFaqTwo" class="accordion-collapse collapse" aria-labelledby="vovFaqHeadingTwo" data-bs-parent="#vovFaqAccordion"><div class="accordion-body">Yes. Standard configuration should be used where it fits, while focused custom modules can support requirements that need different behavior.</div></div></div>
+                            <div class="accordion-item"><h3 class="accordion-header" id="vovFaqHeadingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vovFaqThree" aria-expanded="false" aria-controls="vovFaqThree">Can we migrate from our current software?</button></h3><div id="vovFaqThree" class="accordion-collapse collapse" aria-labelledby="vovFaqHeadingThree" data-bs-parent="#vovFaqAccordion"><div class="accordion-body">Migration is possible after the source data, quality, history requirements and target Odoo structure have been reviewed.</div></div></div>
+                            <div class="accordion-item"><h3 class="accordion-header" id="vovFaqHeadingFour"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vovFaqFour" aria-expanded="false" aria-controls="vovFaqFour">Can Odoo integrate with existing systems?</button></h3><div id="vovFaqFour" class="accordion-collapse collapse" aria-labelledby="vovFaqHeadingFour" data-bs-parent="#vovFaqAccordion"><div class="accordion-body">Odoo supports integrations, but the right approach depends on the other system, its interfaces and which data or actions need to stay synchronized.</div></div></div>
+                            <div class="accordion-item"><h3 class="accordion-header" id="vovFaqHeadingFive"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vovFaqFive" aria-expanded="false" aria-controls="vovFaqFive">What happens after implementation?</button></h3><div id="vovFaqFive" class="accordion-collapse collapse" aria-labelledby="vovFaqHeadingFive" data-bs-parent="#vovFaqAccordion"><div class="accordion-body">Post-launch work typically includes user support, issue resolution, workflow refinement and planned improvements as teams learn from real use.</div></div></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="consultation" class="vov-contact vov-section s_website_form" data-vcss="001" data-snippet="s_website_form" data-name="Consultation Request" data-anchor="true">
+                    <div class="vov-container vov-contact-grid">
+                        <div class="vov-contact-copy">
+                            <p class="vov-kicker">START A CONVERSATION</p>
+                            <h2>Tell us what needs to work better.</h2>
+                            <p>Share the process, system or operational challenge you want to improve. We will use the details to prepare a focused first conversation.</p>
+                            <div class="vov-contact-points"><span><i class="fa fa-check" aria-hidden="true"/> No generic software pitch</span><span><i class="fa fa-check" aria-hidden="true"/> Practical Odoo guidance</span><span><i class="fa fa-check" aria-hidden="true"/> Clear next steps</span></div>
+                        </div>
+                        <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required vov-consultation-form" data-mark="*" data-pre-fill="true" data-model_name="vorevia.consultation" data-success-mode="redirect" data-success-page="/contactus-thank-you">
+                            <div class="vov-form-grid s_website_form_rows">
+                                <div class="vov-form-field s_website_form_field s_website_form_custom s_website_form_required" data-type="char"><label for="vov_consultation_name">Name *</label><input id="vov_consultation_name" class="form-control s_website_form_input" type="text" name="name" required="required" autocomplete="name" data-fill-with="name"/></div>
+                                <div class="vov-form-field s_website_form_field s_website_form_model_required" data-type="email"><label for="vov_consultation_email">Work email *</label><input id="vov_consultation_email" class="form-control s_website_form_input" type="email" name="email" required="required" autocomplete="email" data-fill-with="email"/></div>
+                                <div class="vov-form-field s_website_form_field s_website_form_custom" data-type="char"><label for="vov_consultation_company">Company</label><input id="vov_consultation_company" class="form-control s_website_form_input" type="text" name="company" autocomplete="organization"/></div>
+                                <div class="vov-form-field s_website_form_field s_website_form_custom" data-type="char"><label for="vov_consultation_phone">Phone</label><input id="vov_consultation_phone" class="form-control s_website_form_input" type="tel" name="phone" autocomplete="tel"/></div>
+                                <div class="vov-form-field vov-form-field-wide s_website_form_field s_website_form_model_required" data-type="selection"><label for="vov_consultation_interest">What would you like to improve? *</label><select id="vov_consultation_interest" class="form-select s_website_form_input" name="interest" required="required"><option value="implementation">ERP implementation</option><option value="customization">Odoo customization</option><option value="integration">Integration or migration</option><option value="support">Training or support</option><option value="unsure">Not sure yet</option></select></div>
+                                <div class="vov-form-field vov-form-field-wide s_website_form_field s_website_form_custom s_website_form_required" data-type="text"><label for="vov_consultation_message">What is happening today? *</label><textarea id="vov_consultation_message" class="form-control s_website_form_input" name="description" rows="5" required="required" placeholder="Briefly describe the workflow, current system or recurring issue."/></div>
+                                <div class="vov-form-submit vov-form-field-wide s_website_form_submit"><span id="s_website_form_result"/><a href="#" role="button" class="vov-button vov-button-primary s_website_form_send">Request Consultation <i class="fa fa-arrow-right" aria-hidden="true"/></a></div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="vov-final-cta s_text_block" data-snippet="s_text_block" data-name="Final Call to Action">
+                    <div class="vov-container"><div class="vov-cta-inner"><p class="vov-kicker">A MORE CONNECTED WAY TO WORK</p><h2>Ready to Connect Your Business?</h2><p>Let's explore how Odoo can support your operations.</p><a class="vov-button vov-button-primary" href="#consultation">Start a Conversation <i class="fa fa-arrow-right" aria-hidden="true"/></a></div></div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

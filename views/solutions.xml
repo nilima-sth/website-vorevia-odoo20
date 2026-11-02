@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="vorevia_solutions_page" name="Vorevia Solutions Page">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure">
+                <section class="vov-solutions-page">
+                    <div class="vov-container">
+                        <div class="vov-solutions-page__heading">
+                            <p class="vov-kicker">SOLUTIONS</p>
+                            <h1>Business Solutions</h1>
+                            <p>Explore connected business capabilities. We'll help you identify what is relevant to your workflow.</p>
+                        </div>
+
+                        <div id="sales-customer-management" class="vov-solutions-page__item">
+                            <div class="vov-solutions-page__item-inner">
+                                <span class="vov-solutions-page__item-number">01</span>
+                                <div>
+                                    <h2>Sales &amp; Customer Management</h2>
+                                    <p>Organize customer relationships and sales processes. Manage leads, quotations, and the full sales pipeline within a connected system.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="inventory-procurement" class="vov-solutions-page__item">
+                            <div class="vov-solutions-page__item-inner">
+                                <span class="vov-solutions-page__item-number">02</span>
+                                <div>
+                                    <h2>Inventory &amp; Procurement</h2>
+                                    <p>Connect inventory, purchasing, and supplier workflows. Maintain stock visibility and streamline procurement operations.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="finance-billing" class="vov-solutions-page__item">
+                            <div class="vov-solutions-page__item-inner">
+                                <span class="vov-solutions-page__item-number">03</span>
+                                <div>
+                                    <h2>Finance &amp; Billing</h2>
+                                    <p>Bring billing and financial processes into a clearer workflow. Connect invoicing, expenses, and accounting with operational activity.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="human-resources" class="vov-solutions-page__item">
+                            <div class="vov-solutions-page__item-inner">
+                                <span class="vov-solutions-page__item-number">04</span>
+                                <div>
+                                    <h2>Human Resources</h2>
+                                    <p>Bring employee-related processes into one organized system. Manage workforce information, leave, attendance, and planning.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="retail-pos" class="vov-solutions-page__item">
+                            <div class="vov-solutions-page__item-inner">
+                                <span class="vov-solutions-page__item-number">05</span>
+                                <div>
+                                    <h2>Retail &amp; Point of Sale</h2>
+                                    <p>Explore how counter transactions can connect with business operations. Link in-store activity with inventory, customer data, and accounting.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="website-ecommerce" class="vov-solutions-page__item">
+                            <div class="vov-solutions-page__item-inner">
+                                <span class="vov-solutions-page__item-number">06</span>
+                                <div>
+                                    <h2>Website &amp; eCommerce</h2>
+                                    <p>Connect customer-facing digital experiences with operational workflows. Bring online commerce and business processes together.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="project-service-management" class="vov-solutions-page__item">
+                            <div class="vov-solutions-page__item-inner">
+                                <span class="vov-solutions-page__item-number">07</span>
+                                <div>
+                                    <h2>Project &amp; Service Management</h2>
+                                    <p>Coordinate project delivery and service work. Manage tasks, timesheets, and client interactions in context.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="reporting-automation" class="vov-solutions-page__item">
+                            <div class="vov-solutions-page__item-inner">
+                                <span class="vov-solutions-page__item-number">08</span>
+                                <div>
+                                    <h2>Reporting &amp; Automation</h2>
+                                    <p>Explore better reporting and streamlined recurring work. Improve visibility and reduce repetitive manual processes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vov-solutions-page__cta">
+                            <h3>Start with your requirements</h3>
+                            <p>Not sure what your business needs? Tell us about your workflow and we'll help identify the right starting point.</p>
+                            <a class="vov-button vov-button-primary" href="/#consultation">Start a Conversation <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+    <record id="vorevia_solutions_page_record" model="website.page">
+        <field name="name">Vorevia Solutions</field>
+        <field name="url">/solutions</field>
+        <field name="view_id" ref="vorevia_solutions_page"/>
+        <field name="is_published">True</field>
+    </record>
+</odoo>

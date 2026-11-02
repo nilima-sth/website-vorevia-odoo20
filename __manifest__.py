@@ -10,12 +10,18 @@
         "data/website_form_data.xml",
         "views/consultation_views.xml",
         "views/homepage.xml",
+        "views/solutions.xml",
     ],
     "assets": {
         "web.assets_frontend": [
             "website_vorevia/static/src/scss/theme.scss",
             "website_vorevia/static/src/scss/hero_refinement.scss",
+            "website_vorevia/static/src/scss/navbar-cta.scss",
+            "website_vorevia/static/src/scss/solutions_mega_menu.scss",
+            "website_vorevia/static/src/scss/footer-brand-reveal.scss",
             "website_vorevia/static/src/js/homepage.js",
+            "website_vorevia/static/src/js/solutions_mega_menu.js",
+            "website_vorevia/static/src/js/footer_brand_reveal.js",
         ],
     },
     "installable": True,

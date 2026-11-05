@@ -18,7 +18,7 @@ export class VoreviaNavigationMenus extends Interaction {
 
     start() {
         const doc = this.el.ownerDocument;
-        if (doc.documentElement.dataset.editable === "1" || doc.body.classList.contains("editor_enable")) {
+        if (doc.body.classList.contains("editor_enable")) {
             return;
         }
 

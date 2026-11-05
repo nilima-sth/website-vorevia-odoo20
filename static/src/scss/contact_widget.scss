@@ -1,0 +1,511 @@
+/**
+ * Vorevia Contact Widget Styles
+ * Adapted from Floating Calls & Social Buttons Widget by Liveupx.com (MIT)
+ * Integrated into website_vorevia Odoo 19 module.
+ *
+ * Original: https://github.com/liveupx/Floating-Calls-Social-Buttons-Widget
+ * License:  MIT — © Liveupx.com
+ */
+
+// ─── Variables ────────────────────────────────────────────────────────────────
+
+$cw-transition:      all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$cw-panel-width:     328px;
+$cw-btn-size:        60px;
+$cw-btn-color:       #20364f;
+$cw-z-launcher:      1050;        // above Vorevia header (1040)
+$cw-z-panel:         1049;
+$cw-z-backdrop:      1048;
+
+$cw-row-wa:          #20364f;
+$cw-row-enquiry:     var(--vov-blue, #367fd1);
+$cw-row-call:        #20364f;
+$cw-row-email:       #ea4335;
+
+// ─── Launcher ─────────────────────────────────────────────────────────────────
+
+.vov-cw-launcher {
+    position:        fixed;
+    right:           24px;
+    bottom:          24px;
+    z-index:         $cw-z-launcher;
+    display:         flex;
+    flex-direction:  column;
+    align-items:     center;
+}
+
+.vov-cw-btn {
+    position:        relative;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    width:           $cw-btn-size;
+    height:          $cw-btn-size;
+    padding:         0;
+    border:          none;
+    border-radius:   50%;
+    background:      $cw-btn-color;
+    color:           #fff;
+    cursor:          pointer;
+    box-shadow:      0 4px 16px rgba(32, 54, 79, 0.35),
+                     0 2px 6px rgba(0, 0, 0, 0.15);
+    transition:      $cw-transition;
+    outline:         none;
+    -webkit-tap-highlight-color: transparent;
+
+    svg {
+        width:       28px;
+        height:      28px;
+        transition:  transform 0.3s ease;
+    }
+
+    // Opened state — show X
+    &.is-open svg.vov-cw-icon-chat { display: none; }
+    &:not(.is-open) svg.vov-cw-icon-close { display: none; }
+
+    &:hover {
+        transform:   scale(1.08);
+        box-shadow:  0 6px 24px rgba(32, 54, 79, 0.45),
+                     0 4px 10px rgba(0, 0, 0, 0.18);
+    }
+
+    &:focus-visible {
+        outline:        3px solid rgba(32, 54, 79, 0.6);
+        outline-offset: 3px;
+    }
+
+    &:active { transform: scale(0.95); }
+}
+
+// Pulse ring
+.vov-cw-btn::before {
+    content:       '';
+    position:      absolute;
+    inset:         0;
+    border-radius: 50%;
+    background:    $cw-btn-color;
+    animation:     vov-cw-pulse 2.2s ease-out infinite;
+    z-index:       -1;
+}
+
+.vov-cw-btn.is-open::before { animation: none; }
+
+@keyframes vov-cw-pulse {
+    0%   { transform: scale(1); opacity: 0.5; }
+    60%  { transform: scale(1.45); opacity: 0; }
+    100% { transform: scale(1.45); opacity: 0; }
+}
+
+// ─── Backdrop ─────────────────────────────────────────────────────────────────
+
+.vov-cw-backdrop {
+    position:    fixed;
+    inset:       0;
+    z-index:     $cw-z-backdrop;
+    background:  rgba(0, 0, 0, 0.25);
+    opacity:     0;
+    visibility:  hidden;
+    transition:  opacity 0.25s ease, visibility 0.25s ease;
+
+    &.is-visible {
+        opacity:    1;
+        visibility: visible;
+    }
+}
+
+// ─── Panel ────────────────────────────────────────────────────────────────────
+
+.vov-cw-panel {
+    position:       fixed;
+    right:          24px;
+    bottom:         98px;   // above launcher button (60px + 24px bottom + 14px gap)
+    z-index:        $cw-z-panel;
+    width:          $cw-panel-width;
+    border-radius:  16px;
+    background:     #fff;
+    box-shadow:     0 8px 32px rgba(20, 25, 31, 0.14),
+                    0 2px 8px rgba(20, 25, 31, 0.08);
+    overflow:       hidden;
+    opacity:        0;
+    visibility:     hidden;
+    transform:      translateY(16px) scale(0.96);
+    transform-origin: bottom right;
+    transition:     opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+                    visibility 0.28s ease;
+
+    &.is-open {
+        opacity:     1;
+        visibility:  visible;
+        transform:   translateY(0) scale(1);
+    }
+}
+
+// Panel inner (overflow hidden for view sliding)
+.vov-cw-panel-inner {
+    position:  relative;
+    overflow:  hidden;
+}
+
+// ─── Views ────────────────────────────────────────────────────────────────────
+
+.vov-cw-view {
+    width:      100%;
+    flex-shrink: 0;
+    opacity:    0;
+    visibility: hidden;
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+    transform:  translateX(20px);
+
+    &.is-active {
+        opacity:    1;
+        visibility: visible;
+        transform:  translateX(0);
+    }
+
+    &.is-exiting {
+        position:   absolute;
+        top:        0;
+        left:       0;
+        opacity:    0;
+        transform:  translateX(-20px);
+        pointer-events: none;
+    }
+}
+
+.vov-cw-view:not(.is-active):not(.is-exiting) {
+    display: none;
+}
+
+// ─── Panel Header ─────────────────────────────────────────────────────────────
+
+.vov-cw-header {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    padding:         14px 16px;
+    background:      var(--vov-ink, #14191f);
+    color:           #fff;
+    border-radius:   16px 16px 0 0;
+    gap:             8px;
+}
+
+.vov-cw-header-title {
+    flex:         1;
+    font-size:    0.92rem;
+    font-weight:  700;
+    letter-spacing: 0.005em;
+    font-family:  Inter, "Helvetica Neue", Arial, sans-serif;
+}
+
+.vov-cw-close,
+.vov-cw-back {
+    display:      flex;
+    align-items:  center;
+    justify-content: center;
+    padding:      4px 8px;
+    border:       1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    background:   transparent;
+    color:        rgba(255, 255, 255, 0.85);
+    font-size:    0.78rem;
+    font-weight:  600;
+    cursor:       pointer;
+    transition:   background 0.18s ease, color 0.18s ease;
+    white-space:  nowrap;
+    font-family:  Inter, "Helvetica Neue", Arial, sans-serif;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color:      #fff;
+    }
+
+    &:focus-visible {
+        outline:        2px solid rgba(255, 255, 255, 0.6);
+        outline-offset: 2px;
+    }
+}
+
+.vov-cw-close {
+    width:  30px;
+    height: 30px;
+    padding: 0;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+// ─── Panel Body ───────────────────────────────────────────────────────────────
+
+.vov-cw-body {
+    padding: 4px 0 8px;
+}
+
+.vov-cw-tagline {
+    margin:       0;
+    padding:      10px 16px 8px;
+    color:        var(--vov-muted, #5f6c77);
+    font-size:    0.78rem;
+    font-family:  Inter, "Helvetica Neue", Arial, sans-serif;
+}
+
+// ─── Contact Rows ─────────────────────────────────────────────────────────────
+
+.vov-cw-contacts {
+    display:        flex;
+    flex-direction: column;
+    padding:        6px 0;
+}
+
+.vov-cw-row {
+    display:      flex;
+    align-items:  center;
+    width:        100%;
+    gap:          12px;
+    padding:      13px 16px;
+    border:       none;
+    background:   transparent;
+    color:        var(--vov-ink, #14191f);
+    text-decoration: none !important;
+    font-size:    0.88rem;
+    font-weight:  600;
+    font-family:  Inter, "Helvetica Neue", Arial, sans-serif;
+    cursor:       pointer;
+    transition:   background 0.16s ease;
+
+    &:hover {
+        background: var(--vov-surface, #f4f6f8);
+        text-decoration: none !important;
+
+        .vov-cw-row-arrow { transform: translateX(3px); }
+    }
+
+    &:focus-visible {
+        outline:        2px solid var(--vov-blue, #367fd1);
+        outline-offset: -2px;
+        text-decoration: none !important;
+    }
+}
+
+.vov-cw-row:hover .vov-cw-row-label,
+.vov-cw-row:hover .vov-cw-row-sub,
+.vov-cw-row:focus-visible .vov-cw-row-label,
+.vov-cw-row:focus-visible .vov-cw-row-sub {
+    text-decoration: none !important;
+}
+
+.vov-cw-row-icon {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    width:           40px;
+    height:          40px;
+    border-radius:   12px;
+    flex-shrink:     0;
+    color:           #fff;
+
+    svg {
+        width:  20px;
+        height: 20px;
+    }
+}
+
+.vov-cw-row--whatsapp .vov-cw-row-icon { background: $cw-row-wa; }
+.vov-cw-row--enquiry  .vov-cw-row-icon { background: var(--vov-blue, #367fd1); }
+.vov-cw-row--call     .vov-cw-row-icon { background: $cw-row-call; }
+.vov-cw-row--email    .vov-cw-row-icon { background: $cw-row-email; }
+
+.vov-cw-row-label {
+    flex: 1;
+    text-align: left;
+}
+
+.vov-cw-row-sub {
+    display:     block;
+    color:       var(--vov-muted, #5f6c77);
+    font-size:   0.68rem;
+    font-weight: 500;
+    margin-top:  1px;
+}
+
+.vov-cw-row-arrow {
+    color:      var(--vov-muted, #5f6c77);
+    font-size:  1rem;
+    transition: transform 0.18s ease;
+    flex-shrink: 0;
+}
+
+// ─── Enquiry Form ─────────────────────────────────────────────────────────────
+
+.vov-cw-form {
+    padding: 14px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.vov-cw-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    label {
+        font-size:   0.73rem;
+        font-weight: 650;
+        color:       var(--vov-ink-soft, #27313a);
+        font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    input,
+    textarea {
+        width:         100%;
+        padding:       8px 11px;
+        border:        1px solid var(--vov-line, #dce4ea);
+        border-radius: 8px;
+        background:    var(--vov-surface, #f4f6f8);
+        color:         var(--vov-ink, #14191f);
+        font-size:     0.83rem;
+        font-family:   Inter, "Helvetica Neue", Arial, sans-serif;
+        transition:    border-color 0.18s ease, box-shadow 0.18s ease;
+        outline:       none;
+        box-sizing:    border-box;
+
+        &::placeholder { color: var(--vov-muted, #5f6c77); }
+
+        &:focus {
+            border-color: var(--vov-blue, #367fd1);
+            box-shadow:   0 0 0 3px rgba(54, 127, 209, 0.12);
+            background:   #fff;
+        }
+
+        &.is-invalid {
+            border-color: #dc2626;
+            box-shadow:   0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+    }
+
+    textarea {
+        resize:      vertical;
+        min-height:  76px;
+        line-height: 1.5;
+    }
+}
+
+.vov-cw-form-status {
+    font-size:   0.78rem;
+    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+    min-height:  0;
+    border-radius: 6px;
+    padding:     0;
+    transition:  all 0.2s ease;
+
+    &:not(:empty) { padding: 8px 11px; }
+
+    &.is-success {
+        background: #dcfce7;
+        color:      #166534;
+        border:     1px solid #86efac;
+    }
+
+    &.is-error {
+        background: #fee2e2;
+        color:      #991b1b;
+        border:     1px solid #fca5a5;
+    }
+}
+
+.vov-cw-submit {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    gap:             6px;
+    padding:         10px 18px;
+    border:          none;
+    border-radius:   8px;
+    background:      var(--vov-blue, #367fd1);
+    color:           #fff;
+    font-size:       0.86rem;
+    font-weight:     700;
+    font-family:     Inter, "Helvetica Neue", Arial, sans-serif;
+    cursor:          pointer;
+    transition:      background 0.18s ease, transform 0.18s ease;
+    margin-top:      4px;
+
+    &:hover {
+        background: var(--vov-blue-deep, #2467b4);
+        transform:  translateY(-1px);
+    }
+
+    &:focus-visible {
+        outline:        3px solid rgba(54, 127, 209, 0.4);
+        outline-offset: 2px;
+    }
+
+    &:active { transform: translateY(0); }
+
+    &:disabled {
+        opacity: 0.65;
+        cursor:  not-allowed;
+        transform: none;
+    }
+}
+
+// Spinner inside submit button
+.vov-cw-spinner {
+    display:       inline-block;
+    width:         14px;
+    height:        14px;
+    border:        2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation:     vov-cw-spin 0.7s linear infinite;
+}
+
+@keyframes vov-cw-spin {
+    to { transform: rotate(360deg); }
+}
+
+// ─── Mobile ───────────────────────────────────────────────────────────────────
+
+@media (max-width: 575.98px) {
+    .vov-cw-launcher {
+        right:  16px;
+        bottom: 16px;
+
+        &.is-panel-open { display: none; }
+    }
+
+    .vov-cw-panel {
+        right:         0;
+        bottom:        0;
+        left:          0;
+        width:         100%;
+        border-radius: 16px 16px 0 0;
+        transform:     translateY(100%);
+
+        &.is-open { transform: translateY(0); }
+    }
+}
+
+// ─── Reduced motion ───────────────────────────────────────────────────────────
+
+@media (prefers-reduced-motion: reduce) {
+    .vov-cw-btn,
+    .vov-cw-panel,
+    .vov-cw-backdrop,
+    .vov-cw-row,
+    .vov-cw-row-arrow,
+    .vov-cw-view,
+    .vov-cw-submit { transition: none !important; }
+
+    .vov-cw-btn::before,
+    .vov-cw-spinner { animation: none !important; }
+}
+
+// ─── Print ────────────────────────────────────────────────────────────────────
+
+@media print {
+    .vov-cw-launcher,
+    .vov-cw-panel,
+    .vov-cw-backdrop { display: none !important; }
+}
+

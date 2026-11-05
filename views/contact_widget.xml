@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--
+        Vorevia Contact Widget — QWeb template
+        Injects the widget mount point into every website page.
+        JavaScript and SCSS are loaded via __manifest__.py assets.
+
+        Adapted from:
+          Floating Calls & Social Buttons Widget by Liveupx.com (MIT)
+          https://github.com/liveupx/Floating-Calls-Social-Buttons-Widget
+    -->
+    <template id="vorevia_contact_widget"
+              inherit_id="website.layout"
+              name="Vorevia Contact Widget"
+              priority="50">
+        <xpath expr="//body" position="inside">
+            <!--
+                Mount point for the floating contact widget.
+                The contact_widget.js script locates this element by id
+                and renders the launcher button + panel inside it.
+            -->
+            <div id="vov-contact-widget"
+                 aria-label="Contact widget mount"
+                 data-nosnippet="1"/>
+        </xpath>
+    </template>
+</odoo>
+

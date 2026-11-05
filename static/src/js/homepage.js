@@ -1,6 +1,8 @@
 import { Interaction } from "@web/public/interaction";
 import { registry } from "@web/core/registry";
 
+const PANEL_TRANSITION_MS = 320;
+
 export class VoreviaHomepage extends Interaction {
     static selector = ".o_vorevia_homepage";
 
@@ -17,9 +19,7 @@ export class VoreviaHomepage extends Interaction {
     }
 
     start() {
-        this.isEditing =
-            this.el.ownerDocument.documentElement.dataset.editable === "1" ||
-            this.el.ownerDocument.body.classList.contains("editor_enable");
+        this.isEditing = this.el.ownerDocument.body.classList.contains("editor_enable");
 
         this.showcase = this.el.querySelector("[data-vov-showcase]");
         this.showcaseTabs = [...this.el.querySelectorAll("[data-showcase-target]")];
@@ -116,7 +116,7 @@ export class VoreviaHomepage extends Interaction {
     }
 
     activateShowcase(index, animate = true) {
-        if (!this.showcaseTabs.length || !this.showcasePanels.length) {
+        if (!this.showcaseTabs.length || !this.showcasePanels.length || index === this.showcaseIndex && animate) {
             return;
         }
         this.showcaseIndex = index;
@@ -155,7 +155,7 @@ export class VoreviaHomepage extends Interaction {
                     panel.hidden = true;
                 }
             });
-        }, animate && !this.reducedMotion ? 260 : 0);
+        }, animate && !this.reducedMotion ? PANEL_TRANSITION_MS : 0);
     }
 
     scheduleShowcase() {
@@ -240,7 +240,7 @@ export class VoreviaHomepage extends Interaction {
                     panel.hidden = true;
                 }
             });
-        }, animate && !this.reducedMotion ? 260 : 0);
+        }, animate && !this.reducedMotion ? PANEL_TRANSITION_MS : 0);
     }
 
     initializeProcessObserver() {

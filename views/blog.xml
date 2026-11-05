@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Keep Odoo's blog model, routes, search, post cards, and publishing flow. -->
+    <function model="blog.blog" name="write">
+        <value eval="[ref('website_blog.blog_blog_1')]"/>
+        <value eval="{'name': 'Vorevia Insights', 'subtitle': 'Practical perspectives on Odoo ERP, connected workflows, and digital transformation.'}"/>
+    </function>
+
+    <template id="vorevia_blog_header" name="Vorevia Blog Header" inherit_id="website_blog.blog_post_short" priority="90">
+        <xpath expr="//div[@id='o_wblog_blog_top']" position="replace">
+            <div id="o_wblog_blog_top" class="vov-blog-hero">
+                <div class="vov-container vov-blog-hero__inner">
+                    <div class="vov-blog-hero__copy">
+                        <p class="vov-kicker">THE VOREVIA JOURNAL</p>
+                        <h1 t-if="blog" t-field="blog.name" placeholder="Blog title"/>
+                        <h1 t-else="">Vorevia Insights</h1>
+                        <p t-if="blog" t-field="blog.subtitle" class="vov-blog-hero__subtitle" placeholder="Blog description"/>
+                        <p t-else="" class="vov-blog-hero__subtitle">Practical perspectives on Odoo ERP, connected workflows, and digital transformation.</p>
+                    </div>
+                    <div class="vov-blog-hero__mark" aria-hidden="true">V<span>.</span></div>
+                </div>
+                <t t-if="not tag and not date_begin and not search">
+                    <div id="o_wblog_blog_top_droppable"/>
+                    <div t-if="blog" t-field="blog.content" t-attf-data-editor-sub-message.translate="Edit the '{{blog.name}}' page header."/>
+                    <div t-elif="blogs" class="oe_structure" data-editor-sub-message.translate="Edit the 'All Blogs' page header."/>
+                </t>
+                <div t-else="" class="oe_structure" id="oe_structure_blog_filtered_header" data-editor-sub-message.translate="Edit the 'Filter Results' page header."/>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="vorevia_blog_empty" name="Vorevia Blog Empty State" inherit_id="website_blog.posts_loop" priority="50">
+        <xpath expr="//div[@t-if='not posts']" position="replace">
+            <div t-if="not posts" class="col-12">
+                <div t-if="search or tag or date_begin" class="vov-blog-empty vov-blog-empty--filtered">
+                    <p class="vov-kicker">NO MATCHING ARTICLES</p>
+                    <h2>Nothing matched your search.</h2>
+                    <p>Try a different term or return to all insights.</p>
+                    <a href="/blog" class="vov-blog-empty__link">View all insights <span aria-hidden="true">↗</span></a>
+                </div>
+                <div t-else="" class="vov-blog-empty">
+                    <div class="vov-blog-empty__number" aria-hidden="true">01 / INSIGHTS</div>
+                    <div>
+                        <p class="vov-kicker">THE CONVERSATION STARTS HERE</p>
+                        <h2>Ideas are taking shape.</h2>
+                        <p>We are preparing practical articles on Odoo, connected operations, and the work behind digital transformation. Explore our approach or tell us what your team is working through.</p>
+                        <div class="vov-blog-empty__actions">
+                            <a class="vov-button vov-button-primary" href="/about">Explore our approach <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                            <a class="vov-blog-empty__link" href="/#consultation">Start a conversation <span aria-hidden="true">↗</span></a>
+                        </div>
+                        <p class="vov-blog-empty__editor-note" groups="website.group_website_designer">To publish the first article, use <strong>New → Blog Post</strong> in the website toolbar.</p>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

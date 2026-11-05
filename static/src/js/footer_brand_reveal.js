@@ -6,9 +6,7 @@ export class VoreviaFooterBrandReveal extends Interaction {
 
     start() {
         const document = this.el.ownerDocument;
-        const isEditing =
-            document.documentElement.dataset.editable === "1" ||
-            document.body.classList.contains("editor_enable");
+        const isEditing = document.body.classList.contains("editor_enable");
         const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         const spacer = this.el.nextElementSibling;
 

@@ -9,6 +9,7 @@
                 <field name="name"/>
                 <field name="company"/>
                 <field name="email"/>
+                <field name="partner_id"/>
                 <field name="interest"/>
                 <field name="state" widget="badge"/>
             </list>
@@ -27,6 +28,7 @@
                             <field name="company"/>
                             <field name="email" widget="email"/>
                             <field name="phone" widget="phone"/>
+                            <field name="partner_id"/>
                         </group>
                         <group>
                             <field name="interest"/>

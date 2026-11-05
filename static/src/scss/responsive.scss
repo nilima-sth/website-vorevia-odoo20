@@ -1,0 +1,467 @@
+/*
+ * Final responsive layer for the Vorevia website.
+ *
+ * Component styles keep their desktop composition. This file owns the shared
+ * reflow rules so the same content remains readable from wide monitors down to
+ * compact phones without changing the visual language of the site.
+ */
+
+:where(
+    .o_vorevia_homepage,
+    .vov-about,
+    .vov-solutions-page,
+    .website_blog,
+    .vov-site-header,
+    .vov-site-footer
+) {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+:where(
+    .o_vorevia_homepage,
+    .vov-about,
+    .vov-solutions-page,
+    .website_blog,
+    .vov-site-header,
+    .vov-site-footer
+) *,
+:where(
+    .o_vorevia_homepage,
+    .vov-about,
+    .vov-solutions-page,
+    .website_blog,
+    .vov-site-header,
+    .vov-site-footer
+) *::before,
+:where(
+    .o_vorevia_homepage,
+    .vov-about,
+    .vov-solutions-page,
+    .website_blog,
+    .vov-site-header,
+    .vov-site-footer
+) *::after {
+    box-sizing: border-box;
+}
+
+:where(
+    .o_vorevia_homepage,
+    .vov-about,
+    .vov-solutions-page,
+    .website_blog
+) :where(img, video, iframe) {
+    max-width: 100%;
+}
+
+:where(
+    .o_vorevia_homepage,
+    .vov-about,
+    .vov-solutions-page,
+    .website_blog
+) :where(h1, h2, h3, p, li, a, span, strong) {
+    min-width: 0;
+}
+
+/* Keep controls usable when a label wraps in a translated or zoomed layout. */
+.vov-button,
+.vov-nav-cta,
+.vov-nav-signin,
+.vov-menu-toggle,
+.vov-cw-row,
+.vov-cw-submit {
+    min-height: 44px;
+}
+
+/* Laptop and landscape-tablet refinements. */
+@media (max-width: 1199.98px) {
+    .vov-section {
+        padding-block: clamp(5.5rem, 9vw, 8rem);
+    }
+
+    .vov-footer-grid {
+        gap: 2.25rem;
+    }
+
+    .vov-footer-conversation > a {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Tablet: use the available viewport and collapse sticky two-column content. */
+@media (max-width: 991.98px) {
+    .vov-container,
+    .vov-nav-inner {
+        max-width: none;
+    }
+
+    .vov-hero-grid,
+    .vov-why-story,
+    .vov-about-identity__grid,
+    .vov-contact-grid,
+    .vov-faq-grid,
+    .vov-capability-layout {
+        min-width: 0;
+    }
+
+    .vov-hero-visual,
+    .vov-product-demo,
+    .vov-flow-card,
+    .vov-ui-window {
+        margin-inline: auto;
+    }
+
+    .vov-capability-evidence,
+    .vov-contact-copy,
+    .vov-why-intro,
+    .vov-why-preview,
+    .vov-faq-intro {
+        position: static;
+        top: auto;
+    }
+
+    .vov-showcase-tabs {
+        scrollbar-color: #b8c8d4 transparent;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-inline: contain;
+    }
+
+    .vov-showcase-tab {
+        flex: 0 0 auto;
+    }
+
+    .vov-footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .vov-footer-brand,
+    .vov-footer-conversation {
+        grid-column: 1 / -1;
+    }
+
+    .vov-about-cta__inner > div,
+    .vov-about-approach__lead > * {
+        min-width: 0;
+    }
+
+    .vov-solutions-page {
+        padding-top: clamp(4rem, 8vw, 6rem);
+    }
+}
+
+/* Portrait tablet and large phones. */
+@media (max-width: 767.98px) {
+    .vov-section {
+        padding-block: clamp(4.5rem, 12vw, 5.5rem);
+    }
+
+    .vov-kicker,
+    .vov-section-pill {
+        letter-spacing: 0.12em;
+    }
+
+    .vov-hero-grid {
+        gap: 3.5rem;
+    }
+
+    .vov-hero-proof span:not(:last-child)::after {
+        margin-inline: 0.65rem;
+    }
+
+    /* Content determines preview height; desktop minimums create large blanks. */
+    .vov-showcase-preview,
+    .vov-showcase-panel,
+    .vov-showcase-panel.vov-image-panel,
+    .vov-process-preview,
+    .vov-process-panel,
+    .vov-process-panel.vov-image-panel {
+        min-height: 0;
+    }
+
+    .vov-showcase-tab {
+        width: 78vw;
+        max-width: 270px;
+        min-width: 0;
+    }
+
+    .vov-showcase-panel:not(.vov-image-panel),
+    .vov-process-panel:not(.vov-image-panel) {
+        padding: clamp(1rem, 4vw, 1.4rem);
+    }
+
+    .vov-preview-header > span {
+        white-space: normal;
+    }
+
+    .vov-why-flow {
+        flex-wrap: wrap;
+    }
+
+    .vov-industry-card,
+    .vov-solution-crm,
+    .vov-solution-sales,
+    .vov-solution-stock,
+    .vov-solution-finance,
+    .vov-solution-people,
+    .vov-solution-reporting {
+        min-height: 0;
+    }
+
+    .vov-form-submit .vov-button,
+    .vov-about-cta__inner > .vov-button {
+        max-width: 100%;
+    }
+
+    .vov-about-hero h1,
+    .vov-blog-hero h1,
+    .vov-solutions-page__heading h1 {
+        font-size: clamp(2.55rem, 11vw, 4.25rem);
+    }
+
+    .vov-about-hero__foot a,
+    .vov-why-more {
+        white-space: normal;
+    }
+
+    .vov-blog-empty__actions {
+        align-items: flex-start;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .vov-solutions-page__item-inner {
+        gap: 0.8rem;
+        grid-template-columns: 30px minmax(0, 1fr);
+    }
+
+    .vov-solutions-page__cta {
+        padding: 1.5rem;
+    }
+
+    /* Odoo portal tables stay available by horizontal scrolling. */
+    .o_portal_wrap .table-responsive,
+    .o_portal_wrap .o_portal_my_doc_table {
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Phones: replace dense diagrams with readable vertical flows. */
+@media (max-width: 575.98px) {
+    .vov-mobile-menu-inner {
+        width: calc(100% - 28px);
+    }
+
+    .vov-mobile-menu a:not(.vov-button),
+    .vov-mobile-solutions-toggle,
+    .vov-mobile-services summary {
+        min-height: 48px;
+    }
+
+    .vov-hero {
+        padding-top: 3rem;
+    }
+
+    .vov-hero-proof {
+        align-items: flex-start;
+        gap: 0.55rem;
+        flex-direction: column;
+    }
+
+    .vov-hero-proof span:not(:last-child)::after {
+        display: none;
+    }
+
+    .vov-flow-board {
+        display: grid;
+        min-height: 0;
+        padding: 1rem;
+        gap: 0.75rem;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .vov-flow-lines {
+        display: none;
+    }
+
+    .vov-flow-node,
+    .vov-flow-core {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+        min-height: 72px;
+        transform: none;
+    }
+
+    .vov-flow-node.is-active {
+        transform: none;
+    }
+
+    .vov-flow-core {
+        order: -1;
+        padding: 1rem;
+    }
+
+    .vov-flow-core::before {
+        inset: -5px;
+    }
+
+    .vov-why-flow i {
+        flex: 0 0 8px;
+    }
+
+    .vov-why-flow span {
+        white-space: normal;
+    }
+
+    .vov-footer-grid {
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+
+    .vov-footer-brand,
+    .vov-footer-conversation {
+        grid-column: auto;
+    }
+
+    .vov-footer-conversation > a,
+    .vov-final-cta .vov-button,
+    .vov-about-cta__inner > .vov-button,
+    .vov-form-submit .vov-button,
+    .vov-solutions-page__cta .vov-button {
+        width: 100%;
+    }
+
+    .vov-accordion .accordion-button {
+        padding-right: 0.25rem;
+        padding-left: 0;
+    }
+
+    .vov-accordion .accordion-body {
+        padding-right: 0;
+    }
+
+    .vov-blog-empty {
+        min-height: 0;
+        padding: 1.5rem;
+    }
+
+    .vov-solutions-page__item-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .vov-solutions-page__item-number {
+        padding-top: 0;
+    }
+
+    .o_portal_wrap .card-body {
+        padding: 1.25rem !important;
+    }
+
+    .o_portal_wrap dl.row dt:not(:first-child) {
+        margin-top: 0.65rem;
+    }
+
+    .o_portal_wrap .table > :not(caption) > * > * {
+        min-width: 7.5rem;
+        white-space: normal;
+    }
+
+    /* The contact sheet must remain usable on short phones and safe areas. */
+    .vov-cw-launcher {
+        right: 16px;
+        bottom: 16px;
+        right: calc(16px + env(safe-area-inset-right, 0px));
+        bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .vov-cw-panel {
+        max-height: calc(100dvh - env(safe-area-inset-top));
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .vov-cw-panel-inner {
+        max-height: inherit;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+    }
+}
+
+/* Compact phones, browser zoom, and long translated labels. */
+@media (max-width: 399.98px) {
+    .vov-container,
+    .vov-nav-inner,
+    .vov-mobile-menu-inner {
+        width: calc(100% - 24px);
+    }
+
+    .vov-logo-lockup {
+        width: 146px;
+        height: 40px;
+    }
+
+    .vov-hero h1,
+    .vov-about-hero h1,
+    .vov-blog-hero h1,
+    .vov-solutions-page__heading h1 {
+        font-size: clamp(2rem, 10.5vw, 2.5rem);
+    }
+
+    .vov-section-heading h2,
+    .vov-why h2,
+    .vov-faq h2,
+    .vov-contact h2,
+    .vov-final-cta h2 {
+        font-size: clamp(2rem, 11vw, 2.7rem);
+    }
+
+    .vov-button {
+        padding-inline: 1rem;
+        gap: 0.7rem;
+    }
+
+    .vov-why-step {
+        padding-inline: 0.45rem;
+        grid-template-columns: 22px minmax(0, 1fr);
+    }
+
+    .vov-why-step__arrow {
+        display: none;
+    }
+
+    .vov-cw-header,
+    .vov-cw-row,
+    .vov-cw-form {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+}
+
+/* Avoid hover-only enlargement on touch screens. */
+@media (hover: none), (pointer: coarse) {
+    .vov-hero-visual:hover img {
+        filter: drop-shadow(0 26px 30px rgba(31, 58, 77, 0.18));
+        transform: translateY(-6px) scale(1);
+    }
+
+    .vov-menu-toggle,
+    .vov-cw-close,
+    .vov-cw-back {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* Short landscape screens still need scrollable navigation and contact UI. */
+@media (max-width: 991.98px) and (max-height: 540px) {
+    .vov-mobile-menu {
+        max-height: calc(100dvh - 64px);
+    }
+
+    .vov-cw-panel {
+        max-height: 100dvh;
+    }
+}

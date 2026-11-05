@@ -23,23 +23,21 @@
                 <nav class="vov-nav" aria-label="Main navigation">
                     <div class="vov-nav-inner">
                         <a class="vov-wordmark" href="/" aria-label="Vorevia Technologies home">
-                            <span class="vov-logo-part vov-logo-symbol" aria-hidden="true">
-                                <img src="/website_vorevia/static/src/img/logo1.webp" alt=""
-                                     width="300" height="300" loading="eager" fetchpriority="high"/>
-                            </span>
-                            <span class="vov-logo-part vov-logo-type" aria-hidden="true">
-                                <img src="/website_vorevia/static/src/img/logo2.webp" alt=""
-                                     width="300" height="300" loading="eager" fetchpriority="high"/>
+                            <span class="vov-logo-lockup" aria-hidden="true">
+                                <img src="/website_vorevia/static/src/img/logo.webp" alt=""
+                                     width="1200" height="600" loading="eager" fetchpriority="high"/>
                             </span>
                         </a>
                         <div class="vov-nav-links" aria-label="Desktop navigation">
                             <a href="/">Home</a>
                             <a class="vov-nav-solutions" href="/solutions" data-mega-trigger="solutions" aria-controls="vovSolutionsMenu" aria-expanded="false">Solutions <span class="vov-mega-arrow" aria-hidden="true">▾</span></a>
                             <a class="vov-nav-services" href="/#services" data-mega-trigger="services" aria-controls="vovServicesMenu" aria-expanded="false">Services <span class="vov-mega-arrow" aria-hidden="true">▾</span></a>
-                            <a href="/#why-vorevia">About</a>
+                            <a href="/about">About</a>
                             <a href="/blog">Blogs</a>
                             <a href="/#consultation">Contact</a>
                         </div>
+                        <a t-if="request.env.user._is_public()" class="vov-nav-signin" href="/web/login">Sign in</a>
+                        <a t-else="" class="vov-nav-signin" href="/my">My account</a>
                         <a class="vov-nav-cta vov-nav-cta--noise" href="/#consultation">
                             <div class="blob1" aria-hidden="true"/>
                             <div class="blob2" aria-hidden="true"/>
@@ -50,6 +48,7 @@
                             <span/><span/>
                         </button>
                     </div>
+                    <div class="top_menu d-none" hidden="hidden" aria-hidden="true"></div>
                     <!-- Solutions Mega Menu Panel (desktop) -->
                     <div id="vovSolutionsMenu" class="vov-mega-panel vov-mega-panel--solutions" data-mega-panel="solutions" hidden="hidden" role="region" aria-label="Solutions menu">
                         <section class="v-solutions-mega" aria-label="Solutions menu">
@@ -215,7 +214,9 @@
                                     <a href="/#services">Explore all services ↗</a>
                                 </div>
                             </div>
-                            <a href="/#why-vorevia">About</a><a href="/blog">Blogs</a><a href="/#consultation">Contact</a>
+                            <a href="/about">About</a><a href="/blog">Blogs</a><a href="/#consultation">Contact</a>
+                            <a t-if="request.env.user._is_public()" href="/web/login">Sign in</a>
+                            <a t-else="" href="/my">My account</a>
                             <a class="vov-button vov-button-primary" href="/#consultation">Let's Talk</a>
                         </div>
                     </div>
@@ -232,19 +233,15 @@
                         <div class="vov-container vov-footer-grid">
                             <div class="vov-footer-brand">
                                 <a class="vov-wordmark" href="/" aria-label="Vorevia Technologies home">
-                                    <span class="vov-logo-part vov-logo-symbol" aria-hidden="true">
-                                        <img src="/website_vorevia/static/src/img/logo1.webp" alt=""
-                                             width="300" height="300" loading="lazy"/>
-                                    </span>
-                                    <span class="vov-logo-part vov-logo-type" aria-hidden="true">
-                                        <img src="/website_vorevia/static/src/img/logo2.webp" alt=""
-                                             width="300" height="300" loading="lazy"/>
+                                    <span class="vov-logo-lockup" aria-hidden="true">
+                                        <img src="/website_vorevia/static/src/img/logo.webp" alt=""
+                                             width="1200" height="600" loading="lazy"/>
                                     </span>
                                 </a>
                                 <p>Odoo implementation and customization for connected sales, inventory, delivery and finance workflows.</p>
                             </div>
                             <div class="vov-footer-links"><h2>Explore</h2><a href="/#solutions">Solutions</a><a href="/#services">Services</a><a href="/#process">Our process</a></div>
-                            <div class="vov-footer-links"><h2>Company</h2><a href="/#why-vorevia">About Vorevia</a><a href="/#faq">FAQ</a><a href="/#consultation">Contact</a></div>
+                            <div class="vov-footer-links"><h2>Company</h2><a href="/about">About Vorevia</a><a href="/#faq">FAQ</a><a href="/#consultation">Contact</a></div>
                             <div class="vov-footer-conversation">
                                 <p class="vov-kicker">START A CONVERSATION</p>
                                 <a href="/#consultation">Tell us where work gets stuck <i class="fa fa-arrow-right" aria-hidden="true"/></a>
@@ -254,12 +251,9 @@
                     <div class="vov-footer-bottom"><div class="vov-container"><span>Copyright © Vorevia Technologies. All rights reserved.</span><span>Built for connected operations.</span></div></div>
                     <div class="vov-brand-reveal" data-vov-brand-reveal="" aria-hidden="true">
                         <div class="vov-brand-reveal__lockup">
-                            <span class="vov-brand-reveal__mark">
-                                <img src="/website_vorevia/static/src/img/logo1.webp" alt="" width="300" height="300" loading="lazy"/>
-                            </span>
-                            <span class="vov-brand-reveal__wordmark">
-                                <img src="/website_vorevia/static/src/img/logo2.webp" alt="" width="300" height="300" loading="lazy"/>
-                            </span>
+                            <img class="vov-brand-reveal__logo"
+                                 src="/website_vorevia/static/src/img/vorevia_technologies.webp"
+                                 alt="" width="3638" height="1313" loading="lazy"/>
                         </div>
                     </div>
                     <div class="vov-brand-reveal__spacer" aria-hidden="true"/>
@@ -355,9 +349,9 @@
                 <section class="vov-hero s_text_block" data-snippet="s_text_block" data-name="Vorevia Hero">
                     <div class="vov-container vov-hero-grid">
                         <div class="vov-hero-copy">
-                            <p class="vov-kicker">ODOO ERP <span>|</span> CONNECTED WORKFLOWS <span>|</span> PRACTICAL DELIVERY</p>
-                            <h1>From customer order to invoice.<br/><span>Keep every team in sync.</span></h1>
-                            <p class="vov-hero-lead">When sales, stock, delivery and billing sit in separate tools, the same work gets repeated. Vorevia configures and extends Odoo around the handoffs your business needs to run.</p>
+                            <p class="vov-kicker">ODOO ERP <span>|</span> DIGITAL TRANSFORMATION</p>
+                            <h1>Start your digital<br/><span>transformation.</span></h1>
+                            <p class="vov-hero-lead">Turn disconnected sales, stock, delivery and billing work into a connected operating flow. Vorevia configures and extends Odoo around the handoffs your teams actually use.</p>
                             <div class="vov-actions">
                                 <a class="vov-button vov-button-primary" href="#consultation">Discuss Your Workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a>
                                 <a class="vov-button vov-button-secondary" href="#workflow">See the Connected Flow <i class="fa fa-arrow-down" aria-hidden="true"/></a>
@@ -407,14 +401,10 @@
                             </div>
                             <div class="vov-capability-evidence">
                                 <div class="vov-ui-window">
-                                    <div class="vov-ui-toolbar"><span/><span/><span/><b>Vorevia delivery workspace</b></div>
-                                    <div class="vov-delivery-summary"><div><small>WORKFLOW COVERAGE</small><strong>Connected from lead to ledger</strong></div><span>5 workstreams</span></div>
-                                    <div class="vov-delivery-track">
-                                        <article><i class="fa fa-search" aria-hidden="true"/><span><b>Discover</b><small>Process mapped</small></span><em>Complete</em></article>
-                                        <article><i class="fa fa-sliders" aria-hidden="true"/><span><b>Configure</b><small>Core modules aligned</small></span><em>In progress</em></article>
-                                        <article><i class="fa fa-exchange" aria-hidden="true"/><span><b>Integrate</b><small>Data pathways defined</small></span><em>Planned</em></article>
-                                        <article><i class="fa fa-users" aria-hidden="true"/><span><b>Adopt</b><small>Role-based training</small></span><em>Planned</em></article>
-                                    </div>
+                                    <picture class="vov-workspace-image">
+                                        <source media="(max-width: 575px)" srcset="/website_vorevia/static/src/img/workspaces/delivery-workspace-mobile.svg" width="400" height="500"/>
+                                        <img src="/website_vorevia/static/src/img/workspaces/delivery-workspace.svg" width="620" height="465" alt="Illustrative Vorevia delivery workspace showing discovery, configuration, integration and adoption stages" loading="eager" decoding="async"/>
+                                    </picture>
                                 </div>
                                 <p class="vov-illustration-note">Illustrative project workspace · sample content</p>
                             </div>
@@ -424,40 +414,45 @@
 
                 <section id="solutions" class="vov-showcase-section vov-section s_text_block" data-snippet="s_text_block" data-name="Interactive Odoo Showcase" data-anchor="true">
                     <div class="vov-container">
-                        <div class="vov-section-heading vov-section-heading-center"><p class="vov-kicker">SEE THE HANDOFFS</p><h2>What each team needs to see.</h2><p>Explore an illustrative Odoo workspace for sales, stock, finance and people. The views show how information can stay connected as work moves forward.</p></div>
+                        <div class="vov-section-heading vov-section-heading-center"><p class="vov-kicker">SEE THE HANDOFFS</p><h2>What each team needs to see.</h2><p>Explore an illustrative Odoo workspace for sales, stock, manufacturing, finance and people. The views show how information can stay connected as work moves forward.</p></div>
                         <div class="vov-showcase" data-vov-showcase="true">
                             <div class="vov-showcase-tabs" role="tablist" aria-label="Odoo business functions">
                                 <button id="vov-tab-sales" class="vov-showcase-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="vov-panel-sales" tabindex="0" data-showcase-target="sales"><i class="fa fa-handshake-o" aria-hidden="true"/><span><strong>Sales and CRM</strong><small>Opportunity to order</small></span><em>01</em></button>
                                 <button id="vov-tab-inventory" class="vov-showcase-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-panel-inventory" tabindex="-1" data-showcase-target="inventory"><i class="fa fa-cubes" aria-hidden="true"/><span><strong>Inventory and Operations</strong><small>Demand to movement</small></span><em>02</em></button>
-                                <button id="vov-tab-accounting" class="vov-showcase-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-panel-accounting" tabindex="-1" data-showcase-target="accounting"><i class="fa fa-calculator" aria-hidden="true"/><span><strong>Accounting and Finance</strong><small>Transaction to ledger</small></span><em>03</em></button>
-                                <button id="vov-tab-hr" class="vov-showcase-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-panel-hr" tabindex="-1" data-showcase-target="hr"><i class="fa fa-users" aria-hidden="true"/><span><strong>Human Resources</strong><small>People to planning</small></span><em>04</em></button>
+                                <button id="vov-tab-manufacturing" class="vov-showcase-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-panel-manufacturing" tabindex="-1" data-showcase-target="manufacturing"><i class="fa fa-cogs" aria-hidden="true"/><span><strong>Manufacturing</strong><small>Materials to finished goods</small></span><em>03</em></button>
+                                <button id="vov-tab-accounting" class="vov-showcase-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-panel-accounting" tabindex="-1" data-showcase-target="accounting"><i class="fa fa-calculator" aria-hidden="true"/><span><strong>Accounting and Finance</strong><small>Transaction to ledger</small></span><em>04</em></button>
+                                <button id="vov-tab-hr" class="vov-showcase-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-panel-hr" tabindex="-1" data-showcase-target="hr"><i class="fa fa-users" aria-hidden="true"/><span><strong>Human Resources</strong><small>People to planning</small></span><em>05</em></button>
                             </div>
                             <div class="vov-showcase-preview">
-                                <div id="vov-panel-sales" class="vov-showcase-panel is-active" role="tabpanel" aria-labelledby="vov-tab-sales" data-showcase-panel="sales">
-                                    <div class="vov-preview-header"><div><small>SALES WORKSPACE</small><h3>Opportunity → Quotation → Order</h3></div><span>Illustrative data</span></div>
-                                    <div class="vov-sales-summary"><article><small>OPEN PIPELINE</small><strong>12 opportunities</strong><span>Across 3 stages</span></article><article><small>NEXT ACTION</small><strong>Review quotation</strong><span>Today, 2:30 PM</span></article></div>
-                                    <div class="vov-kanban">
-                                        <div class="vov-kanban-column"><header><b>Qualified</b><span>3</span></header><article><small>Northwind Retail</small><b>ERP rollout</b><em>Discovery complete</em></article></div>
-                                        <div class="vov-kanban-column is-focus"><header><b>Quotation</b><span>2</span></header><article><small>Summit Foods</small><b>Operations suite</b><em>Quotation ready</em></article></div>
-                                        <div class="vov-kanban-column"><header><b>Won</b><span>7</span></header><article><small>Atlas Services</small><b>Support workflow</b><em>Order confirmed</em></article></div>
-                                    </div>
+                                <div id="vov-panel-sales" class="vov-showcase-panel vov-image-panel is-active" role="tabpanel" aria-labelledby="vov-tab-sales" data-showcase-panel="sales">
+                                    <picture class="vov-workspace-image">
+                                        <source media="(max-width: 575px)" srcset="/website_vorevia/static/src/img/workspaces/showcase-sales-mobile.svg" width="400" height="620"/>
+                                        <img src="/website_vorevia/static/src/img/workspaces/showcase-sales.svg" width="800" height="570" alt="Illustrative sales workspace showing opportunity, quotation and order stages" loading="eager" decoding="async"/>
+                                    </picture>
                                 </div>
-                                <div id="vov-panel-inventory" class="vov-showcase-panel" role="tabpanel" aria-labelledby="vov-tab-inventory" data-showcase-panel="inventory" hidden="hidden">
-                                    <div class="vov-preview-header"><div><small>INVENTORY WORKSPACE</small><h3>Confirmed demand becomes stock movement</h3></div><span>Illustrative data</span></div>
-                                    <div class="vov-stock-route"><article><i class="fa fa-shopping-cart" aria-hidden="true"/><span><small>SALES ORDER</small><b>SO-1042</b></span></article><i class="fa fa-long-arrow-right" aria-hidden="true"/><article class="is-current"><i class="fa fa-cubes" aria-hidden="true"/><span><small>RESERVATION</small><b>2 units ready</b></span></article><i class="fa fa-long-arrow-right" aria-hidden="true"/><article><i class="fa fa-truck" aria-hidden="true"/><span><small>DELIVERY</small><b>Waiting</b></span></article></div>
-                                    <div class="vov-stock-table"><header><span>Product</span><span>On hand</span><span>Reserved</span><span>Status</span></header><div><span><b>Assembly A</b><small>Main warehouse</small></span><span>18</span><span>2</span><em>Available</em></div><div><span><b>Component B</b><small>Main warehouse</small></span><span>42</span><span>6</span><em>Available</em></div><div><span><b>Kit C</b><small>Secondary stock</small></span><span>7</span><span>4</span><em class="is-low">Review</em></div></div>
+                                <div id="vov-panel-inventory" class="vov-showcase-panel vov-image-panel" role="tabpanel" aria-labelledby="vov-tab-inventory" data-showcase-panel="inventory" hidden="hidden">
+                                    <picture class="vov-workspace-image">
+                                        <source media="(max-width: 575px)" srcset="/website_vorevia/static/src/img/workspaces/showcase-inventory-mobile.svg" width="400" height="620"/>
+                                        <img src="/website_vorevia/static/src/img/workspaces/showcase-inventory.svg" width="800" height="570" alt="Illustrative inventory workspace showing sales order, reservation, delivery and stock availability" loading="eager" decoding="async"/>
+                                    </picture>
                                 </div>
-                                <div id="vov-panel-accounting" class="vov-showcase-panel" role="tabpanel" aria-labelledby="vov-tab-accounting" data-showcase-panel="accounting" hidden="hidden">
-                                    <div class="vov-preview-header"><div><small>ACCOUNTING WORKSPACE</small><h3>Operational activity creates financial context</h3></div><span>Illustrative data</span></div>
-                                    <div class="vov-finance-grid">
-                                        <article class="vov-invoice-card"><header><span><small>DRAFT INVOICE</small><b>INV/2026/1042</b></span><em>Draft</em></header><div><span>Related order</span><b>SO-1042</b></div><div><span>Invoice basis</span><b>Delivered items</b></div><div class="vov-invoice-total"><span>Total</span><strong>Ready for review</strong></div></article>
-                                        <article class="vov-ledger-card"><small>TRANSACTION PATH</small><div><span>Sales</span><i/><b>Confirmed</b></div><div><span>Delivery</span><i/><b>Recorded</b></div><div><span>Receivable</span><i/><b>Prepared</b></div><p>Each entry keeps its operational source attached.</p></article>
-                                    </div>
+                                <div id="vov-panel-manufacturing" class="vov-showcase-panel vov-image-panel" role="tabpanel" aria-labelledby="vov-tab-manufacturing" data-showcase-panel="manufacturing" hidden="hidden">
+                                    <picture class="vov-workspace-image">
+                                        <source media="(max-width: 575px)" srcset="/website_vorevia/static/src/img/workspaces/showcase-manufacturing-mobile.svg" width="400" height="620"/>
+                                        <img src="/website_vorevia/static/src/img/workspaces/showcase-manufacturing.svg" width="800" height="570" alt="Illustrative manufacturing workspace showing demand, production, quality and finished goods" loading="eager" decoding="async"/>
+                                    </picture>
                                 </div>
-                                <div id="vov-panel-hr" class="vov-showcase-panel" role="tabpanel" aria-labelledby="vov-tab-hr" data-showcase-panel="hr" hidden="hidden">
-                                    <div class="vov-preview-header"><div><small>PEOPLE WORKSPACE</small><h3>Employee planning in one clear view</h3></div><span>Illustrative data</span></div>
-                                    <div class="vov-people-summary"><article><small>TODAY</small><strong>Team availability</strong><span>12 active · 2 on leave</span></article><article><small>REQUESTS</small><strong>3 to review</strong><span>Leave and attendance</span></article></div>
-                                    <div class="vov-schedule"><header><b>Operations team</b><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></header><div><strong>Alex M.</strong><i/><i/><i/><i/><i class="is-leave"/></div><div><strong>Sara K.</strong><i/><i/><i/><i class="is-leave"/><i class="is-leave"/></div><div><strong>Ravi P.</strong><i/><i/><i/><i/><i/></div></div>
+                                <div id="vov-panel-accounting" class="vov-showcase-panel vov-image-panel" role="tabpanel" aria-labelledby="vov-tab-accounting" data-showcase-panel="accounting" hidden="hidden">
+                                    <picture class="vov-workspace-image">
+                                        <source media="(max-width: 575px)" srcset="/website_vorevia/static/src/img/workspaces/showcase-accounting-mobile.svg" width="400" height="620"/>
+                                        <img src="/website_vorevia/static/src/img/workspaces/showcase-accounting.svg" width="800" height="570" alt="Illustrative accounting workspace showing an invoice connected to its sale and delivery" loading="eager" decoding="async"/>
+                                    </picture>
+                                </div>
+                                <div id="vov-panel-hr" class="vov-showcase-panel vov-image-panel" role="tabpanel" aria-labelledby="vov-tab-hr" data-showcase-panel="hr" hidden="hidden">
+                                    <picture class="vov-workspace-image">
+                                        <source media="(max-width: 575px)" srcset="/website_vorevia/static/src/img/workspaces/showcase-hr-mobile.svg" width="400" height="620"/>
+                                        <img src="/website_vorevia/static/src/img/workspaces/showcase-hr.svg" width="800" height="570" alt="Illustrative people workspace showing team availability and scheduling" loading="eager" decoding="async"/>
+                                    </picture>
                                 </div>
                             </div>
                         </div>
@@ -476,30 +471,35 @@
                                 <button id="vov-process-tab-support" class="vov-process-step" type="button" role="tab" aria-selected="false" aria-controls="vov-process-panel-support" data-process-target="support"><span>05</span><div><h3>Support</h3><p>Resolve issues, refine workflows and plan useful improvements.</p></div></button>
                             </div>
                             <div class="vov-process-preview">
-                                <div id="vov-process-panel-discover" class="vov-process-panel is-active" role="tabpanel" aria-labelledby="vov-process-tab-discover" data-process-panel="discover">
-                                    <header><span>01 / DISCOVER</span><em>Process intelligence</em></header>
-                                    <div class="vov-discovery-map"><article><i class="fa fa-phone" aria-hidden="true"/><b>Customer request</b><small>Entry point</small></article><span>→</span><article class="is-primary"><i class="fa fa-random" aria-hidden="true"/><b>Current workflow</b><small>Mapped together</small></article><span>→</span><article><i class="fa fa-flag-checkered" aria-hidden="true"/><b>Clear priority</b><small>Defined outcome</small></article></div>
-                                    <div class="vov-process-insight"><i class="fa fa-lightbulb-o" aria-hidden="true"/><span><small>OUTPUT</small><b>A shared view of what the system must improve.</b></span></div>
+                                <div id="vov-process-panel-discover" class="vov-process-panel vov-image-panel is-active" role="tabpanel" aria-labelledby="vov-process-tab-discover" data-process-panel="discover">
+                                    <picture class="vov-workspace-image">
+                                        <source media="(max-width: 575px)" srcset="/website_vorevia/static/src/img/workspaces/process-discover-mobile.svg" width="400" height="560"/>
+                                        <img src="/website_vorevia/static/src/img/workspaces/process-discover.svg" width="700" height="500" alt="Discovery stage: customer request, current workflow, pain points and clear priority" loading="eager" decoding="async"/>
+                                    </picture>
                                 </div>
-                                <div id="vov-process-panel-configure" class="vov-process-panel" role="tabpanel" aria-labelledby="vov-process-tab-configure" data-process-panel="configure" hidden="hidden">
-                                    <header><span>02 / CONFIGURE</span><em>System design</em></header>
-                                    <div class="vov-config-grid"><article class="is-enabled"><i class="fa fa-handshake-o" aria-hidden="true"/><b>CRM</b><small>Stages aligned</small></article><article class="is-enabled"><i class="fa fa-cubes" aria-hidden="true"/><b>Inventory</b><small>Routes defined</small></article><article><i class="fa fa-file-text-o" aria-hidden="true"/><b>Accounting</b><small>Rules reviewed</small></article><article><i class="fa fa-users" aria-hidden="true"/><b>Access</b><small>Roles prepared</small></article></div>
-                                    <div class="vov-process-insight"><i class="fa fa-sliders" aria-hidden="true"/><span><small>OUTPUT</small><b>A configured workspace that reflects the approved process.</b></span></div>
+                                <div id="vov-process-panel-configure" class="vov-process-panel vov-image-panel" role="tabpanel" aria-labelledby="vov-process-tab-configure" data-process-panel="configure" hidden="hidden">
+                                    <picture class="vov-workspace-image">
+                                        <source media="(max-width: 575px)" srcset="/website_vorevia/static/src/img/workspaces/process-configure-mobile.svg" width="400" height="560"/>
+                                        <img src="/website_vorevia/static/src/img/workspaces/process-configure.svg" width="700" height="500" alt="Configuration stage: CRM, inventory, accounting and access rules" loading="eager" decoding="async"/>
+                                    </picture>
                                 </div>
-                                <div id="vov-process-panel-customize" class="vov-process-panel" role="tabpanel" aria-labelledby="vov-process-tab-customize" data-process-panel="customize" hidden="hidden">
-                                    <header><span>03 / CUSTOMIZE</span><em>Focused extension</em></header>
-                                    <div class="vov-config-grid"><article class="is-enabled"><i class="fa fa-code" aria-hidden="true"/><b>Workflow logic</b><small>Approved rules</small></article><article class="is-enabled"><i class="fa fa-check-square-o" aria-hidden="true"/><b>Approvals</b><small>Clear ownership</small></article><article><i class="fa fa-exchange" aria-hidden="true"/><b>Integration</b><small>Required systems</small></article><article><i class="fa fa-file-o" aria-hidden="true"/><b>Documents</b><small>Business formats</small></article></div>
-                                    <div class="vov-process-insight"><i class="fa fa-wrench" aria-hidden="true"/><span><small>OUTPUT</small><b>Only the custom behavior needed for the agreed operating model.</b></span></div>
+                                <div id="vov-process-panel-customize" class="vov-process-panel vov-image-panel" role="tabpanel" aria-labelledby="vov-process-tab-customize" data-process-panel="customize" hidden="hidden">
+                                    <picture class="vov-workspace-image">
+                                        <source media="(max-width: 575px)" srcset="/website_vorevia/static/src/img/workspaces/process-customize-mobile.svg" width="400" height="560"/>
+                                        <img src="/website_vorevia/static/src/img/workspaces/process-customize.svg" width="700" height="500" alt="Customization stage: workflow logic, approvals, integrations and documents" loading="eager" decoding="async"/>
+                                    </picture>
                                 </div>
-                                <div id="vov-process-panel-deploy" class="vov-process-panel" role="tabpanel" aria-labelledby="vov-process-tab-deploy" data-process-panel="deploy" hidden="hidden">
-                                    <header><span>04 / DEPLOY</span><em>Go-live readiness</em></header>
-                                    <div class="vov-process-checklist"><article><i class="fa fa-check" aria-hidden="true"/><span><b>Validated data</b><small>Reviewed before migration</small></span></article><article><i class="fa fa-check" aria-hidden="true"/><span><b>Role-based training</b><small>Prepared for each team</small></span></article><article><i class="fa fa-check" aria-hidden="true"/><span><b>Go-live plan</b><small>Owners and fallback agreed</small></span></article></div>
-                                    <div class="vov-process-insight"><i class="fa fa-rocket" aria-hidden="true"/><span><small>OUTPUT</small><b>A controlled deployment with teams ready to work.</b></span></div>
+                                <div id="vov-process-panel-deploy" class="vov-process-panel vov-image-panel" role="tabpanel" aria-labelledby="vov-process-tab-deploy" data-process-panel="deploy" hidden="hidden">
+                                    <picture class="vov-workspace-image">
+                                        <source media="(max-width: 575px)" srcset="/website_vorevia/static/src/img/workspaces/process-deploy-mobile.svg" width="400" height="560"/>
+                                        <img src="/website_vorevia/static/src/img/workspaces/process-deploy.svg" width="700" height="500" alt="Deployment stage: validated data, training, go-live plan and handover" loading="eager" decoding="async"/>
+                                    </picture>
                                 </div>
-                                <div id="vov-process-panel-support" class="vov-process-panel" role="tabpanel" aria-labelledby="vov-process-tab-support" data-process-panel="support" hidden="hidden">
-                                    <header><span>05 / SUPPORT</span><em>Continuous improvement</em></header>
-                                    <div class="vov-process-checklist"><article><i class="fa fa-life-ring" aria-hidden="true"/><span><b>Issue support</b><small>Clear route for operational questions</small></span></article><article><i class="fa fa-sliders" aria-hidden="true"/><span><b>Workflow refinement</b><small>Changes based on real use</small></span></article><article><i class="fa fa-map-o" aria-hidden="true"/><span><b>Improvement roadmap</b><small>Prioritized next steps</small></span></article></div>
-                                    <div class="vov-process-insight"><i class="fa fa-refresh" aria-hidden="true"/><span><small>OUTPUT</small><b>A system that continues to fit as the business evolves.</b></span></div>
+                                <div id="vov-process-panel-support" class="vov-process-panel vov-image-panel" role="tabpanel" aria-labelledby="vov-process-tab-support" data-process-panel="support" hidden="hidden">
+                                    <picture class="vov-workspace-image">
+                                        <source media="(max-width: 575px)" srcset="/website_vorevia/static/src/img/workspaces/process-support-mobile.svg" width="400" height="560"/>
+                                        <img src="/website_vorevia/static/src/img/workspaces/process-support.svg" width="700" height="500" alt="Support stage: issue support, workflow refinement, user guidance and improvement roadmap" loading="eager" decoding="async"/>
+                                    </picture>
                                 </div>
                             </div>
                         </div>
@@ -520,11 +520,42 @@
 
                 <section id="why-vorevia" class="vov-why vov-section s_text_block" data-snippet="s_text_block" data-name="Why Vorevia" data-anchor="true">
                     <div class="vov-container">
-                        <div class="vov-why-grid">
-                            <div class="vov-why-intro"><p class="vov-kicker">WHY VOREVIA</p><h2>Built around operating reality—not a generic software checklist.</h2><p>Our focus is a usable Odoo system: connected processes, practical delivery and room to evolve as your business changes.</p><a class="vov-text-link" href="#consultation">Discuss your workflow <span aria-hidden="true">↗</span></a></div>
-                            <div class="vov-value-list"><article><span>01</span><div><h3>Tailored Odoo workflows</h3><p>Configuration and development aligned to the process teams need to run.</p></div></article><article><span>02</span><div><h3>Connected business processes</h3><p>Shared context between customer, operational and financial work.</p></div></article><article><span>03</span><div><h3>Practical implementation support</h3><p>Clear stages, usable training and support through adoption.</p></div></article><article><span>04</span><div><h3>Long-term adaptability</h3><p>A system that can be refined as roles, workflows and priorities change.</p></div></article></div>
+                        <div class="vov-why-lead">
+                            <p class="vov-kicker">WHY VOREVIA</p>
+                            <h2>Technology should fit your business.<br/><span>Not the other way around.</span></h2>
+                            <p>Every business operates differently. Vorevia implements and customizes connected ERP systems around the processes your team actually follows—reducing manual work, improving information flow, and making daily operations easier to manage.</p>
                         </div>
-                        <div class="vov-case-study-slot"><span>START WITH YOUR PROCESS</span><p>Where does information get lost today: taking orders, checking stock, preparing delivery or billing?</p><a href="#consultation">Plan a workflow review <span aria-hidden="true">↗</span></a></div>
+                        <div class="vov-why-story" data-vov-why-story="">
+                            <div class="vov-why-steps" role="tablist" aria-label="How Vorevia works">
+                                <button class="vov-why-step is-active" id="vov-why-tab-understand" type="button" role="tab" aria-controls="vov-why-panel-understand" aria-selected="true" data-vov-why-tab="understand">
+                                    <span class="vov-why-step__number">01</span><span class="vov-why-step__copy"><small>UNDERSTAND</small><strong>Start with the way you work</strong><span>We examine processes and priorities before recommending a system plan.</span></span><span class="vov-why-step__arrow" aria-hidden="true">↗</span>
+                                </button>
+                                <button class="vov-why-step" id="vov-why-tab-implement" type="button" role="tab" aria-controls="vov-why-panel-implement" aria-selected="false" tabindex="-1" data-vov-why-tab="implement">
+                                    <span class="vov-why-step__number">02</span><span class="vov-why-step__copy"><small>IMPLEMENT</small><strong>Make the system fit</strong><span>We configure useful workflows around real operational requirements.</span></span><span class="vov-why-step__arrow" aria-hidden="true">↗</span>
+                                </button>
+                                <button class="vov-why-step" id="vov-why-tab-connect" type="button" role="tab" aria-controls="vov-why-panel-connect" aria-selected="false" tabindex="-1" data-vov-why-tab="connect">
+                                    <span class="vov-why-step__number">03</span><span class="vov-why-step__copy"><small>CONNECT</small><strong>Bring work together</strong><span>We reduce disconnected information and repetitive handoffs.</span></span><span class="vov-why-step__arrow" aria-hidden="true">↗</span>
+                                </button>
+                                <button class="vov-why-step" id="vov-why-tab-evolve" type="button" role="tab" aria-controls="vov-why-panel-evolve" aria-selected="false" tabindex="-1" data-vov-why-tab="evolve">
+                                    <span class="vov-why-step__number">04</span><span class="vov-why-step__copy"><small>EVOLVE</small><strong>Build for what comes next</strong><span>We support adoption and refinement as business needs change.</span></span><span class="vov-why-step__arrow" aria-hidden="true">↗</span>
+                                </button>
+                            </div>
+                            <div class="vov-why-preview">
+                                <section class="vov-why-panel is-active" id="vov-why-panel-understand" role="tabpanel" aria-labelledby="vov-why-tab-understand" data-vov-why-panel="understand">
+                                    <p class="vov-why-panel__index">01 / UNDERSTAND</p><h3>Begin with a clear picture.</h3><p>We look at the steps people follow today, where information gets delayed, and what each team needs to decide. That shared picture sets the direction for the implementation.</p><div class="vov-why-flow" aria-hidden="true"><span>Current work</span><i/><span>Friction points</span><i/><span>Priorities</span></div>
+                                </section>
+                                <section class="vov-why-panel" id="vov-why-panel-implement" role="tabpanel" aria-labelledby="vov-why-tab-implement" data-vov-why-panel="implement" hidden="hidden">
+                                    <p class="vov-why-panel__index">02 / IMPLEMENT</p><h3>Shape the system around the work.</h3><p>We configure Odoo applications, roles, and approvals around the agreed process. Focused customization addresses gaps that standard behavior cannot cover.</p><div class="vov-why-flow" aria-hidden="true"><span>Requirements</span><i/><span>Configuration</span><i/><span>Usable flow</span></div>
+                                </section>
+                                <section class="vov-why-panel" id="vov-why-panel-connect" role="tabpanel" aria-labelledby="vov-why-tab-connect" data-vov-why-panel="connect" hidden="hidden">
+                                    <p class="vov-why-panel__index">03 / CONNECT</p><h3>Let information move with the work.</h3><p>Customer, inventory, delivery, and finance activity can share the right context. Teams spend less time repeating updates across disconnected tools.</p><div class="vov-why-flow" aria-hidden="true"><span>Orders</span><i/><span>Operations</span><i/><span>Visibility</span></div>
+                                </section>
+                                <section class="vov-why-panel" id="vov-why-panel-evolve" role="tabpanel" aria-labelledby="vov-why-tab-evolve" data-vov-why-panel="evolve" hidden="hidden">
+                                    <p class="vov-why-panel__index">04 / EVOLVE</p><h3>Keep improving after launch.</h3><p>Training, support, and measured changes help the system stay useful as responsibilities, volumes, and priorities change over time.</p><div class="vov-why-flow" aria-hidden="true"><span>Adoption</span><i/><span>Feedback</span><i/><span>Refinement</span></div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="vov-why-footer"><p>Have a workflow that needs a clearer path?</p><div><a class="vov-button vov-button-primary" href="#consultation">Discuss your workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a><a class="vov-why-more" href="/about">More about Vorevia <span aria-hidden="true">↗</span></a></div></div>
                     </div>
                 </section>
 
@@ -557,6 +588,8 @@
                                 <div class="vov-form-field s_website_form_field s_website_form_custom" data-type="char"><label for="vov_consultation_phone">Phone</label><input id="vov_consultation_phone" class="form-control s_website_form_input" type="tel" name="phone" autocomplete="tel"/></div>
                                 <div class="vov-form-field vov-form-field-wide s_website_form_field s_website_form_model_required" data-type="selection"><label for="vov_consultation_interest">What would you like to improve? *</label><select id="vov_consultation_interest" class="form-select s_website_form_input" name="interest" required="required"><option value="implementation">ERP implementation</option><option value="customization">Odoo customization</option><option value="integration">Integration or migration</option><option value="support">Training or support</option><option value="unsure">Not sure yet</option></select></div>
                                 <div class="vov-form-field vov-form-field-wide s_website_form_field s_website_form_custom s_website_form_required" data-type="text"><label for="vov_consultation_message">What is happening today? *</label><textarea id="vov_consultation_message" class="form-control s_website_form_input" name="description" rows="5" required="required" placeholder="Briefly describe the workflow, current system or recurring issue."/></div>
+                                <p t-if="request.env.user._is_public()" class="vov-form-note vov-form-field-wide"><a href="/web/login?redirect=%2F%23consultation">Sign in</a> before sending to track this request in My Account.</p>
+                                <p t-else="" class="vov-form-note vov-form-field-wide">This request will appear in <a href="/my/consultations">My Account</a> after you send it.</p>
                                 <div class="vov-form-submit vov-form-field-wide s_website_form_submit"><span id="s_website_form_result"/><a href="#" role="button" class="vov-button vov-button-primary s_website_form_send">Request Consultation <i class="fa fa-arrow-right" aria-hidden="true"/></a></div>
                             </div>
                         </form>

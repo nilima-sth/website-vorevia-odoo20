@@ -1,0 +1,11 @@
+/*
+ * Give the public site a little more breathing room without changing the
+ * deliberately spaced uppercase labels used throughout the interface.
+ */
+#wrap,
+.vov-site-header,
+.vov-site-footer,
+.vov-cw-panel,
+.vov-cw-launcher {
+    letter-spacing: 0.01em;
+}

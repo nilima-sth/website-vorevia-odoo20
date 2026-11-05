@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_my_home_consultations"
+              name="Consultation requests portal card"
+              inherit_id="portal.portal_my_home">
+        <div id="portal_common_category" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="icon" t-value="False"/>
+                <t t-set="title">Consultation requests</t>
+                <t t-set="text">Follow the requests you have sent to Vorevia</t>
+                <t t-set="url" t-value="'/my/consultations'"/>
+                <t t-set="placeholder_count" t-value="'consultation_count'"/>
+                <t t-set="config_card" t-value="True"/>
+            </t>
+        </div>
+    </template>
+
+    <template id="portal_breadcrumbs_consultations"
+              name="Consultation requests portal breadcrumbs"
+              inherit_id="portal.portal_breadcrumbs">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'consultations' or consultation"
+                t-attf-class="breadcrumb-item #{'active ' if not consultation else ''}">
+                <a t-if="consultation" t-attf-href="/my/consultations?{{ keep_query() }}">Consultation requests</a>
+                <t t-else="">Consultation requests</t>
+            </li>
+            <li t-if="consultation" class="breadcrumb-item active">
+                Request #<t t-out="consultation.id"/>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="portal_my_consultations" name="My Consultation Requests">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Consultation requests</t>
+            </t>
+
+            <div t-if="not consultations" class="alert alert-info" role="status">
+                <p class="mb-2">You do not have any consultation requests linked to this account yet.</p>
+                <p class="mb-0 small">Requests submitted while signed in appear here automatically.</p>
+                <a class="btn btn-primary btn-sm mt-3" href="/#consultation">Request a consultation</a>
+            </div>
+
+            <t t-else="" t-call="portal.portal_table">
+                <thead>
+                    <tr>
+                        <th>Request</th>
+                        <th>Submitted</th>
+                        <th>Area</th>
+                        <th class="text-end">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="consultations" t-as="consultation">
+                        <td>
+                            <a t-att-href="'/my/consultations/%s' % consultation.id">
+                                Request #<t t-out="consultation.id"/>
+                            </a>
+                        </td>
+                        <td><span t-field="consultation.create_date"/></td>
+                        <td><span t-field="consultation.interest"/></td>
+                        <td class="text-end">
+                            <span t-if="consultation.state == 'new'" class="badge text-bg-secondary"><span t-field="consultation.state"/></span>
+                            <span t-elif="consultation.state == 'contacted'" class="badge text-bg-primary"><span t-field="consultation.state"/></span>
+                            <span t-else="" class="badge text-bg-success"><span t-field="consultation.state"/></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_my_consultation" name="My Consultation Request">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Consultation request</t>
+            </t>
+
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+                        <div>
+                            <p class="text-muted mb-1">Consultation request</p>
+                            <h2 class="h4 mb-0">Request #<t t-out="consultation.id"/></h2>
+                        </div>
+                        <span t-if="consultation.state == 'new'" class="badge text-bg-secondary"><span t-field="consultation.state"/></span>
+                        <span t-elif="consultation.state == 'contacted'" class="badge text-bg-primary"><span t-field="consultation.state"/></span>
+                        <span t-else="" class="badge text-bg-success"><span t-field="consultation.state"/></span>
+                    </div>
+
+                    <dl class="row mb-0">
+                        <dt class="col-sm-4">Submitted</dt>
+                        <dd class="col-sm-8"><span t-field="consultation.create_date"/></dd>
+                        <dt class="col-sm-4">Area of interest</dt>
+                        <dd class="col-sm-8"><span t-field="consultation.interest"/></dd>
+                        <dt class="col-sm-4">Company</dt>
+                        <dd class="col-sm-8"><t t-out="consultation.company or 'Not provided'"/></dd>
+                        <dt class="col-sm-4">Email</dt>
+                        <dd class="col-sm-8"><t t-out="consultation.email"/></dd>
+                        <dt class="col-sm-4">Phone</dt>
+                        <dd class="col-sm-8"><t t-out="consultation.phone or 'Not provided'"/></dd>
+                    </dl>
+
+                    <hr class="my-4"/>
+                    <h3 class="h6">What you shared</h3>
+                    <div class="bg-light rounded p-3" style="white-space: pre-line;"><t t-out="consultation.description"/></div>
+                </div>
+            </div>
+
+            <a class="btn btn-link px-0 mt-3" href="/my/consultations">Back to consultation requests</a>
+        </t>
+    </template>
+</odoo>

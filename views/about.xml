@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="vorevia_about_page" name="About Vorevia Technologies">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure vov-about">
+                <section class="vov-about-hero" data-name="About Vorevia">
+                    <div class="vov-container">
+                        <p class="vov-kicker">ABOUT VOREVIA TECHNOLOGIES</p>
+                        <h1>Making connected operations <span>practical.</span></h1>
+                        <div class="vov-about-hero__foot">
+                            <p>Vorevia helps businesses shape Odoo ERP around the work their people do every day. We focus on clear processes, useful connections, and systems that can keep pace with change.</p>
+                            <a href="#our-approach">Explore our approach <span aria-hidden="true">↘</span></a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="who-we-are" class="vov-about-identity" data-name="Who We Are">
+                    <div class="vov-container vov-about-identity__grid">
+                        <div><p class="vov-kicker">WHO WE ARE</p><h2>Business context comes first.</h2></div>
+                        <div class="vov-about-identity__copy">
+                            <p>Vorevia Technologies is a Kathmandu-based technology company focused on Odoo ERP implementation and customization.</p>
+                            <p>We help teams examine how information moves through sales, purchasing, inventory, delivery, service, and finance. From there, we configure the right applications and build focused extensions where a standard setup needs a better fit.</p>
+                            <p>Our aim is a system people can use confidently: one that makes responsibilities clearer, reduces repetitive handoffs, and supports day-to-day decisions.</p>
+                            <div class="vov-about-capabilities" aria-label="What we work on"><span>Odoo implementation</span><span>Workflow customization</span><span>Connected operations</span><span>Adoption and support</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="our-approach" class="vov-about-approach" data-name="Our Approach">
+                    <div class="vov-container">
+                        <div class="vov-about-approach__lead"><div><p class="vov-kicker">OUR APPROACH</p><h2>From understanding to everyday use.</h2></div><p>Each stage answers a practical question before the next begins. The goal is an implementation your teams can understand, test, and improve.</p></div>
+                        <div class="vov-about-journey">
+                            <article><span>01 / DISCOVER</span><h3>Understand</h3><p>Listen to the people doing the work and clarify goals, friction, and priorities.</p></article>
+                            <article><span>02 / MAP</span><h3>Define the flow</h3><p>Trace the steps, information, and decisions that the system needs to support.</p></article>
+                            <article><span>03 / BUILD</span><h3>Implement</h3><p>Configure Odoo and add focused customization for agreed requirements.</p></article>
+                            <article><span>04 / VALIDATE</span><h3>Test and adopt</h3><p>Review real scenarios, prepare data, and help teams learn the new workflow.</p></article>
+                            <article><span>05 / IMPROVE</span><h3>Keep evolving</h3><p>Refine the system as use reveals new needs and the business changes.</p></article>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="our-principles" class="vov-about-principles" data-name="Our Principles">
+                    <div class="vov-container">
+                        <p class="vov-kicker">HOW WE THINK</p>
+                        <h2>Useful systems are built with care.</h2>
+                        <div class="vov-about-principles__grid">
+                            <article><h3>Practical fit</h3><p>Choose the workflow that supports the business, with customization only where it adds value.</p></article>
+                            <article><h3>Clear communication</h3><p>Make decisions and tradeoffs understandable to the people who will use the system.</p></article>
+                            <article><h3>Room to change</h3><p>Build a foundation that can be refined as responsibilities and priorities evolve.</p></article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="vov-about-cta" data-name="Start a Conversation">
+                    <div class="vov-container vov-about-cta__inner">
+                        <div><p class="vov-kicker">LET'S WORK TOGETHER</p><h2>Start with the process you want to improve.</h2><p>Tell us where work slows down or information gets lost. We can help identify a practical starting point.</p></div>
+                        <a class="vov-button vov-button-primary" href="/#consultation">Discuss your workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+    <record id="vorevia_about_page_record" model="website.page">
+        <field name="name">About Vorevia Technologies</field>
+        <field name="url">/about</field>
+        <field name="view_id" ref="vorevia_about_page"/>
+        <field name="is_published">True</field>
+    </record>
+</odoo>

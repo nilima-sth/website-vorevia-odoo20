@@ -361,10 +361,10 @@
                     .vov-nav-cta:focus-visible .inner {
                         filter: brightness(1.08);
                     }
-                    .vov-hero-grid { grid-template-columns: minmax(0, .95fr) minmax(480px, 1.05fr); }
-                    .vov-hero-visual { display: grid; min-height: 470px; align-items: center; justify-items: center; margin: 0; }
-                    .vov-hero-visual img { display: block; width: 600px; max-width: 100%; height: auto; image-rendering: auto; filter: drop-shadow(0 26px 30px rgba(31, 58, 77, .18)); transform: translateY(-6px) scale(1); transform-origin: center; transition: filter 280ms ease, transform 280ms cubic-bezier(.2, .75, .2, 1); will-change: transform; }
-                    .vov-hero-visual:hover img { filter: drop-shadow(0 42px 46px rgba(31, 58, 77, .28)); transform: translateY(-18px) scale(1.08); }
+                    .vov-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(420px, .9fr); }
+                    .vov-hero-visual { display: grid; min-height: 470px; align-items: center; justify-items: end; margin: 0; }
+                    .vov-hero-visual img { display: block; width: 540px; max-width: 100%; height: auto; image-rendering: auto; filter: drop-shadow(0 20px 28px rgba(31, 58, 77, .14)); transform: none; transform-origin: center; transition: filter 280ms ease, transform 280ms cubic-bezier(.2, .75, .2, 1); will-change: transform; }
+                    .vov-hero-visual:hover img { filter: drop-shadow(0 26px 34px rgba(31, 58, 77, .18)); transform: translateY(-4px) scale(1.01); }
                     @media (max-width: 1199.98px) { .vov-hero-grid { grid-template-columns: minmax(0, .9fr) minmax(400px, 1.1fr); } .vov-hero-visual { min-height: 400px; } }
                     @media (max-width: 991.98px) { .vov-hero-grid { grid-template-columns: 1fr; } .vov-hero-visual { width: 100%; max-width: 720px; min-height: 360px; } }
                     @media (max-width: 767.98px) { .vov-hero-visual { min-height: 320px; } }
@@ -599,12 +599,6 @@
                             <div class="accordion-item"><h3 class="accordion-header" id="vovFaqHeadingFive"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vovFaqFive" aria-expanded="false" aria-controls="vovFaqFive">What happens after implementation?</button></h3><div id="vovFaqFive" class="accordion-collapse collapse" aria-labelledby="vovFaqHeadingFive" data-bs-parent="#vovFaqAccordion"><div class="accordion-body">Post-launch work typically includes user support, issue resolution, workflow refinement and planned improvements as teams learn from real use.</div></div></div>
                         </div>
                     </div>
-                </section>
-
-                <section id="consultation" class="vov-contact-page vov-home-contact" data-name="Contact Vorevia" data-anchor="true">
-                    <t t-call="website_vorevia.vorevia_contact_section">
-                        <t t-set="vov_contact_home" t-value="True"/>
-                    </t>
                 </section>
 
                 <section class="vov-final-cta s_text_block" data-snippet="s_text_block" data-name="Final Call to Action">

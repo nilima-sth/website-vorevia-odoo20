@@ -4,13 +4,23 @@
         <t t-call="website.layout">
             <div id="wrap" class="oe_structure vov-about">
                 <section class="vov-about-hero" data-name="About Vorevia">
-                    <div class="vov-container">
-                        <p class="vov-kicker">ABOUT VOREVIA TECHNOLOGIES</p>
+                    <div class="vov-container vov-about-hero__content">
+                        <p class="vov-kicker">ABOUT US</p>
                         <h1>Making connected operations <span>practical.</span></h1>
-                        <div class="vov-about-hero__foot">
-                            <p>Vorevia helps businesses simplify operations, connect teams, and make technology work around their needs. We focus on practical solutions that improve efficiency, support growth, and adapt as businesses evolve.</p>
-                            <a href="#our-approach">Explore our approach <span aria-hidden="true">↘</span></a>
+                        <p class="vov-about-hero__description">Vorevia helps businesses simplify operations, connect teams, and make technology work around their needs. We focus on practical solutions that improve efficiency, support growth, and adapt as businesses evolve.</p>
+                        <ul class="vov-about-hero__strengths" aria-label="Our focus">
+                            <li><i class="fa fa-sitemap" aria-hidden="true"/><span>Business-first approach</span></li>
+                            <li><i class="fa fa-link" aria-hidden="true"/><span>Connected operations</span></li>
+                            <li><i class="fa fa-line-chart" aria-hidden="true"/><span>Built for growth</span></li>
+                        </ul>
+                        <div class="vov-about-hero__actions">
+                            <a class="vov-button vov-button-primary" href="#our-approach">Explore our approach <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                            <a class="vov-button vov-button-secondary" href="/contact">Get in touch</a>
                         </div>
+                    </div>
+                    <div class="vov-about-hero__media" aria-hidden="true">
+                        <img src="/website_vorevia/static/src/img/vorevia-about-hero-glass-workflow.webp" alt=""
+                             width="2896" height="2172" fetchpriority="high" decoding="async"/>
                     </div>
                 </section>
 

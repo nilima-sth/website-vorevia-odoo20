@@ -86,14 +86,123 @@
 .vov-why-more:hover,
 .vov-why-more:focus-visible { color: var(--vov-ink); text-decoration: none; }
 
-.vov-about { color: var(--vov-ink); font-family: Inter, "Helvetica Neue", Arial, sans-serif; }
+.vov-about { color: var(--vov-ink); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 .vov-about section { scroll-margin-top: 100px; }
-.vov-about-hero { padding: clamp(6rem, 10vw, 10rem) 0 clamp(5rem, 7vw, 7rem); background: #f8fbfd; }
-.vov-about-hero h1 { max-width: 1030px; margin: 0; font-size: clamp(3rem, 6.4vw, 6.8rem); font-weight: 500; letter-spacing: 0.005em; line-height: 1.08; }
+
+/* About hero: keep the source image independent of text for readable resizing and editing. */
+.vov-about-hero {
+    position: relative;
+    display: flex;
+    min-height: 685px;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    padding: clamp(4.5rem, 6vw, 6.5rem) 0;
+    background: #f9fbfe;
+}
+.vov-about-hero__content { position: relative; z-index: 2; }
+.vov-about-hero .vov-kicker { margin: 0 0 1.8rem; color: var(--vov-blue-deep); }
+.vov-about-hero h1 {
+    width: min(720px, 61%);
+    max-width: none;
+    margin: 0;
+    color: #112039;
+    font-size: clamp(3rem, 4.5vw, 4.7rem);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+}
 .vov-about-hero h1 span { color: var(--vov-blue-deep); }
-.vov-about-hero__foot { display: flex; align-items: end; justify-content: space-between; margin-top: 3rem; gap: 2rem; }
-.vov-about-hero__foot p { max-width: 720px; margin: 0; color: var(--vov-muted); font-size: clamp(1.06rem, 1.7vw, 1.3rem); line-height: 1.65; }
-.vov-about-hero__foot a { color: var(--vov-blue-deep); font-size: 0.84rem; font-weight: 750; text-decoration: none; white-space: nowrap; }
+.vov-about-hero__description {
+    width: min(600px, 52%);
+    margin: 1.9rem 0 0;
+    color: #4f6176;
+    font-size: clamp(1rem, 1.25vw, 1.15rem);
+    line-height: 1.75;
+}
+.vov-about-hero__strengths {
+    display: grid;
+    width: min(625px, 57%);
+    margin: 2.1rem 0 0;
+    padding: 0;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    list-style: none;
+}
+.vov-about-hero__strengths li {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: .7rem;
+    color: #172941;
+    font-size: .8rem;
+    font-weight: 650;
+    line-height: 1.4;
+}
+.vov-about-hero__strengths i {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2ecf8;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .94);
+    box-shadow: 0 6px 18px rgba(45, 97, 150, .07);
+    color: var(--vov-blue-deep);
+    flex: 0 0 42px;
+    font-size: 1.13rem;
+}
+.vov-about-hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; margin-top: 2.5rem; }
+.vov-about-hero__actions .vov-button { margin: 0; border-radius: 12px; }
+.vov-about-hero__actions .vov-button-primary { border-color: #12355f; background: #12355f; }
+.vov-about-hero__actions .vov-button-primary:hover,
+.vov-about-hero__actions .vov-button-primary:focus-visible { border-color: #0b2749; background: #0b2749; }
+.vov-about-hero__actions .vov-button-secondary { border-color: #cfdeed; background: rgba(255, 255, 255, .94); }
+.vov-about-hero__media {
+    position: absolute;
+    z-index: 0;
+    inset: 0 0 0 auto;
+    width: 70%;
+    overflow: hidden;
+    pointer-events: none;
+}
+.vov-about-hero__media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 58% 50%; }
+.vov-about-hero__media::after {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: linear-gradient(90deg, #f9fbfe 0%, rgba(249,251,254,.98) 12%, rgba(249,251,254,.89) 30%, rgba(249,251,254,.44) 51%, rgba(249,251,254,0) 83%);
+    content: "";
+}
+@media (max-width: 1199.98px) {
+    .vov-about-hero { min-height: 640px; }
+    .vov-about-hero h1 { width: min(650px, 65%); font-size: clamp(3rem, 5.1vw, 4rem); }
+    .vov-about-hero__description { width: 55%; }
+    .vov-about-hero__strengths { width: 62%; }
+    .vov-about-hero__media { width: 72%; }
+}
+@media (max-width: 991.98px) {
+    .vov-about-hero { display: block; min-height: 0; padding: 4.5rem 0 0; }
+    .vov-about-hero h1 { width: 100%; max-width: 750px; font-size: clamp(3rem, 6.5vw, 4.1rem); }
+    .vov-about-hero__description { width: 100%; max-width: 680px; }
+    .vov-about-hero__strengths { width: 100%; max-width: 650px; }
+    .vov-about-hero__media { position: relative; inset: auto; width: 100%; height: clamp(280px, 43vw, 430px); margin-top: 2.3rem; }
+    .vov-about-hero__media img { object-position: 55% 48%; }
+    .vov-about-hero__media::after { background: linear-gradient(180deg, #f9fbfe 0%, rgba(249,251,254,0) 22%); }
+}
+@media (max-width: 575.98px) {
+    .vov-about-hero { padding-top: 3.35rem; }
+    .vov-about-hero .vov-kicker { margin-bottom: 1.1rem; }
+    .vov-about-hero h1 { font-size: clamp(2.35rem, 10.2vw, 3rem); line-height: 1.1; letter-spacing: -.028em; }
+    .vov-about-hero__description { margin-top: 1.35rem; font-size: 1rem; line-height: 1.7; }
+    .vov-about-hero__strengths { grid-template-columns: 1fr; gap: .85rem; margin-top: 1.7rem; }
+    .vov-about-hero__strengths i { width: 38px; height: 38px; flex-basis: 38px; }
+    .vov-about-hero__actions { gap: .7rem; margin-top: 1.9rem; }
+    .vov-about-hero__actions .vov-button { min-width: 0; padding: .8rem 1rem; font-size: .82rem; }
+    .vov-about-hero__media { height: 275px; margin-top: 1.5rem; }
+}
+
 .vov-about-identity,
 .vov-about-approach,
 .vov-about-principles { padding: clamp(5rem, 8vw, 8rem) 0; }

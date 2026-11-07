@@ -101,6 +101,46 @@
 .vov-about h2 { margin: 0; font-size: clamp(2.4rem, 4vw, 4.4rem); font-weight: 550; letter-spacing: 0.005em; line-height: 1.12; }
 .vov-about-identity__copy > p { max-width: 690px; color: var(--vov-muted); font-size: 1.03rem; line-height: 1.75; }
 .vov-about-identity__copy > p:first-child { margin-top: 0; color: var(--vov-ink); font-size: 1.18rem; }
+
+// Expandable company introduction: compact pill label and adjacent circular arrow.
+.vov-about-identity__description [hidden] { display: none !important; }
+.vov-about-identity__description [data-vov-about-more]:not([hidden]) { animation: vov-about-copy-reveal 260ms ease-out both; }
+.vov-about-identity__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: .65rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--vov-ink);
+    font: inherit;
+    cursor: pointer;
+}
+.vov-about-identity__toggle[hidden] { display: none !important; }
+.vov-about-identity__toggle-text, .vov-about-identity__toggle-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--vov-line);
+    border-radius: 999px;
+    background: #fff;
+    transition: border-color 200ms ease, background-color 200ms ease, transform 200ms ease;
+}
+.vov-about-identity__toggle-text { min-height: 43px; padding: 0 1.25rem; font-size: .86rem; font-weight: 650; }
+.vov-about-identity__toggle-arrow { width: 43px; height: 43px; color: var(--vov-blue-deep); }
+.vov-about-identity__toggle-arrow svg { display: block; }
+.vov-about-identity__toggle:hover .vov-about-identity__toggle-text,
+.vov-about-identity__toggle:hover .vov-about-identity__toggle-arrow { border-color: var(--vov-blue); background: var(--vov-blue-pale); }
+.vov-about-identity__toggle:hover .vov-about-identity__toggle-arrow { transform: translate(2px, -2px); }
+.vov-about-identity__toggle[aria-expanded="true"] .vov-about-identity__toggle-arrow svg { transform: rotate(180deg); }
+.vov-about-identity__toggle:focus-visible { outline: 2px solid var(--vov-blue-deep); outline-offset: 4px; border-radius: 999px; }
+@keyframes vov-about-copy-reveal { from { opacity: .3; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+    .vov-about-identity__description [data-vov-about-more]:not([hidden]) { animation: none; }
+    .vov-about-identity__toggle-text, .vov-about-identity__toggle-arrow { transition: none; }
+}
+
 .vov-about-capabilities { display: flex; flex-wrap: wrap; margin-top: 2rem; gap: 0.55rem; }
 .vov-about-capabilities span { padding: 0.65rem 0.8rem; border: 1px solid var(--vov-line); color: var(--vov-blue-deep); font-size: 0.7rem; font-weight: 750; }
 .vov-about-approach { background: #f8fbfd; }

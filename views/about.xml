@@ -60,6 +60,20 @@
                     </div>
                 </section>
 
+                <section class="vov-about-founder" data-name="Founder's Note">
+                    <div class="vov-container vov-about-founder__layout">
+                        <div class="vov-about-founder__profile">
+                            <img src="/website_vorevia/static/src/img/vorevia-founder-cutout.webp" alt="Founder of Vorevia Technologies" width="2560" height="2458" loading="lazy" decoding="async"/>
+                            <p><strong>Founder</strong><span>Vorevia Technologies</span></p>
+                        </div>
+                        <div class="vov-about-founder__message">
+                            <span class="vov-about-founder__quote-icon" aria-hidden="true">“</span>
+                            <h2>Founder's Note</h2>
+                            <blockquote>“Technology should adapt to the way a business works, not the other way around. At Vorevia Technologies, our purpose is to simplify everyday challenges, connect people and processes, and build solutions that businesses can rely on as they grow.”</blockquote>
+                        </div>
+                    </div>
+                </section>
+
                 <section id="our-approach" class="vov-about-approach" data-name="Our Approach">
                     <div class="vov-container">
                         <div class="vov-about-approach__lead"><div><p class="vov-kicker">OUR APPROACH</p><h2>From understanding to everyday use.</h2></div><p>Each stage answers a practical question before the next begins. The goal is an implementation your teams can understand, test, and improve.</p></div>

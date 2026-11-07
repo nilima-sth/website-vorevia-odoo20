@@ -279,6 +279,21 @@
 
 .vov-about-capabilities { display: flex; flex-wrap: wrap; margin-top: 2rem; gap: 0.55rem; }
 .vov-about-capabilities span { padding: 0.65rem 0.8rem; border: 1px solid var(--vov-line); color: var(--vov-blue-deep); font-size: 0.7rem; font-weight: 750; }
+/* Founder's Note: transparent WebP portrait and company message. */
+.vov-about-founder { padding: clamp(3rem, 6vw, 5rem) 0; background: #fff; }
+.vov-about-founder__layout { display: grid; grid-template-columns: minmax(260px, 350px) minmax(0, 1fr); align-items: stretch; gap: clamp(2.5rem, 6vw, 6rem); }
+.vov-about-founder__profile { display: flex; min-width: 0; flex-direction: column; align-items: center; justify-content: flex-end; overflow: hidden; padding: 1.1rem 1.25rem 1.4rem; border-radius: 18px; background: #1d6eb7; color: #fff; text-align: center; }
+.vov-about-founder__profile img { display: block; width: min(100%, 285px); height: 300px; margin: auto auto 0; object-fit: contain; object-position: center bottom; }
+.vov-about-founder__profile p { display: grid; margin: .9rem 0 0; gap: .25rem; }
+.vov-about-founder__profile strong { font-size: 1.16rem; font-weight: 650; }
+.vov-about-founder__profile span { font-size: .83rem; opacity: .9; }
+.vov-about-founder__message { display: flex; min-width: 0; flex-direction: column; justify-content: center; }
+.vov-about-founder__quote-icon { height: 2.6rem; color: #bdddef; font-size: 5.2rem; font-weight: 700; line-height: 1; }
+.vov-about-founder__message h2 { font-size: clamp(1.6rem, 2.7vw, 2.35rem); font-weight: 600; }
+.vov-about-founder__message blockquote { max-width: 800px; margin: 1.4rem 0 0; color: #304257; font-size: clamp(1.05rem, 1.7vw, 1.38rem); font-style: italic; line-height: 1.8; }
+@media (max-width: 767.98px) { .vov-about-founder__layout { grid-template-columns: 1fr; gap: 2.25rem; } .vov-about-founder__profile { width: min(100%, 380px); justify-self: center; } }
+@media (max-width: 575.98px) { .vov-about-founder__profile img { height: 285px; } .vov-about-founder__message blockquote { font-size: 1.05rem; line-height: 1.7; } }
+
 .vov-about-approach { background: #f8fbfd; }
 .vov-about-approach__lead { display: flex; align-items: end; justify-content: space-between; margin-bottom: 3rem; gap: 3rem; }
 .vov-about-approach__lead p:last-child { max-width: 420px; margin: 0; color: var(--vov-muted); line-height: 1.65; }

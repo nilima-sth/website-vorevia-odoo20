@@ -6,17 +6,12 @@
             <div id="wrap" class="oe_structure vov-contact-page">
                 <section class="vov-contact-page__body" data-name="Contact Details and Enquiry Form">
                     <div class="vov-container vov-contact-page__grid">
-                        <aside class="vov-contact-info" aria-labelledby="vov-contact-info-title">
+                        <aside class="vov-contact-info" aria-label="Vorevia contact details">
                             <header class="vov-contact-introduction">
                                 <p class="vov-kicker">CONTACT VOREVIA</p>
                                 <h1>Let’s talk about what <span>you want to improve.</span></h1>
-                                <p>Share the workflow, system, or recurring challenge you are considering. We will use that context to prepare a useful first conversation.</p>
+                                <p>Tell us what you need. We'll help you find the right solution.</p>
                             </header>
-                            <div class="vov-contact-info__content">
-                                <p class="vov-kicker">GET IN TOUCH</p>
-                                <h2 id="vov-contact-info-title">Company information</h2>
-                                <p>Use these details for direct company communication. Consultation requests are best sent through the enquiry form so the right context reaches our team.</p>
-                            </div>
                             <address class="vov-contact-details">
                                 <div><span>Email</span><a href="mailto:info@vorevia.com">info@vorevia.com</a></div>
                                 <div><span>Phone</span><a href="tel:+9779712030420">+977 971-2030420</a></div>

@@ -33,13 +33,13 @@
                 <section id="our-approach" class="vov-about-approach" data-name="Our Approach">
                     <div class="vov-container">
                         <div class="vov-about-approach__lead"><div><p class="vov-kicker">OUR APPROACH</p><h2>From understanding to everyday use.</h2></div><p>Each stage answers a practical question before the next begins. The goal is an implementation your teams can understand, test, and improve.</p></div>
-                        <div class="vov-about-journey">
-                            <article><span>01 / DISCOVER</span><h3>Understand</h3><p>Listen to the people doing the work and clarify goals, friction, and priorities.</p></article>
-                            <article><span>02 / MAP</span><h3>Define the flow</h3><p>Trace the steps, information, and decisions that the system needs to support.</p></article>
-                            <article><span>03 / BUILD</span><h3>Implement</h3><p>Configure Odoo and add focused customization for agreed requirements.</p></article>
-                            <article><span>04 / VALIDATE</span><h3>Test and adopt</h3><p>Review real scenarios, prepare data, and help teams learn the new workflow.</p></article>
-                            <article><span>05 / IMPROVE</span><h3>Keep evolving</h3><p>Refine the system as use reveals new needs and the business changes.</p></article>
-                        </div>
+                        <figure class="vov-about-process-graphic">
+                            <div class="vov-about-process-graphic__scroll" role="region" tabindex="0" aria-label="Vorevia's five-stage engagement process. Scroll horizontally on smaller screens.">
+                                <img src="/website_vorevia/static/src/img/vorevia-engagement-process.webp"
+                                     alt="Five connected stages: Understand business requirements and goals; Plan the solution and scope; Implement configuration and integrations; Enable teams through training and testing; Support and Grow with updates and improvements."
+                                     width="1774" height="887" loading="lazy" decoding="async"/>
+                            </div>
+                        </figure>
                     </div>
                 </section>
 

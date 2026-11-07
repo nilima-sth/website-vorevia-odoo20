@@ -17,9 +17,9 @@
                                 <div>
                                     <h2>Sales &amp; Customer Management</h2>
                                     <p>Organize customer relationships and sales processes. Manage leads, quotations, and the full sales pipeline within a connected system.</p>
+                                    <a class="vov-solutions-page__detail-link" href="/solutions/sales-customer-management" aria-label="Explore Sales &amp; Customer Management solution">Explore solution <span aria-hidden="true">↗</span></a>
                                 </div>
-                                                                <a class="vov-solutions-page__detail-link" href="/solutions/sales-customer-management" aria-label="Explore Sales &amp; Customer Management solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
+                            </div>
                         </div>
 
                         <div id="inventory-procurement" class="vov-solutions-page__item">
@@ -28,9 +28,9 @@
                                 <div>
                                     <h2>Inventory &amp; Procurement</h2>
                                     <p>Connect inventory, purchasing, and supplier workflows. Maintain stock visibility and streamline procurement operations.</p>
+                                    <a class="vov-solutions-page__detail-link" href="/solutions/inventory-procurement" aria-label="Explore Inventory &amp; Procurement solution">Explore solution <span aria-hidden="true">↗</span></a>
                                 </div>
-                                                                <a class="vov-solutions-page__detail-link" href="/solutions/inventory-procurement" aria-label="Explore Inventory &amp; Procurement solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
+                            </div>
                         </div>
 
                         <div id="finance-billing" class="vov-solutions-page__item">
@@ -39,9 +39,9 @@
                                 <div>
                                     <h2>Finance &amp; Billing</h2>
                                     <p>Bring billing and financial processes into a clearer workflow. Connect invoicing, expenses, and accounting with operational activity.</p>
+                                    <a class="vov-solutions-page__detail-link" href="/solutions/finance-billing" aria-label="Explore Finance &amp; Billing solution">Explore solution <span aria-hidden="true">↗</span></a>
                                 </div>
-                                                                <a class="vov-solutions-page__detail-link" href="/solutions/finance-billing" aria-label="Explore Finance &amp; Billing solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
+                            </div>
                         </div>
 
                         <div id="human-resources" class="vov-solutions-page__item">
@@ -50,9 +50,9 @@
                                 <div>
                                     <h2>Human Resources</h2>
                                     <p>Bring employee-related processes into one organized system. Manage workforce information, leave, attendance, and planning.</p>
+                                    <a class="vov-solutions-page__detail-link" href="/solutions/human-resources" aria-label="Explore Human Resources solution">Explore solution <span aria-hidden="true">↗</span></a>
                                 </div>
-                                                                <a class="vov-solutions-page__detail-link" href="/solutions/human-resources" aria-label="Explore Human Resources solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
+                            </div>
                         </div>
 
                         <div id="retail-pos" class="vov-solutions-page__item">
@@ -61,9 +61,9 @@
                                 <div>
                                     <h2>Retail &amp; Point of Sale</h2>
                                     <p>Explore how counter transactions can connect with business operations. Link in-store activity with inventory, customer data, and accounting.</p>
+                                    <a class="vov-solutions-page__detail-link" href="/solutions/retail-pos" aria-label="Explore Retail &amp; Point of Sale solution">Explore solution <span aria-hidden="true">↗</span></a>
                                 </div>
-                                                                <a class="vov-solutions-page__detail-link" href="/solutions/retail-pos" aria-label="Explore Retail &amp; Point of Sale solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
+                            </div>
                         </div>
 
                         <div id="website-ecommerce" class="vov-solutions-page__item">
@@ -72,9 +72,9 @@
                                 <div>
                                     <h2>Website &amp; eCommerce</h2>
                                     <p>Connect customer-facing digital experiences with operational workflows. Bring online commerce and business processes together.</p>
+                                    <a class="vov-solutions-page__detail-link" href="/solutions/website-ecommerce" aria-label="Explore Website &amp; eCommerce solution">Explore solution <span aria-hidden="true">↗</span></a>
                                 </div>
-                                                                <a class="vov-solutions-page__detail-link" href="/solutions/website-ecommerce" aria-label="Explore Website &amp; eCommerce solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
+                            </div>
                         </div>
 
                         <div id="project-service-management" class="vov-solutions-page__item">
@@ -83,9 +83,9 @@
                                 <div>
                                     <h2>Project &amp; Service Management</h2>
                                     <p>Coordinate project delivery and service work. Manage tasks, timesheets, and client interactions in context.</p>
+                                    <a class="vov-solutions-page__detail-link" href="/solutions/project-service-management" aria-label="Explore Project &amp; Service Management solution">Explore solution <span aria-hidden="true">↗</span></a>
                                 </div>
-                                                                <a class="vov-solutions-page__detail-link" href="/solutions/project-service-management" aria-label="Explore Project &amp; Service Management solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
+                            </div>
                         </div>
 
                         <div id="reporting-automation" class="vov-solutions-page__item">
@@ -94,9 +94,9 @@
                                 <div>
                                     <h2>Reporting &amp; Automation</h2>
                                     <p>Explore better reporting and streamlined recurring work. Improve visibility and reduce repetitive manual processes.</p>
+                                    <a class="vov-solutions-page__detail-link" href="/solutions/reporting-automation" aria-label="Explore Reporting &amp; Automation solution">Explore solution <span aria-hidden="true">↗</span></a>
                                 </div>
-                                                                <a class="vov-solutions-page__detail-link" href="/solutions/reporting-automation" aria-label="Explore Reporting &amp; Automation solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
+                            </div>
                         </div>
 
                         <div class="vov-solutions-page__cta">

@@ -37,7 +37,7 @@
                         </div>
                         <a t-if="request.env.user._is_public()" class="vov-nav-signin" href="/web/login">Sign in</a>
                         <a t-else="" class="vov-nav-signin" href="/my">My account</a>
-                        <a class="vov-nav-cta vov-nav-cta--noise" href="/#consultation">
+                        <a class="vov-nav-cta vov-nav-cta--noise" href="/contact">
                             <div class="blob1" aria-hidden="true"/>
                             <div class="blob2" aria-hidden="true"/>
                             <span class="inner"><span class="vov-nav-cta__label">Let's Talk <i class="fa fa-arrow-right" aria-hidden="true"/></span></span>
@@ -146,7 +146,7 @@
                                 <p class="vov-services-mega__eyebrow">START WITH A CONVERSATION</p>
                                 <h3>Where does work slow down?</h3>
                                 <p>Bring the process, the people involved and the current system. We will help identify a practical starting point.</p>
-                                <a href="/#consultation">Discuss your workflow <span aria-hidden="true">↗</span></a>
+                                <a href="/contact">Discuss your workflow <span aria-hidden="true">↗</span></a>
                             </aside>
                         </div>
                     </div>
@@ -216,7 +216,7 @@
                             <a href="/about">About</a><a href="/blog">Blogs</a>
                             <a t-if="request.env.user._is_public()" href="/web/login">Sign in</a>
                             <a t-else="" href="/my">My account</a>
-                            <a class="vov-button vov-button-primary" href="/#consultation">Let's Talk</a>
+                            <a class="vov-button vov-button-primary" href="/contact">Let's Talk</a>
                         </div>
                     </div>
                 </nav>
@@ -234,7 +234,7 @@
                                 <section class="vov-footer-intro" aria-labelledby="vov-footer-intro-title">
                                     <h2 id="vov-footer-intro-title">Making technology work for you.</h2>
                                     <p>Thoughtfully implemented business systems, designed around the way your organization works.</p>
-                                    <a class="vov-footer-conversation-link" href="/#consultation">Start a Conversation <span aria-hidden="true">↗</span></a>
+                                    <a class="vov-footer-conversation-link" href="/contact">Start a Conversation <span aria-hidden="true">↗</span></a>
                                 </section>
                                 <div class="vov-footer-navigation" aria-label="Footer navigation">
                                     <nav class="vov-footer-links" aria-labelledby="vov-footer-explore-title">
@@ -247,7 +247,7 @@
                                     <nav class="vov-footer-links" aria-labelledby="vov-footer-company-title">
                                         <h2 id="vov-footer-company-title">Company</h2>
                                         <a href="/about">About Us</a>
-                                        <a href="/#consultation">Contact</a>
+                                        <a href="/contact">Contact</a>
                                         <a href="/#faq">FAQs</a>
                                         <a href="/my">Client Portal</a>
                                     </nav>
@@ -378,7 +378,7 @@
                             <h1>Start your digital<br/><span>transformation.</span></h1>
                             <p class="vov-hero-lead">Turn disconnected sales, stock, delivery and billing work into a connected operating flow. Vorevia configures and extends Odoo around the handoffs your teams actually use.</p>
                             <div class="vov-actions">
-                                <a class="vov-button vov-button-primary" href="#consultation">Discuss Your Workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                                <a class="vov-button vov-button-primary" href="/contact">Discuss Your Workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a>
                                 <a class="vov-button vov-button-secondary" href="#workflow">See the Connected Flow <i class="fa fa-arrow-down" aria-hidden="true"/></a>
                             </div>
                         </div>
@@ -405,7 +405,7 @@
                         </div>
                         <div class="vov-order-flow__foot">
                             <p>Illustrative workflow. The applications, rules and integrations are scoped for each project.</p>
-                            <a href="#consultation">Map your own process <span aria-hidden="true">↗</span></a>
+                            <a href="/contact">Map your own process <span aria-hidden="true">↗</span></a>
                         </div>
                     </div>
                 </section>
@@ -584,13 +584,13 @@
                                 </section>
                             </div>
                         </div>
-                        <div class="vov-why-footer"><p>Have a workflow that needs a clearer path?</p><div><a class="vov-button vov-button-primary" href="#consultation">Discuss your workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a><a class="vov-why-more" href="/about">More about Vorevia <span aria-hidden="true">↗</span></a></div></div>
+                        <div class="vov-why-footer"><p>Have a workflow that needs a clearer path?</p><div><a class="vov-button vov-button-primary" href="/contact">Discuss your workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a><a class="vov-why-more" href="/about">More about Vorevia <span aria-hidden="true">↗</span></a></div></div>
                     </div>
                 </section>
 
                 <section id="faq" class="vov-faq vov-section s_text_block" data-snippet="s_text_block" data-name="Frequently Asked Questions" data-anchor="true">
                     <div class="vov-container vov-faq-grid">
-                        <div class="vov-faq-intro"><p class="vov-kicker">FREQUENTLY ASKED QUESTIONS</p><h2>Questions, answered.</h2><p>A practical starting point for planning an Odoo implementation or improvement project.</p><a class="vov-text-link" href="#consultation">Ask another question <span aria-hidden="true">↗</span></a></div>
+                        <div class="vov-faq-intro"><p class="vov-kicker">FREQUENTLY ASKED QUESTIONS</p><h2>Questions, answered.</h2><p>A practical starting point for planning an Odoo implementation or improvement project.</p><a class="vov-text-link" href="/contact">Ask another question <span aria-hidden="true">↗</span></a></div>
                         <div class="accordion accordion-flush vov-accordion" id="vovFaqAccordion">
                             <div class="accordion-item"><h3 class="accordion-header" id="vovFaqHeadingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#vovFaqOne" aria-expanded="true" aria-controls="vovFaqOne">What is Odoo ERP?</button></h3><div id="vovFaqOne" class="accordion-collapse collapse show" aria-labelledby="vovFaqHeadingOne" data-bs-parent="#vovFaqAccordion"><div class="accordion-body">Odoo is a suite of connected business applications that can bring areas such as sales, inventory, accounting and people operations into one system.</div></div></div>
                             <div class="accordion-item"><h3 class="accordion-header" id="vovFaqHeadingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vovFaqTwo" aria-expanded="false" aria-controls="vovFaqTwo">Can Odoo be customized for our business?</button></h3><div id="vovFaqTwo" class="accordion-collapse collapse" aria-labelledby="vovFaqHeadingTwo" data-bs-parent="#vovFaqAccordion"><div class="accordion-body">Yes. Standard configuration should be used where it fits, while focused custom modules can support requirements that need different behavior.</div></div></div>
@@ -601,32 +601,10 @@
                     </div>
                 </section>
 
-                <section id="consultation" class="vov-contact vov-section s_website_form" data-vcss="001" data-snippet="s_website_form" data-name="Consultation Request" data-anchor="true">
-                    <div class="vov-container vov-contact-grid">
-                        <div class="vov-contact-copy">
-                            <p class="vov-kicker">START A CONVERSATION</p>
-                            <h2>Show us where the handoff breaks.</h2>
-                            <p>Tell us what happens today, which teams are involved and where information gets repeated or lost. We will use that context to prepare a focused first conversation.</p>
-                            <div class="vov-contact-points"><span><i class="fa fa-check" aria-hidden="true"/> No generic software pitch</span><span><i class="fa fa-check" aria-hidden="true"/> Practical Odoo guidance</span><span><i class="fa fa-check" aria-hidden="true"/> Clear next steps</span></div>
-                        </div>
-                        <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required vov-consultation-form" data-mark="*" data-pre-fill="true" data-model_name="vorevia.consultation" data-success-mode="redirect" data-success-page="/contactus-thank-you">
-                            <div class="vov-form-grid s_website_form_rows">
-                                <div class="vov-form-field s_website_form_field s_website_form_custom s_website_form_required" data-type="char"><label for="vov_consultation_name">Name *</label><input id="vov_consultation_name" class="form-control s_website_form_input" type="text" name="name" required="required" autocomplete="name" data-fill-with="name"/></div>
-                                <div class="vov-form-field s_website_form_field s_website_form_model_required" data-type="email"><label for="vov_consultation_email">Work email *</label><input id="vov_consultation_email" class="form-control s_website_form_input" type="email" name="email" required="required" autocomplete="email" data-fill-with="email"/></div>
-                                <div class="vov-form-field s_website_form_field s_website_form_custom" data-type="char"><label for="vov_consultation_company">Company</label><input id="vov_consultation_company" class="form-control s_website_form_input" type="text" name="company" autocomplete="organization"/></div>
-                                <div class="vov-form-field s_website_form_field s_website_form_custom" data-type="char"><label for="vov_consultation_phone">Phone</label><input id="vov_consultation_phone" class="form-control s_website_form_input" type="tel" name="phone" autocomplete="tel"/></div>
-                                <div class="vov-form-field vov-form-field-wide s_website_form_field s_website_form_model_required" data-type="selection"><label for="vov_consultation_interest">What would you like to improve? *</label><select id="vov_consultation_interest" class="form-select s_website_form_input" name="interest" required="required"><option value="implementation">ERP implementation</option><option value="customization">Odoo customization</option><option value="integration">Integration or migration</option><option value="support">Training or support</option><option value="unsure">Not sure yet</option></select></div>
-                                <div class="vov-form-field vov-form-field-wide s_website_form_field s_website_form_custom s_website_form_required" data-type="text"><label for="vov_consultation_message">What is happening today? *</label><textarea id="vov_consultation_message" class="form-control s_website_form_input" name="description" rows="5" required="required" placeholder="Briefly describe the workflow, current system or recurring issue."/></div>
-                                <p t-if="request.env.user._is_public()" class="vov-form-note vov-form-field-wide"><a href="/web/login?redirect=%2F%23consultation">Sign in</a> before sending to track this request in My Account.</p>
-                                <p t-else="" class="vov-form-note vov-form-field-wide">This request will appear in <a href="/my/consultations">My Account</a> after you send it.</p>
-                                <div class="vov-form-submit vov-form-field-wide s_website_form_submit"><span id="s_website_form_result"/><a href="#" role="button" class="vov-button vov-button-primary s_website_form_send">Request Consultation <i class="fa fa-arrow-right" aria-hidden="true"/></a></div>
-                            </div>
-                        </form>
-                    </div>
-                </section>
+                
 
                 <section class="vov-final-cta s_text_block" data-snippet="s_text_block" data-name="Final Call to Action">
-                    <div class="vov-container"><div class="vov-cta-inner"><p class="vov-kicker">A MORE CONNECTED WAY TO WORK</p><h2>Your Next Step Towards a Smarter Business.</h2><p>Bring us the process you want to improve. We'll help you find the right approach, built around your business.</p><a class="vov-button vov-button-primary" href="#consultation">Discuss Your Workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a></div></div>
+                    <div class="vov-container"><div class="vov-cta-inner"><p class="vov-kicker">A MORE CONNECTED WAY TO WORK</p><h2>Your Next Step Towards a Smarter Business.</h2><p>Bring us the process you want to improve. We'll help you find the right approach, built around your business.</p><a class="vov-button vov-button-primary" href="/contact">Discuss Your Workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a></div></div>
                 </section>
             </div>
         </xpath>

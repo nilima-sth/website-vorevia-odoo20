@@ -13,9 +13,41 @@
                                 <p>Tell us what you need. We'll help you find the right solution.</p>
                             </header>
                             <address class="vov-contact-details">
-                                <div><span>Email</span><a href="mailto:info@vorevia.com">info@vorevia.com</a></div>
-                                <div><span>Phone</span><a href="tel:+9779712030420">+977 971-2030420</a></div>
-                                <div><span>Office location</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Kathmandu%2C%20Nepal" target="_blank" rel="noopener noreferrer">Kathmandu, Nepal</a></div>
+                                <div class="vov-contact-details__item">
+                                    <div class="vov-contact-details__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="3" y="5" width="18" height="14" rx="2"/>
+                                            <path d="m4 7 8 6 8-6"/>
+                                        </svg>
+                                    </div>
+                                    <div class="vov-contact-details__content">
+                                        <span>Email</span>
+                                        <a href="mailto:info@vorevia.com">info@vorevia.com</a>
+                                    </div>
+                                </div>
+                                <div class="vov-contact-details__item">
+                                    <div class="vov-contact-details__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.63 2.62a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.46-1.29a2 2 0 0 1 2.11-.45c.84.3 1.72.51 2.62.63A2 2 0 0 1 22 16.92Z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="vov-contact-details__content">
+                                        <span>Phone</span>
+                                        <a href="tel:+9779712030420">+977 971-2030420</a>
+                                    </div>
+                                </div>
+                                <div class="vov-contact-details__item">
+                                    <div class="vov-contact-details__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 21s-6-4.35-6-10a6 6 0 1 1 12 0c0 5.65-6 10-6 10Z"/>
+                                            <circle cx="12" cy="11" r="2.5"/>
+                                        </svg>
+                                    </div>
+                                    <div class="vov-contact-details__content">
+                                        <span>Office location</span>
+                                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Kathmandu%2C%20Nepal" target="_blank" rel="noopener noreferrer">Kathmandu, Nepal</a>
+                                    </div>
+                                </div>
                             </address>
                             <div class="vov-contact-map">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4816.748898441512!2d85.31559547546641!3d27.680131476198124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDQwJzQ4LjUiTiA4NcKwMTknMDUuNCJF!5e1!3m2!1sen!2snp!4v1794071230445!5m2!1sen!2snp"
@@ -94,8 +126,6 @@
                                             <option value="other">Other</option>
                                         </select>
                                     </div>
-                                    <p t-if="request.env.user._is_public()" class="vov-contact-form__note vov-contact-form__field--wide"><a href="/web/login?redirect=%2Fcontact">Sign in</a> before sending if you want to track this request in My Account.</p>
-                                    <p t-else="" class="vov-contact-form__note vov-contact-form__field--wide">This request will appear in <a href="/my/consultations">My Account</a> after you send it.</p>
                                     <div class="vov-contact-form__submit vov-contact-form__field--wide s_website_form_submit">
                                         <span id="s_website_form_result"/>
                                         <a href="#" role="button" class="vov-button vov-button-primary s_website_form_send">Send Enquiry <span aria-hidden="true">→</span></a>

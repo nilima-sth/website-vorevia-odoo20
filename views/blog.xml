@@ -48,7 +48,6 @@
                             <a class="vov-button vov-button-primary" href="/about">Explore our approach <i class="fa fa-arrow-right" aria-hidden="true"/></a>
                             <a class="vov-blog-empty__link" href="/contact">Start a conversation <span aria-hidden="true">↗</span></a>
                         </div>
-                        <p class="vov-blog-empty__editor-note" groups="website.group_website_designer">To publish the first article, use <strong>New → Blog Post</strong> in the website toolbar.</p>
                     </div>
                 </div>
             </div>

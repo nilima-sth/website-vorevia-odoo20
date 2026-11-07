@@ -10,6 +10,7 @@ export class VoreviaAboutReadMore extends Interaction {
         const more = this.el.querySelector("[data-vov-about-more]");
         const button = this.el.querySelector("[data-vov-about-toggle]");
         const label = this.el.querySelector("[data-vov-about-toggle-text]");
+        const section = this.el.closest(".vov-about-identity");
         if (!more || !button || !label) return;
 
         more.hidden = true;
@@ -19,6 +20,16 @@ export class VoreviaAboutReadMore extends Interaction {
             more.hidden = !expanded;
             button.setAttribute("aria-expanded", String(expanded));
             label.textContent = expanded ? "See Less" : "See More";
+            section?.classList.toggle("is-expanded", expanded);
+
+            if (!expanded && section) {
+                window.requestAnimationFrame(() => {
+                    section.scrollIntoView({
+                        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+                        block: "start",
+                    });
+                });
+            }
         });
     }
 }

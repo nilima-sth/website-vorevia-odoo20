@@ -26,9 +26,29 @@
 
                 <section id="who-we-are" class="vov-about-identity" data-name="Who We Are">
                     <div class="vov-container vov-about-identity__grid">
-                        <div><p class="vov-kicker">WHO WE ARE</p><h2>Business context comes first.</h2></div>
+                        <div class="vov-about-identity__heading"><p class="vov-kicker">WHO WE ARE</p><h2>Business context comes first.</h2></div>
                         <div class="vov-about-identity__copy" data-vov-about-expand="1">
-                            <p class="vov-about-identity__description"><span>Vorevia Technologies is a technology firm based in Kathmandu that aims to make tech solutions more accessible for enterprises to streamline operations, enhance productivity, and establish robust groundwork for sustainable growth. Our ERP implementation, customization, system integration and business process improvement expertise focuses on creating a technological solution that meets actual business requirements.</span> <span id="vov-about-description-more" data-vov-about-more="1">We feel that each organisation has unique processes, responsibilities, challenges and aspirations. That is why our strategy is to first understand the business and then talk about software. We have the time to look at the way teams function, the flow of information among departments, where inefficiencies lie, and what stands in the way of getting the day's work done. Whatever an organisation is doing from selling to buying, stocking, funding, customer relationship, or services delivery, we are here to tie them all together – connected, reliable, and manageable. We help businesses transcend disconnected applications, repetitive manual tasks and fragmented information through an ERP solution that's designed, customized and developed to answer the call of business. We're not just about the technology; usability, employee adoption, system reliability, and evolving needs of a growing organization are all taken into account. Successful digital transformation is not just about introducing new tools; it's about making a difference in how people work together, how they find information, how they make decisions and how they serve their customers. We at Vorevia Technologies appreciate clarity, collaboration and long-term thinking and look to provide solutions that are practical for today, and adaptable for tomorrow. We want technology to be a reliable part of the business routine, empowering businesses to be more confident, to have more visibility in their processes and dedicate more time and resources to what really matters.</span></p>
+                            <div class="vov-about-identity__description">
+                                <h3>Our starting point</h3>
+                                <p class="vov-about-identity__lead">Vorevia Technologies is a technology firm based in Kathmandu that aims to make tech solutions more accessible for enterprises to streamline operations, enhance productivity, and establish robust groundwork for sustainable growth. Our ERP implementation, customization, system integration and business process improvement expertise focuses on creating a technological solution that meets actual business requirements.</p>
+                                <div id="vov-about-description-more" data-vov-about-more="1">
+                                    <h3>Understanding the business</h3>
+                                    <p>We feel that each organization has unique processes, responsibilities, challenges and aspirations. That is why our strategy is to first understand the business and then talk about software.</p>
+                                    <h3>Mapping the workflow</h3>
+                                    <p>We have the time to look at the way teams function, the flow of information among departments, where inefficiencies lie, and what stands in the way of getting the day's work done.</p>
+                                    <h3>Connecting daily operations</h3>
+                                    <p>Whatever an organization is doing, from selling to buying, stocking, funding, customer relationship, or services delivery, we are here to tie them all together in a connected, reliable, and manageable way.</p>
+                                    <h3>One system, fewer gaps</h3>
+                                    <p>We help businesses transcend disconnected applications, repetitive manual tasks and fragmented information through an ERP solution that is designed, customized and developed to answer the call of business.</p>
+                                    <h3>Designed for adoption</h3>
+                                    <p>We are not just about the technology; usability, employee adoption, system reliability, and the evolving needs of a growing organization are all taken into account.</p>
+                                    <h3>Making transformation practical</h3>
+                                    <p>Successful digital transformation is not just about introducing new tools; it is about making a difference in how people work together, find information, make decisions and serve their customers.</p>
+                                    <h3>Built for today and tomorrow</h3>
+                                    <p>We at Vorevia Technologies appreciate clarity, collaboration and long-term thinking, and look to provide solutions that are practical for today and adaptable for tomorrow.</p>
+                                    <p>We want technology to be a reliable part of the business routine, empowering businesses to be more confident, gain visibility in their processes, and dedicate more time and resources to what really matters.</p>
+                                </div>
+                            </div>
                             <button type="button" class="vov-about-identity__toggle" data-vov-about-toggle="1" aria-controls="vov-about-description-more" aria-expanded="false" hidden="hidden">
                                 <span class="vov-about-identity__toggle-text" data-vov-about-toggle-text="1">See More</span>
                                 <span class="vov-about-identity__toggle-arrow" aria-hidden="true">

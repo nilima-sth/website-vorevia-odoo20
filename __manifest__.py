@@ -40,6 +40,7 @@
             "website_vorevia/static/src/js/footer_brand_reveal.js",
             "website_vorevia/static/src/js/contact_widget.js",
             "website_vorevia/static/src/js/why_vorevia.js",
+            "website_vorevia/static/src/js/about_read_more.js",
         ],
     },
     "installable": True,

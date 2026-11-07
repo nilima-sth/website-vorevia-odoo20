@@ -1,0 +1,51 @@
+.vov-services-page {
+    color: var(--vov-ink);
+    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+    overflow: hidden;
+}
+
+.vov-services-page *,
+.vov-services-page *::before,
+.vov-services-page *::after { box-sizing: border-box; }
+
+.vov-services-hero { padding: clamp(5rem, 10vw, 9rem) 0 clamp(4rem, 8vw, 7rem); border-bottom: 1px solid var(--vov-line); background: #fff; }
+.vov-services-hero h1 { max-width: 1000px; margin: 0; color: var(--vov-ink); font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 540; letter-spacing: -.065em; line-height: .98; }
+.vov-services-hero h1 span { color: var(--vov-blue); }
+.vov-services-hero__foot { display: grid; align-items: end; gap: 2rem; margin-top: clamp(2.5rem, 5vw, 4.5rem); grid-template-columns: minmax(0, 1fr) auto; }
+.vov-services-hero__foot p { max-width: 690px; margin: 0; color: var(--vov-muted); font-size: clamp(1rem, 1.5vw, 1.18rem); line-height: 1.7; }
+.vov-services-hero__foot a { min-height: 44px; color: var(--vov-ink); font-size: .9rem; font-weight: 750; text-decoration: none; }.vov-services-hero__foot a:hover, .vov-services-hero__foot a:focus-visible { color: var(--vov-blue-deep); text-decoration: underline; text-underline-offset: .3em; }
+
+.vov-service-explorer, .vov-services-deliverables, .vov-services-engagement, .vov-services-faq { padding: clamp(4.5rem, 9vw, 8rem) 0; }
+.vov-services-heading { display: grid; align-items: end; gap: clamp(2rem, 7vw, 7rem); grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr); }.vov-services-heading h2 { max-width: 720px; margin: 0; color: var(--vov-ink); font-size: clamp(2rem, 4vw, 4rem); font-weight: 570; letter-spacing: -.05em; line-height: 1.05; }.vov-services-heading > p { max-width: 520px; margin: 0 0 .35rem; color: var(--vov-muted); line-height: 1.7; }
+
+.vov-service-browser { display: grid; min-height: 560px; margin-top: clamp(2.75rem, 6vw, 5rem); border: 1px solid var(--vov-line); border-radius: 16px; background: #fff; box-shadow: 0 22px 60px rgba(28, 53, 72, .07); grid-template-columns: minmax(260px, .72fr) minmax(0, 1.55fr); overflow: hidden; }
+.vov-service-tabs { padding: 1rem; border-right: 1px solid var(--vov-line); background: var(--vov-surface); }.vov-service-tab { display: grid; width: 100%; min-height: 82px; align-content: center; padding: 1rem; border: 0; border-radius: 10px; background: transparent; color: var(--vov-muted); font: inherit; text-align: left; transition: background 180ms ease, color 180ms ease; }.vov-service-tab + .vov-service-tab { margin-top: .35rem; }.vov-service-tab span { font-size: .92rem; font-weight: 720; }.vov-service-tab small { margin-top: .25rem; font-size: .76rem; }.vov-service-tab:hover, .vov-service-tab:focus-visible { background: #fff; color: var(--vov-ink); }.vov-service-tab.is-active { background: var(--vov-blue); color: #fff; }.vov-service-tab:focus-visible { outline: 2px solid var(--vov-blue-deep); outline-offset: 2px; }
+.vov-service-panels { min-width: 0; }.vov-service-panel { padding: clamp(2rem, 5vw, 4.5rem); }.vov-service-panel[hidden] { display: none; }.vov-service-panel__label { margin: 0 0 1rem; color: var(--vov-blue-deep); font-size: .7rem; font-weight: 800; letter-spacing: .14em; }.vov-service-panel h2 { max-width: 730px; margin: 0; color: var(--vov-ink); font-size: clamp(1.8rem, 3vw, 3rem); font-weight: 600; letter-spacing: -.04em; line-height: 1.08; }.vov-service-panel__lead { max-width: 690px; margin: 1.25rem 0 0; color: var(--vov-muted); line-height: 1.7; }.vov-service-panel__columns { display: grid; gap: clamp(2rem, 5vw, 5rem); margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid var(--vov-line); grid-template-columns: repeat(2, minmax(0, 1fr)); }.vov-service-panel__columns h3 { margin: 0 0 1rem; color: var(--vov-ink); font-size: .9rem; font-weight: 800; }.vov-service-panel__columns ul { display: grid; padding: 0; margin: 0; gap: .75rem; list-style: none; }.vov-service-panel__columns li { position: relative; padding-left: 1.1rem; color: var(--vov-ink-soft); font-size: .88rem; line-height: 1.5; }.vov-service-panel__columns li::before { position: absolute; top: .55em; left: 0; width: 5px; height: 5px; border-radius: 50%; background: var(--vov-blue); content: ""; }
+
+.vov-services-deliverables { background: var(--vov-blue-pale); }.vov-deliverable-grid { display: grid; margin-top: clamp(2.5rem, 5vw, 4.5rem); border-top: 1px solid #cbdde9; grid-template-columns: repeat(4, minmax(0, 1fr)); }.vov-deliverable-grid article { min-width: 0; padding: 2rem clamp(1rem, 2vw, 2rem) 1rem 0; }.vov-deliverable-grid article + article { padding-left: clamp(1rem, 2vw, 2rem); border-left: 1px solid #cbdde9; }.vov-deliverable-grid span { color: var(--vov-blue-deep); font-size: .72rem; font-weight: 800; }.vov-deliverable-grid h3 { margin: 2rem 0 .75rem; font-size: 1.05rem; font-weight: 750; }.vov-deliverable-grid p { margin: 0; color: var(--vov-muted); font-size: .86rem; line-height: 1.65; }
+
+.vov-engagement-steps { display: grid; padding: 0; margin: clamp(2.75rem, 6vw, 5rem) 0 0; border-top: 1px solid var(--vov-line); list-style: none; }.vov-engagement-steps li { display: grid; align-items: start; gap: 1.5rem; padding: 1.6rem 0; border-bottom: 1px solid var(--vov-line); grid-template-columns: 56px minmax(0, 1fr); }.vov-engagement-steps > li > span { color: var(--vov-blue-deep); font-size: .75rem; font-weight: 800; }.vov-engagement-steps h3 { margin: 0; font-size: clamp(1.15rem, 2vw, 1.55rem); font-weight: 700; }.vov-engagement-steps p { max-width: 720px; margin: .5rem 0 0; color: var(--vov-muted); line-height: 1.65; }
+
+.vov-services-faq { background: var(--vov-surface); }.vov-services-faq__grid { display: grid; gap: clamp(3rem, 8vw, 8rem); grid-template-columns: minmax(260px, .75fr) minmax(0, 1.25fr); }.vov-services-faq h2 { margin: 0; font-size: clamp(2rem, 3.5vw, 3.4rem); font-weight: 600; letter-spacing: -.045em; }.vov-services-faq__grid > div:first-child > p:last-child { color: var(--vov-muted); }.vov-services-faq__list { border-top: 1px solid var(--vov-line); }.vov-services-faq details { border-bottom: 1px solid var(--vov-line); }.vov-services-faq summary { min-height: 64px; padding: 1.25rem 2rem 1.25rem 0; color: var(--vov-ink); font-size: .94rem; font-weight: 700; cursor: pointer; }.vov-services-faq details p { max-width: 680px; padding: 0 1rem 1.35rem 0; margin: 0; color: var(--vov-muted); line-height: 1.65; }
+
+.vov-services-cta { padding: clamp(4rem, 8vw, 7rem) 0; background: #fff; }.vov-services-cta__inner { display: flex; align-items: end; justify-content: space-between; gap: 2rem; }.vov-services-cta h2 { max-width: 740px; margin: 0; font-size: clamp(2rem, 4vw, 4rem); font-weight: 580; letter-spacing: -.05em; line-height: 1.05; }.vov-services-cta p { max-width: 630px; color: var(--vov-muted); line-height: 1.65; }
+
+@media (max-width: 991.98px) {
+    .vov-services-heading { gap: 1.5rem; grid-template-columns: 1fr; }
+    .vov-service-browser { grid-template-columns: 1fr; }
+    .vov-service-tabs { display: flex; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--vov-line); gap: .5rem; scroll-snap-type: x mandatory; }
+    .vov-service-tab { min-width: 220px; scroll-snap-align: start; }.vov-service-tab + .vov-service-tab { margin-top: 0; }
+    .vov-deliverable-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.vov-deliverable-grid article:nth-child(3) { padding-left: 0; border-top: 1px solid #cbdde9; border-left: 0; }.vov-deliverable-grid article:nth-child(4) { border-top: 1px solid #cbdde9; }
+}
+
+@media (max-width: 767.98px) {
+    .vov-services-hero__foot, .vov-services-faq__grid { grid-template-columns: 1fr; }
+    .vov-services-hero h1 { font-size: clamp(2.75rem, 13vw, 4.5rem); }
+    .vov-service-panel__columns { grid-template-columns: 1fr; }
+    .vov-deliverable-grid { grid-template-columns: 1fr; }.vov-deliverable-grid article, .vov-deliverable-grid article + article { padding: 1.5rem 0; border-top: 1px solid #cbdde9; border-left: 0; }.vov-deliverable-grid article:first-child { border-top: 0; }
+    .vov-services-cta__inner { align-items: stretch; flex-direction: column; }.vov-services-cta .vov-button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vov-service-tab, .vov-services-page a { transition-duration: .01ms !important; }
+}

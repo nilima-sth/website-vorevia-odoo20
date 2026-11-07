@@ -94,7 +94,7 @@
                         <div class="vov-solutions-page__cta">
                             <h3>Start with your requirements</h3>
                             <p>Not sure what your business needs? Tell us about your workflow and we'll help identify the right starting point.</p>
-                            <a class="vov-button vov-button-primary" href="/#consultation">Start a Conversation <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                            <a class="vov-button vov-button-primary" href="/contact">Start a Conversation <i class="fa fa-arrow-right" aria-hidden="true"/></a>
                         </div>
                     </div>
                 </section>

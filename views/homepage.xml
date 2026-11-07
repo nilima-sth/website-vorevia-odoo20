@@ -31,14 +31,14 @@
                         <div class="vov-nav-links" aria-label="Desktop navigation">
                             <a href="/">Home</a>
                             <a class="vov-nav-solutions" href="/solutions" data-mega-trigger="solutions" aria-controls="vovSolutionsMenu" aria-expanded="false">Solutions <span class="vov-mega-arrow" aria-hidden="true">▾</span></a>
-                            <a class="vov-nav-services" href="/#services" data-mega-trigger="services" aria-controls="vovServicesMenu" aria-expanded="false">Services <span class="vov-mega-arrow" aria-hidden="true">▾</span></a>
+                            <a class="vov-nav-services" href="/services" data-mega-trigger="services" aria-controls="vovServicesMenu" aria-expanded="false">Services <span class="vov-mega-arrow" aria-hidden="true">▾</span></a>
                             <a href="/about">About</a>
                             <a href="/blog">Blogs</a>
-                            <a href="/#consultation">Contact</a>
+                            <a href="/contact">Contact</a>
                         </div>
                         <a t-if="request.env.user._is_public()" class="vov-nav-signin" href="/web/login">Sign in</a>
                         <a t-else="" class="vov-nav-signin" href="/my">My account</a>
-                        <a class="vov-nav-cta vov-nav-cta--noise" href="/#consultation">
+                        <a class="vov-nav-cta vov-nav-cta--noise" href="/contact">
                             <div class="blob1" aria-hidden="true"/>
                             <div class="blob2" aria-hidden="true"/>
                             <span class="inner"><span class="vov-nav-cta__label">Let's Talk <i class="fa fa-arrow-right" aria-hidden="true"/></span></span>
@@ -141,13 +141,13 @@
                                     <p class="vov-services-mega__eyebrow">KEEP TEAMS MOVING</p><h3>Training &amp; Support</h3><p>Help users adopt the system, resolve issues and improve workflows after launch.</p>
                                     <ul><li>Role-based training</li><li>Issue resolution</li><li>Ongoing refinements</li></ul>
                                 </section>
-                                <a href="/#services" class="vov-services-mega__link">Explore all services <span aria-hidden="true">↗</span></a>
+                                <a href="/services" class="vov-services-mega__link">Explore all services <span aria-hidden="true">↗</span></a>
                             </div>
                             <aside class="vov-services-mega__aside">
                                 <p class="vov-services-mega__eyebrow">START WITH A CONVERSATION</p>
                                 <h3>Where does work slow down?</h3>
                                 <p>Bring the process, the people involved and the current system. We will help identify a practical starting point.</p>
-                                <a href="/#consultation">Discuss your workflow <span aria-hidden="true">↗</span></a>
+                                <a href="/contact">Discuss your workflow <span aria-hidden="true">↗</span></a>
                             </aside>
                         </div>
                     </div>
@@ -211,13 +211,13 @@
                                     <details><summary>Workflow Automation</summary><p>Give recurring handoffs clear rules and ownership.</p></details>
                                     <details><summary>Integrations &amp; Migration</summary><p>Assess, move and connect the data your process depends on.</p></details>
                                     <details><summary>Training &amp; Support</summary><p>Prepare users and refine the system after launch.</p></details>
-                                    <a href="/#services">Explore all services ↗</a>
+                                    <a href="/services">Explore all services ↗</a>
                                 </div>
                             </div>
-                            <a href="/about">About</a><a href="/blog">Blogs</a><a href="/#consultation">Contact</a>
+                            <a href="/about">About</a><a href="/blog">Blogs</a><a href="/contact">Contact</a>
                             <a t-if="request.env.user._is_public()" href="/web/login">Sign in</a>
                             <a t-else="" href="/my">My account</a>
-                            <a class="vov-button vov-button-primary" href="/#consultation">Let's Talk</a>
+                            <a class="vov-button vov-button-primary" href="/contact">Let's Talk</a>
                         </div>
                     </div>
                 </nav>
@@ -230,25 +230,51 @@
             <footer id="bottom" class="vov-site-footer" data-name="Footer">
                 <div id="footer" class="oe_structure" t-if="not no_footer">
                     <section class="vov-footer-main s_text_block" data-snippet="s_text_block" data-name="Vorevia Footer">
-                        <div class="vov-container vov-footer-grid">
-                            <div class="vov-footer-brand">
-                                <a class="vov-wordmark" href="/" aria-label="Vorevia Technologies home">
-                                    <span class="vov-logo-lockup" aria-hidden="true">
-                                        <img src="/website_vorevia/static/src/img/logo.webp" alt=""
-                                             width="1200" height="600" loading="lazy"/>
-                                    </span>
-                                </a>
-                                <p>Odoo implementation and customization for connected sales, inventory, delivery and finance workflows.</p>
+                        <div class="vov-container">
+                            <div class="vov-footer-editorial">
+                                <section class="vov-footer-intro" aria-labelledby="vov-footer-intro-title">
+                                    <h2 id="vov-footer-intro-title">Making technology work for you.</h2>
+                                    <p>Thoughtfully implemented business systems, designed around the way your organization works.</p>
+                                    <a class="vov-footer-conversation-link" href="/contact">Start a Conversation <span aria-hidden="true">↗</span></a>
+                                </section>
+                                <div class="vov-footer-navigation" aria-label="Footer navigation">
+                                    <nav class="vov-footer-links" aria-labelledby="vov-footer-explore-title">
+                                        <h2 id="vov-footer-explore-title">Explore</h2>
+                                        <a href="/solutions">Solutions</a>
+                                        <a href="/services">Services</a>
+                                        <a href="/about">Our Approach</a>
+                                        <a href="/blog">Insights</a>
+                                    </nav>
+                                    <nav class="vov-footer-links" aria-labelledby="vov-footer-company-title">
+                                        <h2 id="vov-footer-company-title">Company</h2>
+                                        <a href="/about">About Us</a>
+                                        <a href="/contact">Contact</a>
+                                        <a href="/#faq">FAQs</a>
+                                        <a href="/my">Client Portal</a>
+                                    </nav>
+                                </div>
                             </div>
-                            <div class="vov-footer-links"><h2>Explore</h2><a href="/#solutions">Solutions</a><a href="/#services">Services</a><a href="/#process">Our process</a></div>
-                            <div class="vov-footer-links"><h2>Company</h2><a href="/about">About Vorevia</a><a href="/#faq">FAQ</a><a href="/#consultation">Contact</a></div>
-                            <div class="vov-footer-conversation">
-                                <p class="vov-kicker">START A CONVERSATION</p>
-                                <a href="/#consultation">Tell us where work gets stuck <i class="fa fa-arrow-right" aria-hidden="true"/></a>
-                            </div>
+                            <section class="vov-footer-meta" aria-label="Vorevia contact and social links">
+                                <address class="vov-footer-contact-list">
+                                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Kathmandu%2C%20Nepal" target="_blank" rel="noopener noreferrer">Kathmandu, Nepal</a>
+                                    <a href="mailto:info@vorevia.com">info@vorevia.com</a>
+                                    <a href="tel:+9779712030420">+977 971-2030420</a>
+                                </address>
+                                <div class="vov-footer-social__links" aria-label="Vorevia social media">
+                                    <a class="vov-footer-social__link" href="https://www.linkedin.com/in/voreviatech-undefined-007425449/" target="_blank" rel="noopener noreferrer" aria-label="Visit Vorevia Technologies on LinkedIn">
+                                        <svg viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="3" fill="#0a66c2"/><path fill="#fff" d="M8.8 13.3h3.4V25H8.8zM10.5 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm3.8 5.3h3.3v1.6h.1c.5-.9 1.6-1.9 3.5-1.9 3.7 0 4.4 2.4 4.4 5.6V25h-3.4v-5.7c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3V25h-3.4z"/></svg>
+                                    </a>
+                                    <a class="vov-footer-social__link" href="https://www.instagram.com/voreviatech/" target="_blank" rel="noopener noreferrer" aria-label="Visit Vorevia Technologies on Instagram">
+                                        <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="vov-instagram-gradient" x1="7" y1="42" x2="42" y2="6" gradientUnits="userSpaceOnUse"><stop stop-color="#feda75"/><stop offset=".36" stop-color="#fa7e1e"/><stop offset=".64" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="3" y="3" width="42" height="42" rx="12" fill="url(#vov-instagram-gradient)"/><rect x="12" y="12" width="24" height="24" rx="7" fill="none" stroke="#fff" stroke-width="3"/><circle cx="24" cy="24" r="6" fill="none" stroke="#fff" stroke-width="3"/><circle cx="33.5" cy="14.5" r="2" fill="#fff"/></svg>
+                                    </a>
+                                    <a class="vov-footer-social__link" href="https://www.facebook.com/profile.php?id=61596195483334" target="_blank" rel="noopener noreferrer" aria-label="Visit Vorevia Technologies on Facebook">
+                                        <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="20" fill="#1877f2"/><text x="20" y="31" fill="#fff" font-family="Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle">f</text></svg>
+                                    </a>
+                                </div>
+                            </section>
                         </div>
                     </section>
-                    <div class="vov-footer-bottom"><div class="vov-container"><span>Copyright © Vorevia Technologies. All rights reserved.</span><span>Built for connected operations.</span></div></div>
+                    <div class="vov-footer-bottom"><div class="vov-container"><span>Copyright © Vorevia Technologies. All rights reserved.</span></div></div>
                     <div class="vov-brand-reveal" data-vov-brand-reveal="" aria-hidden="true">
                         <div class="vov-brand-reveal__lockup">
                             <img class="vov-brand-reveal__logo"
@@ -353,7 +379,7 @@
                             <h1>Start your digital<br/><span>transformation.</span></h1>
                             <p class="vov-hero-lead">Turn disconnected sales, stock, delivery and billing work into a connected operating flow. Vorevia configures and extends Odoo around the handoffs your teams actually use.</p>
                             <div class="vov-actions">
-                                <a class="vov-button vov-button-primary" href="#consultation">Discuss Your Workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                                <a class="vov-button vov-button-primary" href="/contact">Discuss Your Workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a>
                                 <a class="vov-button vov-button-secondary" href="#workflow">See the Connected Flow <i class="fa fa-arrow-down" aria-hidden="true"/></a>
                             </div>
                         </div>
@@ -380,7 +406,7 @@
                         </div>
                         <div class="vov-order-flow__foot">
                             <p>Illustrative workflow. The applications, rules and integrations are scoped for each project.</p>
-                            <a href="#consultation">Map your own process <span aria-hidden="true">↗</span></a>
+                            <a href="/contact">Map your own process <span aria-hidden="true">↗</span></a>
                         </div>
                     </div>
                 </section>
@@ -408,6 +434,10 @@
                                 </div>
                                 <p class="vov-illustration-note">Illustrative project workspace · sample content</p>
                             </div>
+                        </div>
+                        <div class="vov-capability-more">
+                            <p>Need to understand scope, deliverables, or how an engagement works?</p>
+                            <a href="/services">Explore all services <span aria-hidden="true">↗</span></a>
                         </div>
                     </div>
                 </section>
@@ -555,13 +585,13 @@
                                 </section>
                             </div>
                         </div>
-                        <div class="vov-why-footer"><p>Have a workflow that needs a clearer path?</p><div><a class="vov-button vov-button-primary" href="#consultation">Discuss your workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a><a class="vov-why-more" href="/about">More about Vorevia <span aria-hidden="true">↗</span></a></div></div>
+                        <div class="vov-why-footer"><p>Have a workflow that needs a clearer path?</p><div><a class="vov-button vov-button-primary" href="/contact">Discuss your workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a><a class="vov-why-more" href="/about">More about Vorevia <span aria-hidden="true">↗</span></a></div></div>
                     </div>
                 </section>
 
                 <section id="faq" class="vov-faq vov-section s_text_block" data-snippet="s_text_block" data-name="Frequently Asked Questions" data-anchor="true">
                     <div class="vov-container vov-faq-grid">
-                        <div class="vov-faq-intro"><p class="vov-kicker">FREQUENTLY ASKED QUESTIONS</p><h2>Questions, answered.</h2><p>A practical starting point for planning an Odoo implementation or improvement project.</p><a class="vov-text-link" href="#consultation">Ask another question <span aria-hidden="true">↗</span></a></div>
+                        <div class="vov-faq-intro"><p class="vov-kicker">FREQUENTLY ASKED QUESTIONS</p><h2>Questions, answered.</h2><p>A practical starting point for planning an Odoo implementation or improvement project.</p><a class="vov-text-link" href="/contact">Ask another question <span aria-hidden="true">↗</span></a></div>
                         <div class="accordion accordion-flush vov-accordion" id="vovFaqAccordion">
                             <div class="accordion-item"><h3 class="accordion-header" id="vovFaqHeadingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#vovFaqOne" aria-expanded="true" aria-controls="vovFaqOne">What is Odoo ERP?</button></h3><div id="vovFaqOne" class="accordion-collapse collapse show" aria-labelledby="vovFaqHeadingOne" data-bs-parent="#vovFaqAccordion"><div class="accordion-body">Odoo is a suite of connected business applications that can bring areas such as sales, inventory, accounting and people operations into one system.</div></div></div>
                             <div class="accordion-item"><h3 class="accordion-header" id="vovFaqHeadingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vovFaqTwo" aria-expanded="false" aria-controls="vovFaqTwo">Can Odoo be customized for our business?</button></h3><div id="vovFaqTwo" class="accordion-collapse collapse" aria-labelledby="vovFaqHeadingTwo" data-bs-parent="#vovFaqAccordion"><div class="accordion-body">Yes. Standard configuration should be used where it fits, while focused custom modules can support requirements that need different behavior.</div></div></div>
@@ -597,7 +627,7 @@
                 </section>
 
                 <section class="vov-final-cta s_text_block" data-snippet="s_text_block" data-name="Final Call to Action">
-                    <div class="vov-container"><div class="vov-cta-inner"><p class="vov-kicker">A MORE CONNECTED WAY TO WORK</p><h2>Ready to connect the steps behind every order?</h2><p>Bring us the process you want to improve. We will help you find a practical starting point in Odoo.</p><a class="vov-button vov-button-primary" href="#consultation">Discuss Your Workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a></div></div>
+                    <div class="vov-container"><div class="vov-cta-inner"><p class="vov-kicker">A MORE CONNECTED WAY TO WORK</p><h2>Your Next Step Towards a Smarter Business.</h2><p>Bring us the process you want to improve. We'll help you find the right approach, built around your business.</p><a class="vov-button vov-button-primary" href="/contact">Discuss Your Workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a></div></div>
                 </section>
             </div>
         </xpath>

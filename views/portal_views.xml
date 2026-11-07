@@ -1,118 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="portal_my_home_consultations"
-              name="Consultation requests portal card"
-              inherit_id="portal.portal_my_home">
-        <div id="portal_common_category" position="inside">
-            <t t-call="portal.portal_docs_entry">
-                <t t-set="icon" t-value="False"/>
-                <t t-set="title">Consultation requests</t>
-                <t t-set="text">Follow the requests you have sent to Vorevia</t>
-                <t t-set="url" t-value="'/my/consultations'"/>
-                <t t-set="placeholder_count" t-value="'consultation_count'"/>
-                <t t-set="config_card" t-value="True"/>
-            </t>
-        </div>
+    <template id="vov_portal_header" name="Vorevia portal header">
+        <nav class="vov-portal-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a><span aria-hidden="true">/</span><span>My Account</span>
+        </nav>
+        <header class="vov-portal-heading">
+            <p class="vov-portal-eyebrow">MY ACCOUNT</p>
+            <h1>Your workspace with Vorevia.</h1>
+            <p>Follow your enquiries and keep your contact information up to date.</p>
+        </header>
+        <nav class="vov-portal-nav" aria-label="My Account navigation">
+            <a t-att-class="'is-active' if page_name == 'home' else ''" href="/my" t-att-aria-current="'page' if page_name == 'home' else None">Overview</a>
+            <a t-att-class="'is-active' if page_name in ['consultations', 'consultation'] else ''" href="/my/consultations" t-att-aria-current="'page' if page_name in ['consultations', 'consultation'] else None">Enquiries</a>
+            <a t-att-class="'is-active' if page_name == 'profile' else ''" href="/my/profile" t-att-aria-current="'page' if page_name == 'profile' else None">Profile</a>
+        </nav>
     </template>
 
-    <template id="portal_breadcrumbs_consultations"
-              name="Consultation requests portal breadcrumbs"
-              inherit_id="portal.portal_breadcrumbs">
-        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
-            <li t-if="page_name == 'consultations' or consultation"
-                t-attf-class="breadcrumb-item #{'active ' if not consultation else ''}">
-                <a t-if="consultation" t-attf-href="/my/consultations?{{ keep_query() }}">Consultation requests</a>
-                <t t-else="">Consultation requests</t>
-            </li>
-            <li t-if="consultation" class="breadcrumb-item active">
-                Request #<t t-out="consultation.id"/>
-            </li>
+    <template id="portal_my_home_vorevia" name="Vorevia account overview" inherit_id="portal.portal_my_home" priority="90">
+        <xpath expr="//t[@t-call='portal.portal_layout']" position="attributes">
+            <attribute name="my_details">False</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('o_portal_my_home')]" position="replace">
+            <main class="vov-portal" id="main-content">
+                <t t-call="website_vorevia.vov_portal_header"/>
+                <section class="vov-portal-welcome" aria-labelledby="vov-portal-welcome-title">
+                    <div>
+                        <p class="vov-portal-eyebrow">WELCOME</p>
+                        <h2 id="vov-portal-welcome-title">
+                            <t t-if="user_id.name and user_id.name != 'Administrator'">Hello, <t t-out="user_id.name"/>.</t>
+                            <t t-else="">Manage your relationship with Vorevia.</t>
+                        </h2>
+                        <p>Review requests you have sent us or update the information we use to contact you.</p>
+                    </div>
+                    <a class="vov-portal-button" href="/contact">Start an enquiry <span aria-hidden="true">→</span></a>
+                </section>
+
+                <div class="vov-portal-grid">
+                    <section class="vov-portal-panel vov-portal-panel--enquiries" aria-labelledby="vov-enquiries-title">
+                        <div class="vov-portal-panel__head"><div><p class="vov-portal-eyebrow">MY ENQUIRIES</p><h2 id="vov-enquiries-title">Your consultation requests</h2></div><a class="vov-portal-text-link" href="/my/consultations">View all <span aria-hidden="true">→</span></a></div>
+                        <div t-if="recent_consultations" class="vov-portal-request-list">
+                            <a t-foreach="recent_consultations" t-as="consultation" class="vov-portal-request" t-att-href="'/my/consultations/%s' % consultation.id">
+                                <span class="vov-portal-request__body"><strong><t t-out="consultation.name or ('Request #%s' % consultation.id)"/></strong><span><span t-field="consultation.create_date"/> · <span t-field="consultation.interest"/></span></span>
+                                <span t-attf-class="vov-status vov-status--#{consultation.state}"><span t-field="consultation.state"/></span>
+                            </a>
+                        </div>
+                        <div t-else="" class="vov-portal-empty" role="status"><h3>No enquiries yet</h3><p>Requests submitted while signed in appear here automatically.</p><a class="vov-portal-text-link" href="/contact">Tell us what you would like to improve <span aria-hidden="true">→</span></a></div>
+                    </section>
+                    <aside class="vov-portal-panel vov-portal-profile" aria-labelledby="vov-profile-title">
+                        <p class="vov-portal-eyebrow">PROFILE</p><h2 id="vov-profile-title">Profile &amp; company information</h2>
+                        <dl><dt>Name</dt><dd><t t-out="user_id.partner_id.name or 'Not provided'"/></dd><dt>Email</dt><dd><t t-out="user_id.partner_id.email or 'Not provided'"/></dd><dt t-if="user_id.partner_id.commercial_partner_id != user_id.partner_id">Company</dt><dd t-if="user_id.partner_id.commercial_partner_id != user_id.partner_id"><t t-out="user_id.partner_id.commercial_partner_id.name"/></dd></dl>
+                        <a class="vov-portal-text-link" href="/my/profile">View or edit your profile <span aria-hidden="true">→</span></a>
+                    </aside>
+                </div>
+                <section class="vov-portal-activity" aria-labelledby="vov-activity-title"><p class="vov-portal-eyebrow">ACCOUNT ACTIVITY</p><h2 id="vov-activity-title">Keep the conversation moving</h2><p t-if="recent_consultations">Your most recent enquiry is shown above. We will update its status as our team follows up.</p><p t-else="">When you submit an enquiry while signed in, it will appear here for you to review.</p></section>
+            </main>
         </xpath>
     </template>
 
-    <template id="portal_my_consultations" name="My Consultation Requests">
-        <t t-call="portal.portal_layout">
-            <t t-set="breadcrumbs_searchbar" t-value="True"/>
-
-            <t t-call="portal.portal_searchbar">
-                <t t-set="title">Consultation requests</t>
-            </t>
-
-            <div t-if="not consultations" class="alert alert-info" role="status">
-                <p class="mb-2">You do not have any consultation requests linked to this account yet.</p>
-                <p class="mb-0 small">Requests submitted while signed in appear here automatically.</p>
-                <a class="btn btn-primary btn-sm mt-3" href="/#consultation">Request a consultation</a>
-            </div>
-
-            <t t-else="" t-call="portal.portal_table">
-                <thead>
-                    <tr>
-                        <th>Request</th>
-                        <th>Submitted</th>
-                        <th>Area</th>
-                        <th class="text-end">Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr t-foreach="consultations" t-as="consultation">
-                        <td>
-                            <a t-att-href="'/my/consultations/%s' % consultation.id">
-                                Request #<t t-out="consultation.id"/>
-                            </a>
-                        </td>
-                        <td><span t-field="consultation.create_date"/></td>
-                        <td><span t-field="consultation.interest"/></td>
-                        <td class="text-end">
-                            <span t-if="consultation.state == 'new'" class="badge text-bg-secondary"><span t-field="consultation.state"/></span>
-                            <span t-elif="consultation.state == 'contacted'" class="badge text-bg-primary"><span t-field="consultation.state"/></span>
-                            <span t-else="" class="badge text-bg-success"><span t-field="consultation.state"/></span>
-                        </td>
-                    </tr>
-                </tbody>
-            </t>
+    <template id="portal_my_consultations" name="My enquiries">
+        <t t-call="portal.portal_layout"><t t-set="no_breadcrumbs" t-value="True"/><t t-set="additional_title">My Enquiries</t>
+            <main class="vov-portal" id="main-content"><t t-call="website_vorevia.vov_portal_header"/>
+                <section class="vov-portal-page-intro"><div><p class="vov-portal-eyebrow">MY ENQUIRIES</p><h2>Consultation requests</h2><p>Every request sent while signed in is listed here.</p></div><a class="vov-portal-button" href="/contact">Start an enquiry <span aria-hidden="true">→</span></a></section>
+                <section t-if="not consultations" class="vov-portal-empty vov-portal-empty--large" role="status"><h2>No enquiries yet</h2><p>Tell us what you would like to improve, and your request will appear here.</p><a class="vov-portal-button" href="/contact">Start an enquiry <span aria-hidden="true">→</span></a></section>
+                <section t-else="" class="vov-portal-panel vov-portal-table-wrap" aria-label="Consultation requests"><div class="vov-portal-sort"><span>Sort by</span><a t-att-class="'is-active' if sortby == 'date' else ''" href="/my/consultations">Newest</a><a t-att-class="'is-active' if sortby == 'status' else ''" href="/my/consultations?sortby=status">Status</a></div><div class="table-responsive"><table class="vov-portal-table"><thead><tr><th>Request</th><th>Submitted</th><th>Area</th><th>Status</th><th><span class="visually-hidden">Action</span></th></tr></thead><tbody><tr t-foreach="consultations" t-as="consultation"><td><strong><t t-out="consultation.name or ('Request #%s' % consultation.id)"/></strong></td><td><span t-field="consultation.create_date"/></td><td><span t-field="consultation.interest"/></td><td><span t-attf-class="vov-status vov-status--#{consultation.state}"><span t-field="consultation.state"/></span></td><td><a class="vov-portal-text-link" t-att-href="'/my/consultations/%s' % consultation.id">View <span aria-hidden="true">→</span></a></td></tr></tbody></table></div><div t-if="pager" class="o_portal_pager d-flex justify-content-center my-4"><t t-call="portal.pager"/></div></section>
+            </main>
         </t>
     </template>
 
-    <template id="portal_my_consultation" name="My Consultation Request">
-        <t t-call="portal.portal_layout">
-            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+    <template id="portal_my_consultation" name="My consultation request">
+        <t t-call="portal.portal_layout"><t t-set="no_breadcrumbs" t-value="True"/><t t-set="additional_title">Consultation Request</t>
+            <main class="vov-portal" id="main-content"><t t-call="website_vorevia.vov_portal_header"/><a class="vov-portal-back" href="/my/consultations">← Back to all enquiries</a><article class="vov-portal-panel vov-portal-detail"><div class="vov-portal-detail__head"><div><p class="vov-portal-eyebrow">CONSULTATION REQUEST</p><h2><t t-out="consultation.name or ('Request #%s' % consultation.id)"/></h2></div><span t-attf-class="vov-status vov-status--#{consultation.state}"><span t-field="consultation.state"/></span></div><dl class="vov-portal-detail__meta"><dt>Submitted</dt><dd><span t-field="consultation.create_date"/></dd><dt>Area of interest</dt><dd><span t-field="consultation.interest"/></dd><dt>Company</dt><dd><t t-out="consultation.company or 'Not provided'"/></dd><dt>Contact</dt><dd><t t-out="consultation.email"/><t t-if="consultation.phone"> · <t t-out="consultation.phone"/></t></dd></dl><div class="vov-portal-detail__message"><h3>What you shared</h3><p><t t-out="consultation.description"/></p></div></article></main>
+        </t>
+    </template>
 
-            <t t-call="portal.portal_searchbar">
-                <t t-set="title">Consultation request</t>
-            </t>
-
-            <div class="card">
-                <div class="card-body p-4">
-                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
-                        <div>
-                            <p class="text-muted mb-1">Consultation request</p>
-                            <h2 class="h4 mb-0">Request #<t t-out="consultation.id"/></h2>
-                        </div>
-                        <span t-if="consultation.state == 'new'" class="badge text-bg-secondary"><span t-field="consultation.state"/></span>
-                        <span t-elif="consultation.state == 'contacted'" class="badge text-bg-primary"><span t-field="consultation.state"/></span>
-                        <span t-else="" class="badge text-bg-success"><span t-field="consultation.state"/></span>
-                    </div>
-
-                    <dl class="row mb-0">
-                        <dt class="col-sm-4">Submitted</dt>
-                        <dd class="col-sm-8"><span t-field="consultation.create_date"/></dd>
-                        <dt class="col-sm-4">Area of interest</dt>
-                        <dd class="col-sm-8"><span t-field="consultation.interest"/></dd>
-                        <dt class="col-sm-4">Company</dt>
-                        <dd class="col-sm-8"><t t-out="consultation.company or 'Not provided'"/></dd>
-                        <dt class="col-sm-4">Email</dt>
-                        <dd class="col-sm-8"><t t-out="consultation.email"/></dd>
-                        <dt class="col-sm-4">Phone</dt>
-                        <dd class="col-sm-8"><t t-out="consultation.phone or 'Not provided'"/></dd>
-                    </dl>
-
-                    <hr class="my-4"/>
-                    <h3 class="h6">What you shared</h3>
-                    <div class="bg-light rounded p-3" style="white-space: pre-line;"><t t-out="consultation.description"/></div>
-                </div>
-            </div>
-
-            <a class="btn btn-link px-0 mt-3" href="/my/consultations">Back to consultation requests</a>
+    <template id="portal_my_profile" name="My profile">
+        <t t-call="portal.portal_layout"><t t-set="no_breadcrumbs" t-value="True"/><t t-set="additional_title">My Profile</t>
+            <main class="vov-portal" id="main-content"><t t-call="website_vorevia.vov_portal_header"/><section class="vov-portal-page-intro"><div><p class="vov-portal-eyebrow">PROFILE</p><h2>Profile &amp; company information</h2><p>Keep your contact information accurate so our team can reach you.</p></div></section><section class="vov-portal-panel vov-portal-profile-form"><form action="/my/address/submit" method="post" name="address_form" class="address_autoformat" t-att-data-company-country-code="res_company.country_id.code" t-att-data-submit-url="'/my/address/submit'"><div name="address_details" class="row"><t t-call="portal.address_form_fields"/></div><t t-call="portal.address_footer"/></form></section></main>
         </t>
     </template>
 </odoo>

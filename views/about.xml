@@ -54,7 +54,7 @@
                 <section class="vov-about-cta" data-name="Start a Conversation">
                     <div class="vov-container vov-about-cta__inner">
                         <div><p class="vov-kicker">LET'S WORK TOGETHER</p><h2>Start with the process you want to improve.</h2><p>Tell us where work slows down or information gets lost. We can help identify a practical starting point.</p></div>
-                        <a class="vov-button vov-button-primary" href="/#consultation">Discuss your workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                        <a class="vov-button vov-button-primary" href="/contact">Discuss your workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a>
                     </div>
                 </section>
             </div>

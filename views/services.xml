@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="vorevia_services_page" name="Vorevia Services">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Services</t>
+            <div id="wrap" class="oe_structure vov-services-page">
+                <section class="vov-services-hero" data-name="Services Introduction">
+                    <div class="vov-container">
+                        <p class="vov-kicker">SERVICES</p>
+                        <h1>Services for the work <span>behind your business.</span></h1>
+                        <div class="vov-services-hero__foot">
+                            <p>From a first Odoo implementation to focused improvements in an existing system, Vorevia turns documented operational needs into practical, maintainable workflows.</p>
+                            <a href="#service-explorer">Explore our services <span aria-hidden="true">↘</span></a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="service-explorer" class="vov-service-explorer" data-name="Service Explorer">
+                    <div class="vov-container">
+                        <div class="vov-services-heading">
+                            <div><p class="vov-kicker">CHOOSE A STARTING POINT</p><h2>What do you need to move forward?</h2></div>
+                            <p>Select a service to see who it helps, what the work includes, and what you can expect to receive.</p>
+                        </div>
+                        <div class="vov-service-browser" data-vov-service-browser="true">
+                            <div class="vov-service-tabs" role="tablist" aria-label="Vorevia services">
+                                <button id="vov-service-tab-implementation" class="vov-service-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="vov-service-panel-implementation" tabindex="0" data-service-target="implementation"><span>ERP Implementation</span><small>Plan and launch</small></button>
+                                <button id="vov-service-tab-development" class="vov-service-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-service-panel-development" tabindex="-1" data-service-target="development"><span>Custom Development</span><small>Close a defined gap</small></button>
+                                <button id="vov-service-tab-automation" class="vov-service-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-service-panel-automation" tabindex="-1" data-service-target="automation"><span>Workflow Automation</span><small>Reduce repeated work</small></button>
+                                <button id="vov-service-tab-integration" class="vov-service-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-service-panel-integration" tabindex="-1" data-service-target="integration"><span>Integrations &amp; Migration</span><small>Connect systems and data</small></button>
+                                <button id="vov-service-tab-support" class="vov-service-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-service-panel-support" tabindex="-1" data-service-target="support"><span>Training &amp; Support</span><small>Adopt and improve</small></button>
+                            </div>
+                            <div class="vov-service-panels">
+                                <article id="vov-service-panel-implementation" class="vov-service-panel is-active" role="tabpanel" aria-labelledby="vov-service-tab-implementation" data-service-panel="implementation">
+                                    <p class="vov-service-panel__label">ERP IMPLEMENTATION</p><h2>Plan, configure, and launch an integrated business system.</h2><p class="vov-service-panel__lead">For teams replacing fragmented tools or introducing Odoo across a defined operating process.</p>
+                                    <div class="vov-service-panel__columns"><div><h3>What we work through</h3><ul><li>Process discovery and requirements</li><li>Application, role, and workflow configuration</li><li>Data preparation and scenario testing</li><li>User onboarding and go-live planning</li></ul></div><div><h3>What you receive</h3><ul><li>Agreed implementation scope</li><li>Configured Odoo workspace</li><li>Validated operating scenarios</li><li>Launch and adoption plan</li></ul></div></div>
+                                </article>
+                                <article id="vov-service-panel-development" class="vov-service-panel" role="tabpanel" aria-labelledby="vov-service-tab-development" data-service-panel="development" hidden="hidden">
+                                    <p class="vov-service-panel__label">CUSTOM DEVELOPMENT</p><h2>Extend Odoo where a documented requirement needs a better fit.</h2><p class="vov-service-panel__lead">For organizations with a clear workflow gap that standard configuration cannot resolve.</p>
+                                    <div class="vov-service-panel__columns"><div><h3>What we work through</h3><ul><li>Requirement and edge-case review</li><li>Technical design and module boundaries</li><li>Focused development and access rules</li><li>Acceptance testing and release preparation</li></ul></div><div><h3>What you receive</h3><ul><li>Maintainable custom Odoo module</li><li>Documented behavior and decisions</li><li>Tested permissions and workflows</li><li>Deployment and update guidance</li></ul></div></div>
+                                </article>
+                                <article id="vov-service-panel-automation" class="vov-service-panel" role="tabpanel" aria-labelledby="vov-service-tab-automation" data-service-panel="automation" hidden="hidden">
+                                    <p class="vov-service-panel__label">WORKFLOW AUTOMATION</p><h2>Give recurring handoffs clear rules, triggers, and ownership.</h2><p class="vov-service-panel__lead">For teams spending time on repeated updates, reminders, approvals, or manual status changes.</p>
+                                    <div class="vov-service-panel__columns"><div><h3>What we work through</h3><ul><li>Manual-step and exception mapping</li><li>Trigger, approval, and notification rules</li><li>Failure paths and human checkpoints</li><li>Operational validation with users</li></ul></div><div><h3>What you receive</h3><ul><li>Configured automation rules</li><li>Clear exception-handling process</li><li>Reduced duplicate data entry</li><li>Workflow ownership documentation</li></ul></div></div>
+                                </article>
+                                <article id="vov-service-panel-integration" class="vov-service-panel" role="tabpanel" aria-labelledby="vov-service-tab-integration" data-service-panel="integration" hidden="hidden">
+                                    <p class="vov-service-panel__label">INTEGRATIONS &amp; MIGRATION</p><h2>Move necessary data and keep essential systems connected.</h2><p class="vov-service-panel__lead">For organizations consolidating historical information or exchanging data between Odoo and another platform.</p>
+                                    <div class="vov-service-panel__columns"><div><h3>What we work through</h3><ul><li>Source-data and interface assessment</li><li>Field mapping and ownership decisions</li><li>Migration rehearsal and validation</li><li>Integration monitoring and recovery paths</li></ul></div><div><h3>What you receive</h3><ul><li>Documented mapping and validation rules</li><li>Cleaned and migrated agreed data</li><li>Defined integration pathway</li><li>Reconciliation and support checklist</li></ul></div></div>
+                                </article>
+                                <article id="vov-service-panel-support" class="vov-service-panel" role="tabpanel" aria-labelledby="vov-service-tab-support" data-service-panel="support" hidden="hidden">
+                                    <p class="vov-service-panel__label">TRAINING &amp; SUPPORT</p><h2>Help people use the system confidently and improve it over time.</h2><p class="vov-service-panel__lead">For teams preparing to adopt Odoo or needing structured help after launch.</p>
+                                    <div class="vov-service-panel__columns"><div><h3>What we work through</h3><ul><li>Role-based learning needs</li><li>Real day-to-day operating scenarios</li><li>Issue triage and root-cause review</li><li>Improvement priorities and release planning</li></ul></div><div><h3>What you receive</h3><ul><li>Role-focused training sessions</li><li>Practical reference material</li><li>Prioritized support outcomes</li><li>Roadmap for future refinements</li></ul></div></div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="vov-services-deliverables" data-name="Service Deliverables">
+                    <div class="vov-container">
+                        <div class="vov-services-heading"><div><p class="vov-kicker">WORK YOU CAN SEE</p><h2>Clear outputs at every stage.</h2></div><p>Each engagement is scoped around the actual requirement. These are the practical artifacts that keep decisions visible and the work reviewable.</p></div>
+                        <div class="vov-deliverable-grid">
+                            <article><span>01</span><h3>Discovery brief</h3><p>Goals, actors, constraints, and priorities written in language stakeholders can review.</p></article>
+                            <article><span>02</span><h3>Working configuration</h3><p>A usable Odoo workflow demonstrated against agreed operating scenarios.</p></article>
+                            <article><span>03</span><h3>Validation record</h3><p>Test outcomes, open decisions, and acceptance criteria kept visible before release.</p></article>
+                            <article><span>04</span><h3>Adoption plan</h3><p>Roles, training, launch steps, and follow-up actions prepared for everyday use.</p></article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="vov-services-engagement" data-name="How an Engagement Works">
+                    <div class="vov-container">
+                        <div class="vov-services-heading"><div><p class="vov-kicker">HOW AN ENGAGEMENT WORKS</p><h2>Decide, demonstrate, validate, launch.</h2></div><p>Small review loops keep the work grounded in what users and process owners actually need.</p></div>
+                        <ol class="vov-engagement-steps">
+                            <li><span>01</span><div><h3>Scope the outcome</h3><p>Clarify the problem, success criteria, dependencies, and decision owners.</p></div></li>
+                            <li><span>02</span><div><h3>Demonstrate the flow</h3><p>Configure or build a working path early enough for useful feedback.</p></div></li>
+                            <li><span>03</span><div><h3>Validate real scenarios</h3><p>Test permissions, data, exceptions, and handoffs with the people involved.</p></div></li>
+                            <li><span>04</span><div><h3>Launch and improve</h3><p>Prepare users, release deliberately, and prioritize learning after go-live.</p></div></li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="vov-services-faq" data-name="Services FAQs">
+                    <div class="vov-container vov-services-faq__grid">
+                        <div><p class="vov-kicker">SERVICES FAQ</p><h2>Before the work begins.</h2><p>Useful answers for planning an initial conversation.</p></div>
+                        <div class="vov-services-faq__list">
+                            <details><summary>Do we need to know exactly which Odoo apps we need?</summary><p>No. Start with the process, decisions, and current friction. Application choices follow from the requirement.</p></details>
+                            <details><summary>Can Vorevia improve an existing Odoo system?</summary><p>Yes. We can review a defined workflow, identify configuration or customization gaps, and scope a focused improvement.</p></details>
+                            <details><summary>How is custom development controlled?</summary><p>Custom work begins with an agreed requirement, acceptance criteria, access implications, and a maintainable module boundary.</p></details>
+                            <details><summary>What should we bring to the first conversation?</summary><p>Bring the process you want to improve, the people involved, current tools, and one or two real examples of where work gets stuck.</p></details>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="vov-services-cta" data-name="Services Consultation">
+                    <div class="vov-container vov-services-cta__inner"><div><p class="vov-kicker">START WITH THE WORK</p><h2>Bring us the process you want to improve.</h2><p>We will help identify a practical service and a sensible first scope.</p></div><a class="vov-button vov-button-primary" href="/contact">Start a Conversation <span aria-hidden="true">↗</span></a></div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <record id="vorevia_services_page_record" model="website.page">
+        <field name="name">Vorevia Services</field>
+        <field name="url">/services</field>
+        <field name="view_id" ref="vorevia_services_page"/>
+        <field name="is_published">True</field>
+    </record>
+</odoo>

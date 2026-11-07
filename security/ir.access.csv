@@ -1,0 +1,2 @@
+id,name,model_id,group_id/id,operation,domain
+access_vorevia_consultation_user,vorevia.consultation user,vorevia.consultation,base.group_user,crud,

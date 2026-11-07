@@ -17,7 +17,7 @@ $cw-z-launcher:      1050;        // above Vorevia header (1040)
 $cw-z-panel:         1049;
 $cw-z-backdrop:      1048;
 
-$cw-row-wa:          #20364f;
+$cw-row-wa:          #25D366;  // WhatsApp brand green
 $cw-row-enquiry:     var(--vov-blue, #367fd1);
 $cw-row-call:        #20364f;
 $cw-row-email:       #ea4335;
@@ -232,6 +232,7 @@ $cw-row-email:       #ea4335;
     padding: 0;
     font-size: 1rem;
     flex-shrink: 0;
+    border-radius: 50%;
 }
 
 // ─── Panel Body ───────────────────────────────────────────────────────────────

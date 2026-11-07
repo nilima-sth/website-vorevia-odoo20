@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="vorevia_contact_page" name="Contact Vorevia Technologies">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Contact Us</t>
+            <div id="wrap" class="oe_structure vov-contact-page">
+                <section class="vov-contact-page__body" data-name="Contact Details and Enquiry Form">
+                    <div class="vov-container vov-contact-page__grid">
+                        <aside class="vov-contact-info" aria-labelledby="vov-contact-info-title">
+                            <header class="vov-contact-introduction">
+                                <p class="vov-kicker">CONTACT VOREVIA</p>
+                                <h1>Let’s talk about what <span>you want to improve.</span></h1>
+                                <p>Share the workflow, system, or recurring challenge you are considering. We will use that context to prepare a useful first conversation.</p>
+                            </header>
+                            <div class="vov-contact-info__content">
+                                <p class="vov-kicker">GET IN TOUCH</p>
+                                <h2 id="vov-contact-info-title">Company information</h2>
+                                <p>Use these details for direct company communication. Consultation requests are best sent through the enquiry form so the right context reaches our team.</p>
+                            </div>
+                            <address class="vov-contact-details">
+                                <div><span>Email</span><a href="mailto:info@vorevia.com">info@vorevia.com</a></div>
+                                <div><span>Phone</span><a href="tel:+9779712030420">+977 971-2030420</a></div>
+                                <div><span>Office location</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Kathmandu%2C%20Nepal" target="_blank" rel="noopener noreferrer">Kathmandu, Nepal</a></div>
+                            </address>
+                            <div class="vov-contact-map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4816.748898441512!2d85.31559547546641!3d27.680131476198124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDQwJzQ4LjUiTiA4NcKwMTknMDUuNCJF!5e1!3m2!1sen!2snp!4v1794071230445!5m2!1sen!2snp"
+                                        title="Vorevia Technologies office location"
+                                        width="600" height="450" style="border:0;"
+                                        allowfullscreen="" loading="lazy"
+                                        referrerpolicy="strict-origin-when-cross-origin"/>
+                            </div>
+                        </aside>
+
+                        <section class="vov-contact-enquiry s_website_form" data-vcss="001" data-snippet="s_website_form" aria-labelledby="vov-contact-form-title">
+                            <div class="vov-contact-enquiry__heading">
+                                <p class="vov-kicker">SEND AN ENQUIRY</p>
+                                <h2 id="vov-contact-form-title">Tell us what you’re planning.</h2>
+                                <p>A few practical details will help us understand the requirement and suggest a sensible next step.</p>
+                            </div>
+                            <form action="/website/form/" method="post" enctype="multipart/form-data"
+                                  class="o_mark_required vov-contact-form"
+                                  data-mark="*" data-pre-fill="true"
+                                  data-model_name="vorevia.consultation"
+                                  data-success-mode="redirect"
+                                  data-success-page="/contactus-thank-you">
+                                <div class="vov-contact-form__grid s_website_form_rows">
+                                    <div class="vov-contact-form__field vov-contact-form__field--wide s_website_form_field s_website_form_custom s_website_form_required" data-type="char">
+                                        <label for="vov_contact_name">Full name *</label>
+                                        <input id="vov_contact_name" class="form-control s_website_form_input" type="text" name="name" required="required" autocomplete="name" data-fill-with="name" placeholder="Your full name"/>
+                                    </div>
+                                    <div class="vov-contact-form__field vov-contact-form__field--wide s_website_form_field s_website_form_model_required" data-type="email">
+                                        <label for="vov_contact_email">Work email *</label>
+                                        <input id="vov_contact_email" class="form-control s_website_form_input" type="email" name="email" required="required" autocomplete="email" data-fill-with="email" placeholder="you@company.com"/>
+                                    </div>
+                                    <div class="vov-contact-form__field s_website_form_field s_website_form_custom" data-type="char">
+                                        <label for="vov_contact_company">Company</label>
+                                        <input id="vov_contact_company" class="form-control s_website_form_input" type="text" name="company" autocomplete="organization" placeholder="Company name"/>
+                                    </div>
+                                    <div class="vov-contact-form__field s_website_form_field s_website_form_custom" data-type="char">
+                                        <label for="vov_contact_phone">Phone</label>
+                                        <input id="vov_contact_phone" class="form-control s_website_form_input" type="tel" name="phone" autocomplete="tel" placeholder="+977…"/>
+                                    </div>
+                                    <div class="vov-contact-form__field vov-contact-form__field--wide s_website_form_field s_website_form_model_required" data-type="selection">
+                                        <label for="vov_contact_interest">How can we help? *</label>
+                                        <select id="vov_contact_interest" class="form-select s_website_form_input" name="interest" required="required">
+                                            <option value="" selected="selected" disabled="disabled">Select a service</option>
+                                            <option value="implementation">ERP implementation</option>
+                                            <option value="customization">Custom development</option>
+                                            <option value="integration">Integration or migration</option>
+                                            <option value="support">Training or support</option>
+                                            <option value="unsure">Not sure yet</option>
+                                        </select>
+                                    </div>
+                                    <div class="vov-contact-form__field vov-contact-form__field--wide s_website_form_field s_website_form_custom s_website_form_required" data-type="text">
+                                        <label for="vov_contact_description">Project details *</label>
+                                        <textarea id="vov_contact_description" class="form-control s_website_form_input" name="description" rows="6" required="required" placeholder="Tell us what is happening today and what you would like to improve."/>
+                                    </div>
+                                    <div class="vov-contact-form__field s_website_form_field s_website_form_custom" data-type="selection">
+                                        <label for="vov_contact_timeline">Timeline <span>(optional)</span></label>
+                                        <select id="vov_contact_timeline" class="form-select s_website_form_input" name="timeline">
+                                            <option value="" selected="selected">Select timeline</option>
+                                            <option value="asap">As soon as possible</option>
+                                            <option value="one_month">Within 1 month</option>
+                                            <option value="one_three_months">Within 1–3 months</option>
+                                            <option value="three_six_months">Within 3–6 months</option>
+                                            <option value="exploring">Just exploring</option>
+                                            <option value="unsure">Not sure yet</option>
+                                        </select>
+                                    </div>
+                                    <div class="vov-contact-form__field s_website_form_field s_website_form_custom" data-type="selection">
+                                        <label for="vov_contact_source">How did you hear about us? <span>(optional)</span></label>
+                                        <select id="vov_contact_source" class="form-select s_website_form_input" name="referral_source">
+                                            <option value="" selected="selected">Select source</option>
+                                            <option value="google">Google Search</option>
+                                            <option value="linkedin">LinkedIn</option>
+                                            <option value="social">Facebook / Instagram</option>
+                                            <option value="referral">Friend or colleague</option>
+                                            <option value="client">Existing client</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <p t-if="request.env.user._is_public()" class="vov-contact-form__note vov-contact-form__field--wide"><a href="/web/login?redirect=%2Fcontact">Sign in</a> before sending if you want to track this request in My Account.</p>
+                                    <p t-else="" class="vov-contact-form__note vov-contact-form__field--wide">This request will appear in <a href="/my/consultations">My Account</a> after you send it.</p>
+                                    <div class="vov-contact-form__submit vov-contact-form__field--wide s_website_form_submit">
+                                        <span id="s_website_form_result"/>
+                                        <a href="#" role="button" class="vov-button vov-button-primary s_website_form_send">Send Enquiry <span aria-hidden="true">→</span></a>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <record id="vorevia_contact_page_record" model="website.page">
+        <field name="name">Contact Vorevia Technologies</field>
+        <field name="url">/contact</field>
+        <field name="view_id" ref="vorevia_contact_page"/>
+        <field name="is_published">True</field>
+    </record>
+</odoo>

@@ -8,6 +8,6 @@
     </record>
     <function model="ir.model.fields" name="formbuilder_whitelist">
         <value>vorevia.consultation</value>
-        <value eval="['name', 'email', 'company', 'phone', 'interest', 'description']"/>
+        <value eval="['name', 'email', 'company', 'phone', 'interest', 'description', 'timeline', 'referral_source']"/>
     </function>
 </odoo>

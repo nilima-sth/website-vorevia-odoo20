@@ -12,13 +12,33 @@ class VoreviaCustomerPortal(CustomerPortal):
     def _consultation_domain(self):
         return [("partner_id", "=", request.env.user.partner_id.id)]
 
-    def _prepare_home_portal_values(self, counters):
-        values = super()._prepare_home_portal_values(counters)
-        if "consultation_count" in counters:
-            values["consultation_count"] = request.env["vorevia.consultation"].sudo().search_count(
-                self._consultation_domain()
-            )
-        return values
+    def _prepare_portal_counter_values(self, counter):
+        if counter == "consultation_count":
+            return "vorevia.consultation", self._consultation_domain(), "sudo"
+        return super()._prepare_portal_counter_values(counter)
+
+    @http.route()
+    def home(self, **kwargs):
+        """Render a branded overview with only the current user's records."""
+        consultations = request.env["vorevia.consultation"].sudo()
+        domain = self._consultation_domain()
+        values = self._prepare_portal_layout_values()
+        values.update({
+            "consultation_count": consultations.search_count(domain),
+            "recent_consultations": consultations.search(
+                domain, order="create_date desc, id desc", limit=3
+            ),
+        })
+        return request.render("portal.portal_my_home", values)
+
+    @http.route("/my/profile", type="http", auth="user", website=True)
+    def portal_my_profile(self, **kwargs):
+        """Use Odoo's native, permission-aware partner update flow."""
+        values = self._prepare_my_account_rendering_values(
+            redirect="/my/profile", **kwargs
+        )
+        values["page_name"] = "profile"
+        return request.render("website_vorevia.portal_my_profile", values)
 
     @http.route(
         ["/my/consultations", "/my/consultations/page/<int:page>"],

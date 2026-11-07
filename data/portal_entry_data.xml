@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="portal_consultation_requests" model="portal.entry">
+        <field name="name">Consultation requests</field>
+        <field name="description">Follow the requests you have sent to Vorevia</field>
+        <field name="url">/my/consultations</field>
+        <field name="placeholder_count">consultation_count</field>
+        <field name="category">client_category</field>
+        <field name="sequence" eval="100"/>
+    </record>
+</odoo>

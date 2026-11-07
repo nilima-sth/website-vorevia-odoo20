@@ -31,6 +31,28 @@ class VoreviaConsultation(models.Model):
         default="implementation",
     )
     description = fields.Text(string="Current Situation", required=True)
+    timeline = fields.Selection(
+        selection=[
+            ("asap", "As soon as possible"),
+            ("one_month", "Within 1 month"),
+            ("one_three_months", "Within 1–3 months"),
+            ("three_six_months", "Within 3–6 months"),
+            ("exploring", "Just exploring"),
+            ("unsure", "Not sure yet"),
+        ],
+        string="Timeline",
+    )
+    referral_source = fields.Selection(
+        selection=[
+            ("google", "Google Search"),
+            ("linkedin", "LinkedIn"),
+            ("social", "Facebook / Instagram"),
+            ("referral", "Friend or colleague"),
+            ("client", "Existing client"),
+            ("other", "Other"),
+        ],
+        string="How did you hear about us?",
+    )
     state = fields.Selection(
         selection=[
             ("new", "New"),

@@ -46,7 +46,7 @@
                         <p>We are preparing practical articles on Odoo, connected operations, and the work behind digital transformation. Explore our approach or tell us what your team is working through.</p>
                         <div class="vov-blog-empty__actions">
                             <a class="vov-button vov-button-primary" href="/about">Explore our approach <i class="fa fa-arrow-right" aria-hidden="true"/></a>
-                            <a class="vov-blog-empty__link" href="/#consultation">Start a conversation <span aria-hidden="true">↗</span></a>
+                            <a class="vov-blog-empty__link" href="/contact">Start a conversation <span aria-hidden="true">↗</span></a>
                         </div>
                         <p class="vov-blog-empty__editor-note" groups="website.group_website_designer">To publish the first article, use <strong>New → Blog Post</strong> in the website toolbar.</p>
                     </div>

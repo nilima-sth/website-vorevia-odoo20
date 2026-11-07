@@ -4,12 +4,21 @@
         <t t-call="website.layout">
             <t t-set="additional_title">Contact Us</t>
             <div id="wrap" class="oe_structure vov-contact-page">
+                <t t-call="website_vorevia.vorevia_contact_section">
+                    <t t-set="vov_contact_home" t-value="False"/>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <template id="vorevia_contact_section" name="Vorevia Contact Details and Enquiry Form">
                 <section class="vov-contact-page__body" data-name="Contact Details and Enquiry Form">
                     <div class="vov-container vov-contact-page__grid">
                         <aside class="vov-contact-info" aria-label="Vorevia contact details">
                             <header class="vov-contact-introduction">
                                 <p class="vov-kicker">CONTACT VOREVIA</p>
-                                <h1>Let’s talk about what <span>you want to improve.</span></h1>
+                                <h1 t-if="not vov_contact_home">Let’s talk about what <span>you want to improve.</span></h1>
+                                <h2 t-else="" class="vov-contact-introduction__title">Let’s talk about what <span>you want to improve.</span></h2>
                                 <p>Tell us what you need. We'll help you find the right solution.</p>
                             </header>
                             <address class="vov-contact-details">
@@ -135,8 +144,6 @@
                         </section>
                     </div>
                 </section>
-            </div>
-        </t>
     </template>
 
     <record id="vorevia_contact_page_record" model="website.page">

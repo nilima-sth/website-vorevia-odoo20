@@ -601,7 +601,11 @@
                     </div>
                 </section>
 
-                
+                <section id="consultation" class="vov-contact-page vov-home-contact" data-name="Contact Vorevia" data-anchor="true">
+                    <t t-call="website_vorevia.vorevia_contact_section">
+                        <t t-set="vov_contact_home" t-value="True"/>
+                    </t>
+                </section>
 
                 <section class="vov-final-cta s_text_block" data-snippet="s_text_block" data-name="Final Call to Action">
                     <div class="vov-container"><div class="vov-cta-inner"><p class="vov-kicker">A MORE CONNECTED WAY TO WORK</p><h2>Your Next Step Towards a Smarter Business.</h2><p>Bring us the process you want to improve. We'll help you find the right approach, built around your business.</p><a class="vov-button vov-button-primary" href="/contact">Discuss Your Workflow <i class="fa fa-arrow-right" aria-hidden="true"/></a></div></div>

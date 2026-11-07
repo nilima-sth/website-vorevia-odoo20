@@ -198,12 +198,16 @@
     .vov-about-hero h1 { width: 100%; max-width: 750px; font-size: clamp(3rem, 6.5vw, 4.1rem); }
     .vov-about-hero__description { width: 100%; max-width: 680px; }
     .vov-about-hero__strengths { width: 100%; max-width: 650px; }
-    .vov-about-hero__media { position: relative; inset: auto; width: 100%; height: clamp(280px, 43vw, 430px); margin-top: 2.3rem; }
+    .vov-about .vov-about-hero > .vov-about-hero__media { position: relative; inset: auto; width: 100%; height: clamp(280px, 43vw, 430px); margin-top: 2.3rem; }
     .vov-about-hero__media img { object-position: 55% 48%; }
     .vov-about-hero__media::after { background: linear-gradient(180deg, #f9fbfe 0%, rgba(249,251,254,0) 22%); }
 }
 @media (max-width: 767.98px) {
     .vov-about-hero > .vov-about-hero__content { width: calc(100% - 32px); max-width: 680px; }
+    .vov-about-journey { grid-template-columns: 1fr; }
+    .vov-about-journey > li,
+    .vov-about-journey > li:nth-child(even) { min-height: 0; padding: 1.5rem 0; border-left: 0; }
+    .vov-about-journey h3 { margin-top: 1rem; }
 }
 @media (max-width: 575.98px) {
     .vov-about-hero { padding-top: 3.35rem; }
@@ -282,37 +286,24 @@
 /* Founder's Note: transparent WebP portrait and company message. */
 .vov-about-founder { padding: clamp(3rem, 6vw, 5rem) 0; background: #fff; }
 .vov-about-founder__layout { display: grid; grid-template-columns: minmax(260px, 350px) minmax(0, 1fr); align-items: stretch; gap: clamp(2.5rem, 6vw, 6rem); }
-.vov-about-founder__profile { display: flex; min-width: 0; flex-direction: column; align-items: center; justify-content: flex-end; overflow: hidden; padding: 1.1rem 1.25rem 1.4rem; border-radius: 18px; background: #1d6eb7; color: #fff; text-align: center; }
-.vov-about-founder__profile img { display: block; width: min(100%, 285px); height: 300px; margin: auto auto 0; object-fit: contain; object-position: center bottom; }
+.vov-about-founder__profile { display: flex; min-width: 0; flex-direction: column; align-items: center; justify-content: flex-end; overflow: hidden; padding: 1.1rem 1.25rem 1.4rem; border: 1px solid var(--vov-line); border-radius: 18px; background: #fff; box-shadow: 0 14px 34px rgba(28, 53, 72, .06); color: var(--vov-ink); text-align: center; }
+.vov-about-founder__profile img { display: block; width: 100%; max-width: 260px; height: 220px; margin: auto auto 0; object-fit: contain; object-position: center bottom; }
 .vov-about-founder__profile p { display: grid; margin: .9rem 0 0; gap: .25rem; }
 .vov-about-founder__profile strong { font-size: 1.16rem; font-weight: 650; }
-.vov-about-founder__profile span { font-size: .83rem; opacity: .9; }
+.vov-about-founder__profile span { color: var(--vov-muted); font-size: .83rem; }
 .vov-about-founder__message { display: flex; min-width: 0; flex-direction: column; justify-content: center; }
 .vov-about-founder__quote-icon { height: 2.6rem; color: #bdddef; font-size: 5.2rem; font-weight: 700; line-height: 1; }
 .vov-about-founder__message h2 { font-size: clamp(1.6rem, 2.7vw, 2.35rem); font-weight: 600; }
 .vov-about-founder__message blockquote { max-width: 800px; margin: 1.4rem 0 0; color: #304257; font-size: clamp(1.05rem, 1.7vw, 1.38rem); font-style: italic; line-height: 1.8; }
-@media (max-width: 767.98px) { .vov-about-founder__layout { grid-template-columns: 1fr; gap: 2.25rem; } .vov-about-founder__profile { width: min(100%, 380px); justify-self: center; } }
-@media (max-width: 575.98px) { .vov-about-founder__profile img { height: 285px; } .vov-about-founder__message blockquote { font-size: 1.05rem; line-height: 1.7; } }
+@media (max-width: 767.98px) { .vov-about-founder__layout { grid-template-columns: 1fr; gap: 2.25rem; } .vov-about-founder__profile { width: 100%; max-width: 380px; justify-self: center; } }
+@media (max-width: 575.98px) { .vov-about-founder__profile img { height: 210px; } .vov-about-founder__message blockquote { font-size: 1.05rem; line-height: 1.7; } }
 
 .vov-about-approach { background: #f8fbfd; }
 .vov-about-approach__lead { display: flex; align-items: end; justify-content: space-between; margin-bottom: 3rem; gap: 3rem; }
 .vov-about-approach__lead p:last-child { max-width: 420px; margin: 0; color: var(--vov-muted); line-height: 1.65; }
-.vov-about-process-graphic { margin: 0; }
-.vov-about-process-graphic__scroll {
-    max-width: 100%;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    -webkit-overflow-scrolling: touch;
-}
-.vov-about-process-graphic__scroll:focus-visible { outline: 2px solid var(--vov-blue-deep); outline-offset: 2px; }
-.vov-about-process-graphic img { display: block; width: 100%; height: auto; }
-@media (max-width: 991.98px) {
-    .vov-about-process-graphic img { min-width: 880px; }
-}
-
-.vov-about-journey { display: grid; border-top: 1px solid var(--vov-line); grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.vov-about-journey article { min-height: 230px; padding: 1.6rem 1.3rem 0 0; border-bottom: 1px solid var(--vov-line); }
-.vov-about-journey article + article { padding-left: 1.3rem; border-left: 1px solid var(--vov-line); }
+.vov-about-journey { display: grid; margin: 0; padding: 0; border-top: 1px solid var(--vov-line); grid-template-columns: repeat(5, minmax(0, 1fr)); list-style: none; }
+.vov-about-journey > li { position: relative; min-height: 230px; padding: 1.6rem 1.3rem 0 0; border-bottom: 1px solid var(--vov-line); }
+.vov-about-journey > li + li { padding-left: 1.3rem; border-left: 1px solid var(--vov-line); }
 .vov-about-journey span { color: var(--vov-blue-deep); font-size: 0.68rem; font-weight: 800; }
 .vov-about-journey h3 { margin: 2.5rem 0 0.7rem; font-size: 1.23rem; font-weight: 650; letter-spacing: 0.005em; line-height: 1.3; }
 .vov-about-journey p { margin: 0; color: var(--vov-muted); font-size: 0.79rem; line-height: 1.6; }
@@ -336,9 +327,9 @@
     .vov-about-identity__heading { position: static; }
     .vov-why-panel { min-height: 340px; }
     .vov-about-journey { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .vov-about-journey article { min-height: 190px; padding-left: 0; }
-    .vov-about-journey article + article { border-left: 0; }
-    .vov-about-journey article:nth-child(even) { padding-left: 1.3rem; border-left: 1px solid var(--vov-line); }
+    .vov-about-journey > li { min-height: 190px; padding-left: 0; }
+    .vov-about-journey > li + li { border-left: 0; }
+    .vov-about-journey > li:nth-child(even) { padding-left: 1.3rem; border-left: 1px solid var(--vov-line); }
 }
 
 @media (max-width: 767.98px) {
@@ -360,9 +351,18 @@
     .vov-why-flow { flex-wrap: wrap; gap: 0.4rem; }
     .vov-why-flow i { width: 8px; flex: 0 0 8px; }
     .vov-why-flow span { font-size: 0.55rem; }
-    .vov-about-journey { grid-template-columns: 1fr; }
-    .vov-about-journey article,
-    .vov-about-journey article:nth-child(even) { min-height: 0; padding: 1.5rem 0; border-left: 0; }
+}
+
+/* Keep the engagement stages in one consistently aligned reading column on phones.
+   This must follow the tablet grid rule above so it wins at narrow widths. */
+@media (max-width: 767.98px) {
+    .vov-about-journey { grid-template-columns: minmax(0, 1fr); }
+    .vov-about-journey > li,
+    .vov-about-journey > li:nth-child(even) {
+        min-height: 0;
+        padding: 1.5rem 0;
+        border-left: 0;
+    }
     .vov-about-journey h3 { margin-top: 1rem; }
 }
 

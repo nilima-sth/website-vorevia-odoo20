@@ -63,27 +63,27 @@
                 <section class="vov-about-founder" data-name="Founder's Note">
                     <div class="vov-container vov-about-founder__layout">
                         <div class="vov-about-founder__profile">
-                            <img src="/website_vorevia/static/src/img/vorevia-founder-cutout.webp" alt="Founder of Vorevia Technologies" width="2560" height="2458" loading="lazy" decoding="async"/>
-                            <p><strong>Founder</strong><span>Vorevia Technologies</span></p>
+                            <img src="/website_vorevia/static/src/img/vorevia-founder-mid-torso.png" alt="Founder of Vorevia Technologies Pvt. Ltd." width="1312" height="1199" loading="lazy" decoding="async"/>
+                            <p><strong>Founder</strong><span>Vorevia Technologies Pvt. Ltd.</span></p>
                         </div>
                         <div class="vov-about-founder__message">
                             <span class="vov-about-founder__quote-icon" aria-hidden="true">“</span>
                             <h2>Founder's Note</h2>
-                            <blockquote>“Technology should adapt to the way a business works, not the other way around. At Vorevia Technologies, our purpose is to simplify everyday challenges, connect people and processes, and build solutions that businesses can rely on as they grow.”</blockquote>
+                            <blockquote>“Technology should adapt to the way a business works, not the other way around. At Vorevia Technologies Pvt. Ltd., our purpose is to simplify everyday challenges, connect people and processes, and build solutions that businesses can rely on as they grow.”</blockquote>
                         </div>
                     </div>
                 </section>
 
                 <section id="our-approach" class="vov-about-approach" data-name="Our Approach">
                     <div class="vov-container">
-                        <div class="vov-about-approach__lead"><div><p class="vov-kicker">OUR APPROACH</p><h2>From understanding to everyday use.</h2></div><p>Each stage answers a practical question before the next begins. The goal is an implementation your teams can understand, test, and improve.</p></div>
-                        <figure class="vov-about-process-graphic">
-                            <div class="vov-about-process-graphic__scroll" role="region" tabindex="0" aria-label="Vorevia's five-stage engagement process. Scroll horizontally on smaller screens.">
-                                <img src="/website_vorevia/static/src/img/vorevia-engagement-process.webp"
-                                     alt="Five connected stages: Understand business requirements and goals; Plan the solution and scope; Implement configuration and integrations; Enable teams through training and testing; Support and Grow with updates and improvements."
-                                     width="1774" height="887" loading="lazy" decoding="async"/>
-                            </div>
-                        </figure>
+                        <div class="vov-about-approach__lead"><div><p class="vov-kicker">OUR APPROACH</p><h2>From understanding to everyday use.</h2></div></div>
+                        <ol class="vov-about-journey" aria-label="Vorevia's five-stage engagement process">
+                            <li><span>01</span><h3>Understand</h3><p>Clarify the business requirements, goals, and day-to-day context.</p></li>
+                            <li><span>02</span><h3>Plan</h3><p>Define the solution, priorities, scope, and practical next steps.</p></li>
+                            <li><span>03</span><h3>Implement</h3><p>Configure the system and connect the necessary workflows and integrations.</p></li>
+                            <li><span>04</span><h3>Enable</h3><p>Test together and prepare the people who will use the new way of working.</p></li>
+                            <li><span>05</span><h3>Support and Grow</h3><p>Improve the system over time as the business, teams, and priorities evolve.</p></li>
+                        </ol>
                     </div>
                 </section>
 

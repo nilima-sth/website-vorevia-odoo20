@@ -9,9 +9,9 @@
                         <h1>Making connected operations <span>practical.</span></h1>
                         <p class="vov-about-hero__description">Vorevia helps businesses simplify operations, connect teams, and make technology work around their needs. We focus on practical solutions that improve efficiency, support growth, and adapt as businesses evolve.</p>
                         <ul class="vov-about-hero__strengths" aria-label="Our focus">
-                            <li><i class="fa fa-sitemap" aria-hidden="true"/><span>Business-first approach</span></li>
-                            <li><i class="fa fa-link" aria-hidden="true"/><span>Connected operations</span></li>
-                            <li><i class="fa fa-line-chart" aria-hidden="true"/><span>Built for growth</span></li>
+                            <li><span class="vov-about-hero__strength-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="m16.95 7.05-3.54 3.54"/></svg></span><span>Business-first approach</span></li>
+                            <li><span class="vov-about-hero__strength-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="m7.8 11 8.4-4M7.8 13l8.4 4"/></svg></span><span>Connected operations</span></li>
+                            <li><span class="vov-about-hero__strength-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V6M4 18h16"/><path d="m7 15 4-4 3 2 5-6"/><path d="M16 7h3v3"/></svg></span><span>Built for growth</span></li>
                         </ul>
                         <div class="vov-about-hero__actions">
                             <a class="vov-button vov-button-primary" href="#our-approach">Explore our approach <i class="fa fa-arrow-right" aria-hidden="true"/></a>

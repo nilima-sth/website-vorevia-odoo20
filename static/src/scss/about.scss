@@ -93,18 +93,26 @@
 .vov-about-hero {
     position: relative;
     display: flex;
-    min-height: 685px;
+    box-sizing: border-box;
+    min-height: clamp(640px, 45vw, 720px);
     align-items: center;
     overflow: hidden;
     isolation: isolate;
     padding: clamp(4.5rem, 6vw, 6.5rem) 0;
     background: #f9fbfe;
 }
-.vov-about-hero__content { position: relative; z-index: 2; }
+.vov-about-hero > .vov-about-hero__content {
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 48px);
+    max-width: 1240px;
+    flex: 0 0 auto;
+    margin-inline: auto;
+}
 .vov-about-hero .vov-kicker { margin: 0 0 1.8rem; color: var(--vov-blue-deep); }
 .vov-about-hero h1 {
-    width: min(720px, 61%);
-    max-width: none;
+    width: 61%;
+    max-width: 720px;
     margin: 0;
     color: #112039;
     font-size: clamp(3rem, 4.5vw, 4.7rem);
@@ -114,7 +122,8 @@
 }
 .vov-about-hero h1 span { color: var(--vov-blue-deep); }
 .vov-about-hero__description {
-    width: min(600px, 52%);
+    width: 52%;
+    max-width: 600px;
     margin: 1.9rem 0 0;
     color: #4f6176;
     font-size: clamp(1rem, 1.25vw, 1.15rem);
@@ -122,7 +131,8 @@
 }
 .vov-about-hero__strengths {
     display: grid;
-    width: min(625px, 57%);
+    width: 57%;
+    max-width: 625px;
     margin: 2.1rem 0 0;
     padding: 0;
     gap: 1rem;
@@ -139,7 +149,7 @@
     font-weight: 650;
     line-height: 1.4;
 }
-.vov-about-hero__strengths i {
+.vov-about-hero__strength-icon {
     display: inline-flex;
     width: 42px;
     height: 42px;
@@ -151,15 +161,15 @@
     box-shadow: 0 6px 18px rgba(45, 97, 150, .07);
     color: var(--vov-blue-deep);
     flex: 0 0 42px;
-    font-size: 1.13rem;
 }
+.vov-about-hero__strength-icon svg { display: block; width: 21px; height: 21px; }
 .vov-about-hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; margin-top: 2.5rem; }
 .vov-about-hero__actions .vov-button { margin: 0; border-radius: 12px; }
 .vov-about-hero__actions .vov-button-primary { border-color: #12355f; background: #12355f; }
 .vov-about-hero__actions .vov-button-primary:hover,
 .vov-about-hero__actions .vov-button-primary:focus-visible { border-color: #0b2749; background: #0b2749; }
 .vov-about-hero__actions .vov-button-secondary { border-color: #cfdeed; background: rgba(255, 255, 255, .94); }
-.vov-about-hero__media {
+.vov-about .vov-about-hero > .vov-about-hero__media {
     position: absolute;
     z-index: 0;
     inset: 0 0 0 auto;
@@ -177,13 +187,14 @@
 }
 @media (max-width: 1199.98px) {
     .vov-about-hero { min-height: 640px; }
-    .vov-about-hero h1 { width: min(650px, 65%); font-size: clamp(3rem, 5.1vw, 4rem); }
+    .vov-about-hero h1 { width: 65%; max-width: 650px; font-size: clamp(3rem, 5.1vw, 4rem); }
     .vov-about-hero__description { width: 55%; }
     .vov-about-hero__strengths { width: 62%; }
     .vov-about-hero__media { width: 72%; }
 }
 @media (max-width: 991.98px) {
     .vov-about-hero { display: block; min-height: 0; padding: 4.5rem 0 0; }
+    .vov-about-hero > .vov-about-hero__content { width: calc(100% - 40px); max-width: 760px; }
     .vov-about-hero h1 { width: 100%; max-width: 750px; font-size: clamp(3rem, 6.5vw, 4.1rem); }
     .vov-about-hero__description { width: 100%; max-width: 680px; }
     .vov-about-hero__strengths { width: 100%; max-width: 650px; }
@@ -191,13 +202,17 @@
     .vov-about-hero__media img { object-position: 55% 48%; }
     .vov-about-hero__media::after { background: linear-gradient(180deg, #f9fbfe 0%, rgba(249,251,254,0) 22%); }
 }
+@media (max-width: 767.98px) {
+    .vov-about-hero > .vov-about-hero__content { width: calc(100% - 32px); max-width: 680px; }
+}
 @media (max-width: 575.98px) {
     .vov-about-hero { padding-top: 3.35rem; }
+    .vov-about-hero > .vov-about-hero__content { width: calc(100% - 28px); }
     .vov-about-hero .vov-kicker { margin-bottom: 1.1rem; }
     .vov-about-hero h1 { font-size: clamp(2.35rem, 10.2vw, 3rem); line-height: 1.1; letter-spacing: -.028em; }
     .vov-about-hero__description { margin-top: 1.35rem; font-size: 1rem; line-height: 1.7; }
     .vov-about-hero__strengths { grid-template-columns: 1fr; gap: .85rem; margin-top: 1.7rem; }
-    .vov-about-hero__strengths i { width: 38px; height: 38px; flex-basis: 38px; }
+    .vov-about-hero__strength-icon { width: 38px; height: 38px; flex-basis: 38px; }
     .vov-about-hero__actions { gap: .7rem; margin-top: 1.9rem; }
     .vov-about-hero__actions .vov-button { min-width: 0; padding: .8rem 1rem; font-size: .82rem; }
     .vov-about-hero__media { height: 275px; margin-top: 1.5rem; }

@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="vorevia_solution_sales_customer_management" name="Vorevia — Sales &amp; Customer Management">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Sales &amp; Customer Management | Business Solutions</t>
+            <div id="wrap" class="oe_structure vov-solution-detail">
+                <section class="vov-solution-detail__hero" data-name="Sales &amp; Customer Management Introduction">
+                    <div class="vov-container">
+                        <nav class="vov-solution-detail__breadcrumb" aria-label="Breadcrumb">
+                            <a href="/solutions">Solutions</a><span aria-hidden="true">/</span><span aria-current="page">Sales &amp; Customer Management</span>
+                        </nav>
+                        <div class="vov-solution-detail__hero-grid">
+                            <div class="vov-solution-detail__hero-copy">
+                                <p class="vov-kicker">BUSINESS SOLUTIONS</p>
+                                <h1>Keep every customer opportunity moving.</h1>
+                                <p class="vov-solution-detail__lead">From the first enquiry to the confirmed order, give your sales team a clear, connected view of the work ahead. Organize customer information, quotations, and follow-ups without losing context between teams.</p>
+                                <a class="vov-button vov-button-primary" href="/contact">Discuss your requirements <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                            </div>
+                            <aside class="vov-solution-detail__flow" aria-label="Sales &amp; Customer Management example workflow">
+                                <p class="vov-solution-detail__flow-label">A CONNECTED WORKFLOW</p>
+                                <ol>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Customer enquiry</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Lead qualification</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Sales opportunity</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Quotation</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Confirmed order</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Delivery and billing</span></li>
+                                </ol>
+                                <p>Illustrative stages; the actual flow is scoped to your business.</p>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__challenge" data-name="Understanding the Challenge">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">THE BUSINESS CHALLENGE</p><h2>Customer relationships should not live in scattered records.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Managing sales involves more than closing a deal. Teams respond to enquiries, qualify opportunities, prepare proposals, secure approvals, and coordinate what happens after a customer says yes. When these activities sit across spreadsheets, individual inboxes, and disconnected applications, important context can be lost.</p>
+                            <p>A structured sales workflow gives people a shared record of activity, responsibilities, and customer commitments. Vorevia starts by understanding your sales stages, handoffs, pricing rules, and the information that matters before configuring a system.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__capabilities" data-name="Solution Capabilities">
+                    <div class="vov-container">
+                        <div class="vov-solution-detail__section-head"><p class="vov-kicker">PRACTICAL CAPABILITIES</p><h2>What this solution can support</h2><p>Capabilities are selected and configured according to your operating needs, rather than added simply for their own sake.</p></div>
+                        <div class="vov-solution-detail__features">
+                            <article><h3>Lead and enquiry management</h3><p>Capture, qualify, categorize, and assign incoming business opportunities with clear ownership.</p></article>
+                            <article><h3>Opportunity pipelines</h3><p>Track prospects through agreed sales stages and review open opportunities and next steps.</p></article>
+                            <article><h3>Customer records</h3><p>Maintain contacts, communication context, related activities, and the information relevant to each relationship.</p></article>
+                            <article><h3>Quotations and orders</h3><p>Prepare, revise, and approve quotations before moving confirmed commitments into fulfilment.</p></article>
+                            <article><h3>Follow-ups and activities</h3><p>Schedule calls, meetings, tasks, and reminders so commitments do not depend on individual memory.</p></article>
+                            <article><h3>Sales visibility</h3><p>Review pipeline values, progress, conversion trends, and outstanding activities using available source data.</p></article>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__outcomes" data-name="Expected Outcomes">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">WHY IT MATTERS</p><h2>Clearer work, better-connected decisions.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Give sales and operations teams a clearer understanding of what has been agreed and what should happen next.</p>
+                            <p>Reduce duplicated updates, improve follow-up consistency, and make sales performance easier to review.</p>
+                            <h3>Who it is suited for</h3>
+                            <p>B2B sales teams, distributors, service providers, and businesses managing recurring customer relationships.</p>
+                            <h3>What we verify during discovery</h3>
+                            <p>Approval paths, price lists, customer categories, and fulfilment steps are configured according to the agreed sales process.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__cta" data-name="Start a Conversation">
+                    <div class="vov-container vov-solution-detail__cta-inner">
+                        <div><p class="vov-kicker">LET'S TALK</p><h2>Improve your sales process.</h2><p>Tell us how the process works today. We will help identify a useful starting point and the work it involves.</p></div>
+                        <a class="vov-button vov-button-primary" href="/contact">Contact Vorevia <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                    </div>
+                </section>
+                <nav class="vov-solution-detail__related" aria-label="Other solutions">
+                    <div class="vov-container vov-solution-detail__related-grid">
+                        <a href="/solutions/reporting-automation"><span>Previous solution</span><strong>Reporting &amp; Automation</strong></a>
+                        <a href="/solutions/inventory-procurement"><span>Next solution</span><strong>Inventory &amp; Procurement</strong></a>
+                    </div>
+                </nav>
+            </div>
+        </t>
+    </template>
+    <record id="vorevia_solution_sales_customer_management_page" model="website.page">
+        <field name="name">Sales &amp; Customer Management | Vorevia</field>
+        <field name="url">/solutions/sales-customer-management</field>
+        <field name="view_id" ref="vorevia_solution_sales_customer_management"/>
+        <field name="is_published">True</field>
+    </record>
+
+    <template id="vorevia_solution_inventory_procurement" name="Vorevia — Inventory &amp; Procurement">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Inventory &amp; Procurement | Business Solutions</t>
+            <div id="wrap" class="oe_structure vov-solution-detail">
+                <section class="vov-solution-detail__hero" data-name="Inventory &amp; Procurement Introduction">
+                    <div class="vov-container">
+                        <nav class="vov-solution-detail__breadcrumb" aria-label="Breadcrumb">
+                            <a href="/solutions">Solutions</a><span aria-hidden="true">/</span><span aria-current="page">Inventory &amp; Procurement</span>
+                        </nav>
+                        <div class="vov-solution-detail__hero-grid">
+                            <div class="vov-solution-detail__hero-copy">
+                                <p class="vov-kicker">BUSINESS SOLUTIONS</p>
+                                <h1>Know what is in stock and what comes next.</h1>
+                                <p class="vov-solution-detail__lead">Connect purchasing, suppliers, warehouses, and stock movements so teams can make decisions using the same information. Build a clearer path from identifying demand to receiving and making goods available.</p>
+                                <a class="vov-button vov-button-primary" href="/contact">Discuss your requirements <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                            </div>
+                            <aside class="vov-solution-detail__flow" aria-label="Inventory &amp; Procurement example workflow">
+                                <p class="vov-solution-detail__flow-label">A CONNECTED WORKFLOW</p>
+                                <ol>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Stock requirement</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Purchase approval</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Supplier order</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Goods receipt</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Inventory update</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Available for sale</span></li>
+                                </ol>
+                                <p>Illustrative stages; the actual flow is scoped to your business.</p>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__challenge" data-name="Understanding the Challenge">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">THE BUSINESS CHALLENGE</p><h2>Stock decisions require reliable information.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>A shortage can delay a sale; over-purchasing can tie up working capital. Without consistent records, businesses may not know which goods are available, reserved, in transit, or due to arrive. The problem grows when teams manage purchasing and inventory in separate files.</p>
+                            <p>Vorevia helps map how products are ordered, received, stored, transferred, and issued. From there, inventory and procurement workflows can be configured around the real responsibilities of buyers, warehouse teams, and managers.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__capabilities" data-name="Solution Capabilities">
+                    <div class="vov-container">
+                        <div class="vov-solution-detail__section-head"><p class="vov-kicker">PRACTICAL CAPABILITIES</p><h2>What this solution can support</h2><p>Capabilities are selected and configured according to your operating needs, rather than added simply for their own sake.</p></div>
+                        <div class="vov-solution-detail__features">
+                            <article><h3>Products and stock records</h3><p>Organize product details, units of measure, inventory quantities, and applicable product categories.</p></article>
+                            <article><h3>Warehouse operations</h3><p>Track stock across warehouses, internal locations, transfers, and outgoing movements.</p></article>
+                            <article><h3>Supplier management</h3><p>Maintain supplier information, purchasing terms, quotations, and order histories.</p></article>
+                            <article><h3>Purchase workflows</h3><p>Create purchase requests or orders and manage agreed review and approval steps.</p></article>
+                            <article><h3>Goods receiving</h3><p>Record deliveries, confirm received quantities, and account for partial receipts or discrepancies.</p></article>
+                            <article><h3>Replenishment planning</h3><p>Establish reorder rules, stock reviews, and purchasing triggers where appropriate.</p></article>
+                            <article><h3>Traceability and adjustments</h3><p>Support cycle counts, stock corrections, and lot or serial tracking where required.</p></article>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__outcomes" data-name="Expected Outcomes">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">WHY IT MATTERS</p><h2>Clearer work, better-connected decisions.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Improve visibility into stock availability and purchasing commitments across teams and locations.</p>
+                            <p>Make replenishment decisions more consistent, with clearer records of who ordered, received, transferred, or adjusted stock.</p>
+                            <h3>Who it is suited for</h3>
+                            <p>Retailers, wholesalers, distributors, warehouses, and multi-location product businesses.</p>
+                            <h3>What we verify during discovery</h3>
+                            <p>Barcode hardware, valuation methods, traceability requirements, and stock policies need to be confirmed during discovery.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__cta" data-name="Start a Conversation">
+                    <div class="vov-container vov-solution-detail__cta-inner">
+                        <div><p class="vov-kicker">LET'S TALK</p><h2>Connect inventory and purchasing.</h2><p>Tell us how the process works today. We will help identify a useful starting point and the work it involves.</p></div>
+                        <a class="vov-button vov-button-primary" href="/contact">Contact Vorevia <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                    </div>
+                </section>
+                <nav class="vov-solution-detail__related" aria-label="Other solutions">
+                    <div class="vov-container vov-solution-detail__related-grid">
+                        <a href="/solutions/sales-customer-management"><span>Previous solution</span><strong>Sales &amp; Customer Management</strong></a>
+                        <a href="/solutions/finance-billing"><span>Next solution</span><strong>Finance &amp; Billing</strong></a>
+                    </div>
+                </nav>
+            </div>
+        </t>
+    </template>
+    <record id="vorevia_solution_inventory_procurement_page" model="website.page">
+        <field name="name">Inventory &amp; Procurement | Vorevia</field>
+        <field name="url">/solutions/inventory-procurement</field>
+        <field name="view_id" ref="vorevia_solution_inventory_procurement"/>
+        <field name="is_published">True</field>
+    </record>
+
+    <template id="vorevia_solution_finance_billing" name="Vorevia — Finance &amp; Billing">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Finance &amp; Billing | Business Solutions</t>
+            <div id="wrap" class="oe_structure vov-solution-detail">
+                <section class="vov-solution-detail__hero" data-name="Finance &amp; Billing Introduction">
+                    <div class="vov-container">
+                        <nav class="vov-solution-detail__breadcrumb" aria-label="Breadcrumb">
+                            <a href="/solutions">Solutions</a><span aria-hidden="true">/</span><span aria-current="page">Finance &amp; Billing</span>
+                        </nav>
+                        <div class="vov-solution-detail__hero-grid">
+                            <div class="vov-solution-detail__hero-copy">
+                                <p class="vov-kicker">BUSINESS SOLUTIONS</p>
+                                <h1>Bring financial work closer to daily operations.</h1>
+                                <p class="vov-solution-detail__lead">Connect invoicing, expenses, payments, and accounting records with the transactions behind them. Help finance and operations teams work from clearer information without unnecessary duplication.</p>
+                                <a class="vov-button vov-button-primary" href="/contact">Discuss your requirements <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                            </div>
+                            <aside class="vov-solution-detail__flow" aria-label="Finance &amp; Billing example workflow">
+                                <p class="vov-solution-detail__flow-label">A CONNECTED WORKFLOW</p>
+                                <ol>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Business transaction</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Invoice or bill</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Review and approval</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Payment</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Reconciliation</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Reporting</span></li>
+                                </ol>
+                                <p>Illustrative stages; the actual flow is scoped to your business.</p>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__challenge" data-name="Understanding the Challenge">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">THE BUSINESS CHALLENGE</p><h2>Financial clarity begins with connected transactions.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Sales, purchasing, delivery, and expenses create financial obligations. When each department maintains separate records, finance teams spend time validating figures, chasing missing documents, and reconciling the same activity repeatedly.</p>
+                            <p>Vorevia approaches billing and accounting as part of the wider operating workflow. We identify which transactions create invoices and supplier bills, who approves them, and how the business records and reconciles payments.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__capabilities" data-name="Solution Capabilities">
+                    <div class="vov-container">
+                        <div class="vov-solution-detail__section-head"><p class="vov-kicker">PRACTICAL CAPABILITIES</p><h2>What this solution can support</h2><p>Capabilities are selected and configured according to your operating needs, rather than added simply for their own sake.</p></div>
+                        <div class="vov-solution-detail__features">
+                            <article><h3>Customer invoices</h3><p>Prepare and manage invoices linked to eligible sales, deliveries, or completed service work.</p></article>
+                            <article><h3>Receivables</h3><p>Track customer balances, due dates, payment status, and outstanding invoices.</p></article>
+                            <article><h3>Supplier bills</h3><p>Organize incoming bills and relevant purchase records for review and payment.</p></article>
+                            <article><h3>Business expenses</h3><p>Capture and review expense information using agreed categories and approval rules.</p></article>
+                            <article><h3>Payments and reconciliation</h3><p>Record payments, review differences, and support reconciliation processes.</p></article>
+                            <article><h3>Accounting configuration</h3><p>Set up journals, accounts, taxes, access roles, and related workflows according to scope.</p></article>
+                            <article><h3>Financial reporting</h3><p>Review payable and receivable positions, expenses, and relevant financial activity.</p></article>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__outcomes" data-name="Expected Outcomes">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">WHY IT MATTERS</p><h2>Clearer work, better-connected decisions.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Give finance teams more traceable source records and reduce repeated entry between business functions.</p>
+                            <p>Help managers review amounts due, payment activity, and relevant financial information with greater confidence.</p>
+                            <h3>Who it is suited for</h3>
+                            <p>Growing businesses, distributors, service providers, and organizations improving their billing and accounting workflows.</p>
+                            <h3>What we verify during discovery</h3>
+                            <p>Tax treatment, statutory reports, banking interfaces, and Nepal-specific compliance must be assessed and validated before implementation. No jurisdiction-specific compliance is assumed.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__cta" data-name="Start a Conversation">
+                    <div class="vov-container vov-solution-detail__cta-inner">
+                        <div><p class="vov-kicker">LET'S TALK</p><h2>Connect finance and billing.</h2><p>Tell us how the process works today. We will help identify a useful starting point and the work it involves.</p></div>
+                        <a class="vov-button vov-button-primary" href="/contact">Contact Vorevia <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                    </div>
+                </section>
+                <nav class="vov-solution-detail__related" aria-label="Other solutions">
+                    <div class="vov-container vov-solution-detail__related-grid">
+                        <a href="/solutions/inventory-procurement"><span>Previous solution</span><strong>Inventory &amp; Procurement</strong></a>
+                        <a href="/solutions/human-resources"><span>Next solution</span><strong>Human Resources</strong></a>
+                    </div>
+                </nav>
+            </div>
+        </t>
+    </template>
+    <record id="vorevia_solution_finance_billing_page" model="website.page">
+        <field name="name">Finance &amp; Billing | Vorevia</field>
+        <field name="url">/solutions/finance-billing</field>
+        <field name="view_id" ref="vorevia_solution_finance_billing"/>
+        <field name="is_published">True</field>
+    </record>
+
+    <template id="vorevia_solution_human_resources" name="Vorevia — Human Resources">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Human Resources | Business Solutions</t>
+            <div id="wrap" class="oe_structure vov-solution-detail">
+                <section class="vov-solution-detail__hero" data-name="Human Resources Introduction">
+                    <div class="vov-container">
+                        <nav class="vov-solution-detail__breadcrumb" aria-label="Breadcrumb">
+                            <a href="/solutions">Solutions</a><span aria-hidden="true">/</span><span aria-current="page">Human Resources</span>
+                        </nav>
+                        <div class="vov-solution-detail__hero-grid">
+                            <div class="vov-solution-detail__hero-copy">
+                                <p class="vov-kicker">BUSINESS SOLUTIONS</p>
+                                <h1>Simplify the work behind people operations.</h1>
+                                <p class="vov-solution-detail__lead">Organize employee information, leave, attendance, responsibilities, and HR requests through practical, role-aware workflows. Keep routine administration clear for employees, managers, and HR teams.</p>
+                                <a class="vov-button vov-button-primary" href="/contact">Discuss your requirements <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                            </div>
+                            <aside class="vov-solution-detail__flow" aria-label="Human Resources example workflow">
+                                <p class="vov-solution-detail__flow-label">A CONNECTED WORKFLOW</p>
+                                <ol>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Employee onboarding</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Profile and role setup</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Attendance and leave</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Manager approval</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Record update</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>HR reporting</span></li>
+                                </ol>
+                                <p>Illustrative stages; the actual flow is scoped to your business.</p>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__challenge" data-name="Understanding the Challenge">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">THE BUSINESS CHALLENGE</p><h2>People operations need consistency and care.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Employee records, leave approvals, schedules, and reporting often become harder to manage as a business grows. Maintaining everything in individual spreadsheets or messages can create duplicated work, unclear approvals, and privacy risks.</p>
+                            <p>Vorevia helps define how HR information should be recorded, who should be allowed to access it, and which requests need manager review. A useful HR system supports the people doing the work rather than adding unnecessary steps.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__capabilities" data-name="Solution Capabilities">
+                    <div class="vov-container">
+                        <div class="vov-solution-detail__section-head"><p class="vov-kicker">PRACTICAL CAPABILITIES</p><h2>What this solution can support</h2><p>Capabilities are selected and configured according to your operating needs, rather than added simply for their own sake.</p></div>
+                        <div class="vov-solution-detail__features">
+                            <article><h3>Employee directory</h3><p>Maintain approved employee records, job information, team assignments, and important documents.</p></article>
+                            <article><h3>Organization structure</h3><p>Define departments, managers, reporting lines, and administrative responsibilities.</p></article>
+                            <article><h3>Leave management</h3><p>Handle allocations, balances, requests, approval decisions, and leave histories.</p></article>
+                            <article><h3>Attendance records</h3><p>Capture or import attendance information and support appropriate verification workflows.</p></article>
+                            <article><h3>Work schedules</h3><p>Organize shifts or workforce schedules where the business requires them.</p></article>
+                            <article><h3>Joining and leaving</h3><p>Create clear onboarding and offboarding tasks for the people responsible.</p></article>
+                            <article><h3>HR reporting</h3><p>Provide relevant workforce views and reports within role-based access permissions.</p></article>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__outcomes" data-name="Expected Outcomes">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">WHY IT MATTERS</p><h2>Clearer work, better-connected decisions.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Make recurring HR work easier to follow and reduce reliance on informal approvals.</p>
+                            <p>Give authorized employees and managers a more consistent way to handle administrative requests and information.</p>
+                            <h3>Who it is suited for</h3>
+                            <p>Growing organizations, multi-department teams, service companies, and businesses moving from manual HR records.</p>
+                            <h3>What we verify during discovery</h3>
+                            <p>Payroll rules, local employment requirements, and sensitive employee data protections must be reviewed separately with appropriate specialists.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__cta" data-name="Start a Conversation">
+                    <div class="vov-container vov-solution-detail__cta-inner">
+                        <div><p class="vov-kicker">LET'S TALK</p><h2>Organize your people operations.</h2><p>Tell us how the process works today. We will help identify a useful starting point and the work it involves.</p></div>
+                        <a class="vov-button vov-button-primary" href="/contact">Contact Vorevia <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                    </div>
+                </section>
+                <nav class="vov-solution-detail__related" aria-label="Other solutions">
+                    <div class="vov-container vov-solution-detail__related-grid">
+                        <a href="/solutions/finance-billing"><span>Previous solution</span><strong>Finance &amp; Billing</strong></a>
+                        <a href="/solutions/retail-pos"><span>Next solution</span><strong>Retail &amp; Point of Sale</strong></a>
+                    </div>
+                </nav>
+            </div>
+        </t>
+    </template>
+    <record id="vorevia_solution_human_resources_page" model="website.page">
+        <field name="name">Human Resources | Vorevia</field>
+        <field name="url">/solutions/human-resources</field>
+        <field name="view_id" ref="vorevia_solution_human_resources"/>
+        <field name="is_published">True</field>
+    </record>
+
+    <template id="vorevia_solution_retail_pos" name="Vorevia — Retail &amp; Point of Sale">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Retail &amp; Point of Sale | Business Solutions</t>
+            <div id="wrap" class="oe_structure vov-solution-detail">
+                <section class="vov-solution-detail__hero" data-name="Retail &amp; Point of Sale Introduction">
+                    <div class="vov-container">
+                        <nav class="vov-solution-detail__breadcrumb" aria-label="Breadcrumb">
+                            <a href="/solutions">Solutions</a><span aria-hidden="true">/</span><span aria-current="page">Retail &amp; Point of Sale</span>
+                        </nav>
+                        <div class="vov-solution-detail__hero-grid">
+                            <div class="vov-solution-detail__hero-copy">
+                                <p class="vov-kicker">BUSINESS SOLUTIONS</p>
+                                <h1>Connect the counter with the rest of the business.</h1>
+                                <p class="vov-solution-detail__lead">Make day-to-day checkout easier to manage while keeping retail transactions connected to products, stock, customers, and financial records. Build a point-of-sale workflow that fits how your store actually operates.</p>
+                                <a class="vov-button vov-button-primary" href="/contact">Discuss your requirements <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                            </div>
+                            <aside class="vov-solution-detail__flow" aria-label="Retail &amp; Point of Sale example workflow">
+                                <p class="vov-solution-detail__flow-label">A CONNECTED WORKFLOW</p>
+                                <ol>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Product selection</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Checkout</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Payment</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Receipt</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Stock movement</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Daily reporting</span></li>
+                                </ol>
+                                <p>Illustrative stages; the actual flow is scoped to your business.</p>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__challenge" data-name="Understanding the Challenge">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">THE BUSINESS CHALLENGE</p><h2>Every checkout affects more than the sales counter.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>A transaction changes stock availability, creates payment records, and may affect customer histories or accounting. When POS activity is isolated, managers may need to reconcile sales totals and inventory movement by hand.</p>
+                            <p>Vorevia helps retailers understand their checkout flow, discount policies, payment methods, returns, and stock handling before configuring the tools that support store operations.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__capabilities" data-name="Solution Capabilities">
+                    <div class="vov-container">
+                        <div class="vov-solution-detail__section-head"><p class="vov-kicker">PRACTICAL CAPABILITIES</p><h2>What this solution can support</h2><p>Capabilities are selected and configured according to your operating needs, rather than added simply for their own sake.</p></div>
+                        <div class="vov-solution-detail__features">
+                            <article><h3>Fast counter transactions</h3><p>Organize product selection, quantities, checkout, and transaction records.</p></article>
+                            <article><h3>Product catalogues</h3><p>Manage product groups, prices, taxes, and applicable variants or discounts.</p></article>
+                            <article><h3>Payment handling</h3><p>Configure eligible payment methods and record payment status against transactions.</p></article>
+                            <article><h3>Connected inventory</h3><p>Reflect appropriate stock movements and availability in retail and back-office workflows.</p></article>
+                            <article><h3>Customer information</h3><p>Link transactions to customer profiles or loyalty processes where required.</p></article>
+                            <article><h3>Returns and refunds</h3><p>Establish reviewed procedures for returns, exchanges, and appropriate refunds.</p></article>
+                            <article><h3>Retail reporting</h3><p>Review store sessions, products sold, and relevant daily sales activity.</p></article>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__outcomes" data-name="Expected Outcomes">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">WHY IT MATTERS</p><h2>Clearer work, better-connected decisions.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Reduce manual reconciliation between counter sales and operational records.</p>
+                            <p>Give store managers clearer visibility into transactions and inventory changes throughout the day.</p>
+                            <h3>Who it is suited for</h3>
+                            <p>Retail shops, supermarkets, specialty stores, and businesses with one or several physical outlets.</p>
+                            <h3>What we verify during discovery</h3>
+                            <p>Receipt printers, barcode scanners, fiscal invoicing, offline use, and local payment integrations must be assessed for compatibility before rollout.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__cta" data-name="Start a Conversation">
+                    <div class="vov-container vov-solution-detail__cta-inner">
+                        <div><p class="vov-kicker">LET'S TALK</p><h2>Connect your retail operations.</h2><p>Tell us how the process works today. We will help identify a useful starting point and the work it involves.</p></div>
+                        <a class="vov-button vov-button-primary" href="/contact">Contact Vorevia <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                    </div>
+                </section>
+                <nav class="vov-solution-detail__related" aria-label="Other solutions">
+                    <div class="vov-container vov-solution-detail__related-grid">
+                        <a href="/solutions/human-resources"><span>Previous solution</span><strong>Human Resources</strong></a>
+                        <a href="/solutions/website-ecommerce"><span>Next solution</span><strong>Website &amp; eCommerce</strong></a>
+                    </div>
+                </nav>
+            </div>
+        </t>
+    </template>
+    <record id="vorevia_solution_retail_pos_page" model="website.page">
+        <field name="name">Retail &amp; Point of Sale | Vorevia</field>
+        <field name="url">/solutions/retail-pos</field>
+        <field name="view_id" ref="vorevia_solution_retail_pos"/>
+        <field name="is_published">True</field>
+    </record>
+
+    <template id="vorevia_solution_website_ecommerce" name="Vorevia — Website &amp; eCommerce">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Website &amp; eCommerce | Business Solutions</t>
+            <div id="wrap" class="oe_structure vov-solution-detail">
+                <section class="vov-solution-detail__hero" data-name="Website &amp; eCommerce Introduction">
+                    <div class="vov-container">
+                        <nav class="vov-solution-detail__breadcrumb" aria-label="Breadcrumb">
+                            <a href="/solutions">Solutions</a><span aria-hidden="true">/</span><span aria-current="page">Website &amp; eCommerce</span>
+                        </nav>
+                        <div class="vov-solution-detail__hero-grid">
+                            <div class="vov-solution-detail__hero-copy">
+                                <p class="vov-kicker">BUSINESS SOLUTIONS</p>
+                                <h1>Make your website part of how business gets done.</h1>
+                                <p class="vov-solution-detail__lead">Create a practical customer-facing digital experience and connect it with the operational work behind enquiries, orders, stock, and fulfilment. Your website can be more than a separate marketing channel.</p>
+                                <a class="vov-button vov-button-primary" href="/contact">Discuss your requirements <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                            </div>
+                            <aside class="vov-solution-detail__flow" aria-label="Website &amp; eCommerce example workflow">
+                                <p class="vov-solution-detail__flow-label">A CONNECTED WORKFLOW</p>
+                                <ol>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Product discovery</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Customer enquiry or order</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Confirmation</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Internal processing</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Fulfilment</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Customer updates</span></li>
+                                </ol>
+                                <p>Illustrative stages; the actual flow is scoped to your business.</p>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__challenge" data-name="Understanding the Challenge">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">THE BUSINESS CHALLENGE</p><h2>A good customer experience depends on what happens behind the screen.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Customers expect accurate product information, clear ordering, and reliable updates. When websites, online orders, and internal systems do not communicate, staff may need to copy information between tools and handle avoidable inconsistencies.</p>
+                            <p>Vorevia considers usability and business workflows together. We help scope what customers should be able to do online, what staff need to manage internally, and how those activities should connect.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__capabilities" data-name="Solution Capabilities">
+                    <div class="vov-container">
+                        <div class="vov-solution-detail__section-head"><p class="vov-kicker">PRACTICAL CAPABILITIES</p><h2>What this solution can support</h2><p>Capabilities are selected and configured according to your operating needs, rather than added simply for their own sake.</p></div>
+                        <div class="vov-solution-detail__features">
+                            <article><h3>Business websites</h3><p>Build responsive pages for company information, services, contact enquiries, and other content.</p></article>
+                            <article><h3>Product presentation</h3><p>Manage catalogues, descriptions, categories, media, and eligible product variants.</p></article>
+                            <article><h3>Online orders</h3><p>Support carts, checkout, confirmations, and customer information where eCommerce is in scope.</p></article>
+                            <article><h3>Stock visibility</h3><p>Connect available product information and fulfilment status to internal inventory workflows.</p></article>
+                            <article><h3>Customer relationships</h3><p>Keep relevant enquiries and online order records associated with customer information.</p></article>
+                            <article><h3>Payments and delivery</h3><p>Assess supported gateways, shipping methods, and order fulfilment integrations.</p></article>
+                            <article><h3>Content management</h3><p>Enable authorized team members to update routine website content without code changes.</p></article>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__outcomes" data-name="Expected Outcomes">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">WHY IT MATTERS</p><h2>Clearer work, better-connected decisions.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Create a consistent digital experience that supports visitors and customers on mobile and desktop.</p>
+                            <p>Reduce repeated data entry between online activity and the sales, inventory, or service processes behind it.</p>
+                            <h3>Who it is suited for</h3>
+                            <p>Product businesses, retailers, wholesalers, service providers, and organizations developing a stronger digital presence.</p>
+                            <h3>What we verify during discovery</h3>
+                            <p>Payment-provider availability, security, accessibility, performance, and search visibility are assessed for the chosen project scope.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__cta" data-name="Start a Conversation">
+                    <div class="vov-container vov-solution-detail__cta-inner">
+                        <div><p class="vov-kicker">LET'S TALK</p><h2>Build a connected digital experience.</h2><p>Tell us how the process works today. We will help identify a useful starting point and the work it involves.</p></div>
+                        <a class="vov-button vov-button-primary" href="/contact">Contact Vorevia <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                    </div>
+                </section>
+                <nav class="vov-solution-detail__related" aria-label="Other solutions">
+                    <div class="vov-container vov-solution-detail__related-grid">
+                        <a href="/solutions/retail-pos"><span>Previous solution</span><strong>Retail &amp; Point of Sale</strong></a>
+                        <a href="/solutions/project-service-management"><span>Next solution</span><strong>Project &amp; Service Management</strong></a>
+                    </div>
+                </nav>
+            </div>
+        </t>
+    </template>
+    <record id="vorevia_solution_website_ecommerce_page" model="website.page">
+        <field name="name">Website &amp; eCommerce | Vorevia</field>
+        <field name="url">/solutions/website-ecommerce</field>
+        <field name="view_id" ref="vorevia_solution_website_ecommerce"/>
+        <field name="is_published">True</field>
+    </record>
+
+    <template id="vorevia_solution_project_service_management" name="Vorevia — Project &amp; Service Management">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Project &amp; Service Management | Business Solutions</t>
+            <div id="wrap" class="oe_structure vov-solution-detail">
+                <section class="vov-solution-detail__hero" data-name="Project &amp; Service Management Introduction">
+                    <div class="vov-container">
+                        <nav class="vov-solution-detail__breadcrumb" aria-label="Breadcrumb">
+                            <a href="/solutions">Solutions</a><span aria-hidden="true">/</span><span aria-current="page">Project &amp; Service Management</span>
+                        </nav>
+                        <div class="vov-solution-detail__hero-grid">
+                            <div class="vov-solution-detail__hero-copy">
+                                <p class="vov-kicker">BUSINESS SOLUTIONS</p>
+                                <h1>Keep delivery, responsibilities, and clients aligned.</h1>
+                                <p class="vov-solution-detail__lead">Plan work, assign responsibilities, record progress, and connect projects or service requests with the commitments behind them. Give teams a clearer view of what needs attention and what has been completed.</p>
+                                <a class="vov-button vov-button-primary" href="/contact">Discuss your requirements <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                            </div>
+                            <aside class="vov-solution-detail__flow" aria-label="Project &amp; Service Management example workflow">
+                                <p class="vov-solution-detail__flow-label">A CONNECTED WORKFLOW</p>
+                                <ol>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Customer requirement</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Project or service request</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Task assignment</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Work execution</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Review</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Completion and billing</span></li>
+                                </ol>
+                                <p>Illustrative stages; the actual flow is scoped to your business.</p>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__challenge" data-name="Understanding the Challenge">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">THE BUSINESS CHALLENGE</p><h2>Delivery becomes difficult when context is scattered.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Projects and service engagements involve tasks, deadlines, customer decisions, documents, time records, and handoffs. If that information remains in separate conversations and spreadsheets, delays and dependencies can be hard to spot.</p>
+                            <p>Vorevia helps define how work enters a team, who owns each stage, what needs review, and when it is complete. The resulting workflow should make status visible without creating extra administration.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__capabilities" data-name="Solution Capabilities">
+                    <div class="vov-container">
+                        <div class="vov-solution-detail__section-head"><p class="vov-kicker">PRACTICAL CAPABILITIES</p><h2>What this solution can support</h2><p>Capabilities are selected and configured according to your operating needs, rather than added simply for their own sake.</p></div>
+                        <div class="vov-solution-detail__features">
+                            <article><h3>Project planning</h3><p>Organize projects, milestones, stages, and agreed delivery dates.</p></article>
+                            <article><h3>Task ownership</h3><p>Assign work, set deadlines, and manage responsibilities and status changes.</p></article>
+                            <article><h3>Team collaboration</h3><p>Keep task discussions, files, and relevant decisions connected to the work.</p></article>
+                            <article><h3>Time tracking</h3><p>Record time spent on projects or service tasks when required.</p></article>
+                            <article><h3>Service requests</h3><p>Manage incoming service activities through defined stages and ownership rules.</p></article>
+                            <article><h3>Delivery visibility</h3><p>Review open tasks, overdue items, workloads, and overall progress.</p></article>
+                            <article><h3>Connected billing</h3><p>Link appropriate billable work to customer records and invoices where supported.</p></article>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__outcomes" data-name="Expected Outcomes">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">WHY IT MATTERS</p><h2>Clearer work, better-connected decisions.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Help teams identify outstanding work and understand the next action without chasing updates.</p>
+                            <p>Make project status and client commitments easier to review with traceable activity records.</p>
+                            <h3>Who it is suited for</h3>
+                            <p>Consultancies, IT and service companies, agencies, maintenance teams, and project-based organizations.</p>
+                            <h3>What we verify during discovery</h3>
+                            <p>Time billing, service-level commitments, and customer portals depend on the process and modules selected.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__cta" data-name="Start a Conversation">
+                    <div class="vov-container vov-solution-detail__cta-inner">
+                        <div><p class="vov-kicker">LET'S TALK</p><h2>Improve project and service delivery.</h2><p>Tell us how the process works today. We will help identify a useful starting point and the work it involves.</p></div>
+                        <a class="vov-button vov-button-primary" href="/contact">Contact Vorevia <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                    </div>
+                </section>
+                <nav class="vov-solution-detail__related" aria-label="Other solutions">
+                    <div class="vov-container vov-solution-detail__related-grid">
+                        <a href="/solutions/website-ecommerce"><span>Previous solution</span><strong>Website &amp; eCommerce</strong></a>
+                        <a href="/solutions/reporting-automation"><span>Next solution</span><strong>Reporting &amp; Automation</strong></a>
+                    </div>
+                </nav>
+            </div>
+        </t>
+    </template>
+    <record id="vorevia_solution_project_service_management_page" model="website.page">
+        <field name="name">Project &amp; Service Management | Vorevia</field>
+        <field name="url">/solutions/project-service-management</field>
+        <field name="view_id" ref="vorevia_solution_project_service_management"/>
+        <field name="is_published">True</field>
+    </record>
+
+    <template id="vorevia_solution_reporting_automation" name="Vorevia — Reporting &amp; Automation">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Reporting &amp; Automation | Business Solutions</t>
+            <div id="wrap" class="oe_structure vov-solution-detail">
+                <section class="vov-solution-detail__hero" data-name="Reporting &amp; Automation Introduction">
+                    <div class="vov-container">
+                        <nav class="vov-solution-detail__breadcrumb" aria-label="Breadcrumb">
+                            <a href="/solutions">Solutions</a><span aria-hidden="true">/</span><span aria-current="page">Reporting &amp; Automation</span>
+                        </nav>
+                        <div class="vov-solution-detail__hero-grid">
+                            <div class="vov-solution-detail__hero-copy">
+                                <p class="vov-kicker">BUSINESS SOLUTIONS</p>
+                                <h1>Turn operational information into useful action.</h1>
+                                <p class="vov-solution-detail__lead">Bring relevant business data together, make performance easier to review, and automate well-defined repetitive tasks. Keep decisions transparent and human checkpoints where they matter.</p>
+                                <a class="vov-button vov-button-primary" href="/contact">Discuss your requirements <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                            </div>
+                            <aside class="vov-solution-detail__flow" aria-label="Reporting &amp; Automation example workflow">
+                                <p class="vov-solution-detail__flow-label">A CONNECTED WORKFLOW</p>
+                                <ol>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Business activity</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Data capture</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Validation</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Report or action</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Human review</span></li>
+                                    <li><span class="vov-solution-detail__flow-dot" aria-hidden="true"></span><span>Improvement</span></li>
+                                </ol>
+                                <p>Illustrative stages; the actual flow is scoped to your business.</p>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__challenge" data-name="Understanding the Challenge">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">THE BUSINESS CHALLENGE</p><h2>Collecting data is not the same as using it.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Organizations generate information through sales, purchasing, inventory, finance, employees, and customer service. If reporting requires manual exports from disconnected systems, decisions can be based on delayed or inconsistent figures.</p>
+                            <p>Likewise, repetitive updates, reminders, and approvals can consume time when no clear rule or owner is defined. Vorevia begins by reviewing data sources and the workflow itself so reporting and automation solve real problems.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__capabilities" data-name="Solution Capabilities">
+                    <div class="vov-container">
+                        <div class="vov-solution-detail__section-head"><p class="vov-kicker">PRACTICAL CAPABILITIES</p><h2>What this solution can support</h2><p>Capabilities are selected and configured according to your operating needs, rather than added simply for their own sake.</p></div>
+                        <div class="vov-solution-detail__features">
+                            <article><h3>Business dashboards</h3><p>Present agreed indicators from supported operational data in a clear, role-relevant view.</p></article>
+                            <article><h3>Sales and stock reporting</h3><p>Review activity, availability, movement, and purchasing trends across connected processes.</p></article>
+                            <article><h3>Financial insights</h3><p>Surface relevant billing, expense, payable, and receivable information with appropriate access.</p></article>
+                            <article><h3>Scheduled outputs</h3><p>Prepare recurring reports or reminders where the supporting tools allow them.</p></article>
+                            <article><h3>Rules-based actions</h3><p>Trigger defined tasks or updates from documented events, conditions, or schedules.</p></article>
+                            <article><h3>Approval workflows</h3><p>Route exceptions or requests to the right reviewers and record their decisions.</p></article>
+                            <article><h3>System connectivity</h3><p>Exchange supported information between tools through agreed and validated interfaces.</p></article>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__outcomes" data-name="Expected Outcomes">
+                    <div class="vov-container vov-solution-detail__split">
+                        <div><p class="vov-kicker">WHY IT MATTERS</p><h2>Clearer work, better-connected decisions.</h2></div>
+                        <div class="vov-solution-detail__prose">
+                            <p>Improve access to operational information while reducing time spent preparing repetitive reports.</p>
+                            <p>Reduce manual handoffs where rules are understood, with clear controls for exceptions and important decisions.</p>
+                            <h3>Who it is suited for</h3>
+                            <p>Growing operations, multi-department organizations, and teams with recurring reporting or administrative tasks.</p>
+                            <h3>What we verify during discovery</h3>
+                            <p>Reporting quality depends on source data. Automation needs tested permissions, exception handling, and an accountable process owner before launch.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="vov-solution-detail__cta" data-name="Start a Conversation">
+                    <div class="vov-container vov-solution-detail__cta-inner">
+                        <div><p class="vov-kicker">LET'S TALK</p><h2>Make reporting more useful.</h2><p>Tell us how the process works today. We will help identify a useful starting point and the work it involves.</p></div>
+                        <a class="vov-button vov-button-primary" href="/contact">Contact Vorevia <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                    </div>
+                </section>
+                <nav class="vov-solution-detail__related" aria-label="Other solutions">
+                    <div class="vov-container vov-solution-detail__related-grid">
+                        <a href="/solutions/project-service-management"><span>Previous solution</span><strong>Project &amp; Service Management</strong></a>
+                        <a href="/solutions/sales-customer-management"><span>Next solution</span><strong>Sales &amp; Customer Management</strong></a>
+                    </div>
+                </nav>
+            </div>
+        </t>
+    </template>
+    <record id="vorevia_solution_reporting_automation_page" model="website.page">
+        <field name="name">Reporting &amp; Automation | Vorevia</field>
+        <field name="url">/solutions/reporting-automation</field>
+        <field name="view_id" ref="vorevia_solution_reporting_automation"/>
+        <field name="is_published">True</field>
+    </record>
+</odoo>

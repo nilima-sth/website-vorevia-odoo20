@@ -3,116 +3,37 @@
     <template id="vorevia_solutions_page" name="Vorevia Solutions Page">
         <t t-call="website.layout">
             <div id="wrap" class="oe_structure">
-                <section class="vov-solutions-page">
+                <section class="vov-solutions-page" data-name="Vorevia Solutions">
                     <div class="vov-container">
                         <div class="vov-solutions-page__heading">
                             <p class="vov-kicker">SOLUTIONS</p>
-                            <h1>Business Solutions</h1>
-                            <p>Explore connected business capabilities. We'll help you identify what is relevant to your workflow.</p>
+                            <h1>Business solutions that keep work connected.</h1>
+                            <p>Explore the parts of your business that could work together more clearly. Open a solution to see where it can make a practical difference.</p>
                         </div>
 
-                        <div id="sales-customer-management" class="vov-solutions-page__item">
-                            <div class="vov-solutions-page__item-inner">
-                                <span class="vov-solutions-page__item-number">01</span>
-                                <div>
-                                    <h2>Sales &amp; Customer Management</h2>
-                                    <p>Organize customer relationships and sales processes. Manage leads, quotations, and the full sales pipeline within a connected system.</p>
-                                    <a class="vov-solutions-page__detail-link" href="/solutions/sales-customer-management" aria-label="Explore Sales &amp; Customer Management solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
-                            </div>
-                        </div>
+                        <details id="sales-customer-management" class="vov-solutions-page__item"><summary class="vov-solutions-page__item-inner"><span class="vov-solutions-page__item-number">01</span><span class="vov-solutions-page__summary-copy"><span><h2>Sales &amp; Customer Management</h2><p>Keep every customer conversation moving forward, from the first enquiry to quotation, order, delivery, and invoice.</p></span><span class="vov-solutions-page__toggle" aria-hidden="true">+</span></span></summary><div class="vov-solutions-page__detail"><div><h3>What becomes connected</h3><ul><li>Leads, opportunities, and customer history</li><li>Quotations, approvals, and confirmed orders</li><li>Delivery and invoicing handoffs</li><li>Pipeline activity and performance visibility</li></ul></div><div><h3>Who it helps</h3><p>Sales teams, account managers, operations, and finance teams that need to stay aligned.</p><a href="/contact">Discuss sales and customer management <span aria-hidden="true">→</span></a></div></div></details>
 
-                        <div id="inventory-procurement" class="vov-solutions-page__item">
-                            <div class="vov-solutions-page__item-inner">
-                                <span class="vov-solutions-page__item-number">02</span>
-                                <div>
-                                    <h2>Inventory &amp; Procurement</h2>
-                                    <p>Connect inventory, purchasing, and supplier workflows. Maintain stock visibility and streamline procurement operations.</p>
-                                    <a class="vov-solutions-page__detail-link" href="/solutions/inventory-procurement" aria-label="Explore Inventory &amp; Procurement solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
-                            </div>
-                        </div>
+                        <details id="inventory-procurement" class="vov-solutions-page__item"><summary class="vov-solutions-page__item-inner"><span class="vov-solutions-page__item-number">02</span><span class="vov-solutions-page__summary-copy"><span><h2>Inventory &amp; Procurement</h2><p>Know what is available, what is coming, and what needs attention before it becomes a problem.</p></span><span class="vov-solutions-page__toggle" aria-hidden="true">+</span></span></summary><div class="vov-solutions-page__detail"><div><h3>What becomes connected</h3><ul><li>Stock across locations and warehouses</li><li>Supplier requests, quotations, and purchase orders</li><li>Replenishment rules for important products</li><li>Receiving, internal movement, and delivery</li></ul></div><div><h3>Who it helps</h3><p>Trading, distribution, retail, manufacturing, and operations teams that rely on accurate stock information.</p><a href="/contact">Discuss inventory and procurement <span aria-hidden="true">→</span></a></div></div></details>
 
-                        <div id="finance-billing" class="vov-solutions-page__item">
-                            <div class="vov-solutions-page__item-inner">
-                                <span class="vov-solutions-page__item-number">03</span>
-                                <div>
-                                    <h2>Finance &amp; Billing</h2>
-                                    <p>Bring billing and financial processes into a clearer workflow. Connect invoicing, expenses, and accounting with operational activity.</p>
-                                    <a class="vov-solutions-page__detail-link" href="/solutions/finance-billing" aria-label="Explore Finance &amp; Billing solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
-                            </div>
-                        </div>
+                        <details id="finance-billing" class="vov-solutions-page__item"><summary class="vov-solutions-page__item-inner"><span class="vov-solutions-page__item-number">03</span><span class="vov-solutions-page__summary-copy"><span><h2>Finance &amp; Billing</h2><p>Make the financial side of daily work easier to follow, without chasing information across different systems.</p></span><span class="vov-solutions-page__toggle" aria-hidden="true">+</span></span></summary><div class="vov-solutions-page__detail"><div><h3>What becomes connected</h3><ul><li>Invoices from confirmed sales or completed work</li><li>Expenses, supplier bills, and payment status</li><li>Operational activity and accounting records</li><li>Outstanding payments and cash-flow visibility</li></ul></div><div><h3>Who it helps</h3><p>Finance teams, business owners, operations managers, and project-based businesses.</p><a href="/contact">Discuss finance and billing <span aria-hidden="true">→</span></a></div></div></details>
 
-                        <div id="human-resources" class="vov-solutions-page__item">
-                            <div class="vov-solutions-page__item-inner">
-                                <span class="vov-solutions-page__item-number">04</span>
-                                <div>
-                                    <h2>Human Resources</h2>
-                                    <p>Bring employee-related processes into one organized system. Manage workforce information, leave, attendance, and planning.</p>
-                                    <a class="vov-solutions-page__detail-link" href="/solutions/human-resources" aria-label="Explore Human Resources solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
-                            </div>
-                        </div>
+                        <details id="human-resources" class="vov-solutions-page__item"><summary class="vov-solutions-page__item-inner"><span class="vov-solutions-page__item-number">04</span><span class="vov-solutions-page__summary-copy"><span><h2>Human Resources</h2><p>Give employee information and everyday people processes one clear, organized home.</p></span><span class="vov-solutions-page__toggle" aria-hidden="true">+</span></span></summary><div class="vov-solutions-page__detail"><div><h3>What becomes connected</h3><ul><li>Employee records and onboarding information</li><li>Leave, attendance, and approval requests</li><li>Recruitment and workforce planning steps</li><li>Manager visibility without repeated manual follow-up</li></ul></div><div><h3>Who it helps</h3><p>Growing teams that want people processes to feel consistent, not heavy.</p><a href="/contact">Discuss human resources <span aria-hidden="true">→</span></a></div></div></details>
 
-                        <div id="retail-pos" class="vov-solutions-page__item">
-                            <div class="vov-solutions-page__item-inner">
-                                <span class="vov-solutions-page__item-number">05</span>
-                                <div>
-                                    <h2>Retail &amp; Point of Sale</h2>
-                                    <p>Explore how counter transactions can connect with business operations. Link in-store activity with inventory, customer data, and accounting.</p>
-                                    <a class="vov-solutions-page__detail-link" href="/solutions/retail-pos" aria-label="Explore Retail &amp; Point of Sale solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
-                            </div>
-                        </div>
+                        <details id="retail-pos" class="vov-solutions-page__item"><summary class="vov-solutions-page__item-inner"><span class="vov-solutions-page__item-number">05</span><span class="vov-solutions-page__summary-copy"><span><h2>Retail &amp; Point of Sale</h2><p>Connect what happens at the counter with stock, customers, accounting, and the rest of the business.</p></span><span class="vov-solutions-page__toggle" aria-hidden="true">+</span></span></summary><div class="vov-solutions-page__detail"><div><h3>What becomes connected</h3><ul><li>Fast and reliable in-store sales</li><li>Stock updates as products sell</li><li>Customer purchase history where it is useful</li><li>Sales data, invoicing, and accounting</li></ul></div><div><h3>Who it helps</h3><p>Shops, showrooms, cafés, pharmacies, and multi-location retail businesses.</p><a href="/contact">Discuss retail and point of sale <span aria-hidden="true">→</span></a></div></div></details>
 
-                        <div id="website-ecommerce" class="vov-solutions-page__item">
-                            <div class="vov-solutions-page__item-inner">
-                                <span class="vov-solutions-page__item-number">06</span>
-                                <div>
-                                    <h2>Website &amp; eCommerce</h2>
-                                    <p>Connect customer-facing digital experiences with operational workflows. Bring online commerce and business processes together.</p>
-                                    <a class="vov-solutions-page__detail-link" href="/solutions/website-ecommerce" aria-label="Explore Website &amp; eCommerce solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
-                            </div>
-                        </div>
+                        <details id="website-ecommerce" class="vov-solutions-page__item"><summary class="vov-solutions-page__item-inner"><span class="vov-solutions-page__item-number">06</span><span class="vov-solutions-page__summary-copy"><span><h2>Website &amp; eCommerce</h2><p>Let online orders flow into real operations instead of becoming another disconnected system to manage.</p></span><span class="vov-solutions-page__toggle" aria-hidden="true">+</span></span></summary><div class="vov-solutions-page__detail"><div><h3>What becomes connected</h3><ul><li>Products, services, and online enquiries</li><li>Online orders, payments, and fulfilment</li><li>Pricing and product availability</li><li>Customer communication, delivery, and invoicing</li></ul></div><div><h3>Who it helps</h3><p>Businesses selling products, services, bookings, or subscriptions online.</p><a href="/contact">Discuss website and eCommerce <span aria-hidden="true">→</span></a></div></div></details>
 
-                        <div id="project-service-management" class="vov-solutions-page__item">
-                            <div class="vov-solutions-page__item-inner">
-                                <span class="vov-solutions-page__item-number">07</span>
-                                <div>
-                                    <h2>Project &amp; Service Management</h2>
-                                    <p>Coordinate project delivery and service work. Manage tasks, timesheets, and client interactions in context.</p>
-                                    <a class="vov-solutions-page__detail-link" href="/solutions/project-service-management" aria-label="Explore Project &amp; Service Management solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
-                            </div>
-                        </div>
+                        <details id="project-service-management" class="vov-solutions-page__item"><summary class="vov-solutions-page__item-inner"><span class="vov-solutions-page__item-number">07</span><span class="vov-solutions-page__summary-copy"><span><h2>Project &amp; Service Management</h2><p>Keep delivery work visible from start to finish, with a shared view of progress, responsibility, and client context.</p></span><span class="vov-solutions-page__toggle" aria-hidden="true">+</span></span></summary><div class="vov-solutions-page__detail"><div><h3>What becomes connected</h3><ul><li>Projects, tasks, ownership, and progress</li><li>Timesheets and service activities</li><li>Client requests and delivery context</li><li>Handoffs between delivery and billing teams</li></ul></div><div><h3>Who it helps</h3><p>Consultancies, agencies, implementation teams, service providers, and internal project teams.</p><a href="/contact">Discuss project and service management <span aria-hidden="true">→</span></a></div></div></details>
 
-                        <div id="reporting-automation" class="vov-solutions-page__item">
-                            <div class="vov-solutions-page__item-inner">
-                                <span class="vov-solutions-page__item-number">08</span>
-                                <div>
-                                    <h2>Reporting &amp; Automation</h2>
-                                    <p>Explore better reporting and streamlined recurring work. Improve visibility and reduce repetitive manual processes.</p>
-                                    <a class="vov-solutions-page__detail-link" href="/solutions/reporting-automation" aria-label="Explore Reporting &amp; Automation solution">Explore solution <span aria-hidden="true">↗</span></a>
-                                </div>
-                            </div>
-                        </div>
+                        <details id="reporting-automation" class="vov-solutions-page__item"><summary class="vov-solutions-page__item-inner"><span class="vov-solutions-page__item-number">08</span><span class="vov-solutions-page__summary-copy"><span><h2>Reporting &amp; Automation</h2><p>Spend less time chasing updates and more time acting on information that is already clear.</p></span><span class="vov-solutions-page__toggle" aria-hidden="true">+</span></span></summary><div class="vov-solutions-page__detail"><div><h3>What becomes connected</h3><ul><li>Dashboards built around real decisions</li><li>Scheduled reporting, alerts, and reminders</li><li>Approval and follow-up rules</li><li>Information that is easier to find and trust</li></ul></div><div><h3>Who it helps</h3><p>Teams that rely on spreadsheets, repeated follow-ups, or manual reporting to keep work moving.</p><a href="/contact">Discuss reporting and automation <span aria-hidden="true">→</span></a></div></div></details>
 
-                        <div class="vov-solutions-page__cta">
-                            <h3>Start with your requirements</h3>
-                            <p>Not sure what your business needs? Tell us about your workflow and we'll help identify the right starting point.</p>
-                            <a class="vov-button vov-button-primary" href="/contact">Start a Conversation <i class="fa fa-arrow-right" aria-hidden="true"/></a>
-                        </div>
+                        <details id="manufacturing" class="vov-solutions-page__item"><summary class="vov-solutions-page__item-inner"><span class="vov-solutions-page__item-number">09</span><span class="vov-solutions-page__summary-copy"><span><h2>Manufacturing</h2><p>Bring planning, materials, production, and quality into one practical flow.</p></span><span class="vov-solutions-page__toggle" aria-hidden="true">+</span></span></summary><div class="vov-solutions-page__detail"><div><h3>What becomes connected</h3><ul><li>Demand, materials, and production planning</li><li>Bills of materials, work orders, and production stages</li><li>Purchasing, inventory, quality checks, and finished goods</li><li>Material consumption and production progress</li></ul></div><div><h3>Who it helps</h3><p>Manufacturers, assembly businesses, food producers, furniture makers, workshops, and made-to-order businesses.</p><a href="/contact">Discuss your manufacturing workflow <span aria-hidden="true">→</span></a></div></div></details>
+
+                        <div class="vov-solutions-page__cta"><h3>Start with the part of work you want to improve.</h3><p>Not sure which solution fits? Tell us how the work happens today, and we will help identify a practical starting point.</p><a class="vov-button vov-button-primary" href="/contact">Start a Conversation <i class="fa fa-arrow-right" aria-hidden="true"/></a></div>
                     </div>
                 </section>
             </div>
         </t>
     </template>
-    <record id="vorevia_solutions_page_record" model="website.page">
-        <field name="name">Vorevia Solutions</field>
-        <field name="url">/solutions</field>
-        <field name="view_id" ref="vorevia_solutions_page"/>
-        <field name="is_published">True</field>
-    </record>
+    <record id="vorevia_solutions_page_record" model="website.page"><field name="name">Vorevia Solutions</field><field name="url">/solutions</field><field name="view_id" ref="vorevia_solutions_page"/><field name="is_published">True</field></record>
 </odoo>

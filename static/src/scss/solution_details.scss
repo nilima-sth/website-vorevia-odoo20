@@ -76,8 +76,25 @@
     .vov-solution-detail * { scroll-behavior: auto !important; }
 }
 
-/* Follow the existing overview rhythm; links are keyboard-accessible. */
-.vov-solutions-page { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-.vov-solutions-page__detail-link { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1rem; color: var(--vov-blue-deep); font-size: .86rem; font-weight: 700; text-decoration: none; }
-.vov-solutions-page__detail-link:hover { color: var(--vov-ink); text-decoration: underline; text-underline-offset: 4px; }
-.vov-solutions-page__detail-link:focus-visible { outline: 2px solid var(--vov-blue-deep); outline-offset: 4px; }
+/* Expandable solution overview: keeps the full explanation beside the chosen solution. */
+.vov-solutions-page__item > summary { cursor: pointer; list-style: none; }
+.vov-solutions-page__item > summary::-webkit-details-marker { display: none; }
+.vov-solutions-page__item > summary:focus-visible { outline: 2px solid var(--vov-blue-deep); outline-offset: 7px; border-radius: 3px; }
+.vov-solutions-page__summary-copy { display: flex; min-width: 0; align-items: flex-start; justify-content: space-between; gap: 1.5rem; }
+.vov-solutions-page__summary-copy > span:first-child { min-width: 0; }
+.vov-solutions-page__toggle { display: grid; width: 2.35rem; height: 2.35rem; flex: 0 0 2.35rem; place-items: center; border: 1px solid var(--vov-line); border-radius: 50%; color: var(--vov-blue-deep); font-size: 1.35rem; font-weight: 400; line-height: 1; transition: background-color 180ms ease, color 180ms ease, transform 180ms ease; }
+.vov-solutions-page__item[open] .vov-solutions-page__toggle { transform: rotate(45deg); background: var(--vov-blue-deep); color: #fff; }
+.vov-solutions-page__item > summary:hover .vov-solutions-page__toggle { border-color: var(--vov-blue-deep); }
+.vov-solutions-page__detail { display: grid; margin: 1.75rem 0 .25rem 52px; padding: 1.65rem 0 .25rem; border-top: 1px solid var(--vov-line); grid-template-columns: minmax(0, 1.2fr) minmax(220px, .8fr); gap: clamp(1.75rem, 4vw, 4rem); }
+.vov-solutions-page__detail h3 { margin: 0 0 .85rem; color: var(--vov-ink); font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.vov-solutions-page__detail ul { display: grid; margin: 0; padding: 0; gap: .55rem; list-style: none; }
+.vov-solutions-page__detail li { position: relative; padding-left: 1.15rem; color: var(--vov-muted); font-size: .93rem; line-height: 1.55; }
+.vov-solutions-page__detail li::before { position: absolute; left: 0; top: .56rem; width: .38rem; height: .38rem; border-radius: 50%; background: var(--vov-blue); content: ""; }
+.vov-solutions-page__detail p { margin: 0; color: var(--vov-muted); font-size: .93rem; line-height: 1.65; }
+.vov-solutions-page__detail a { display: inline-flex; margin-top: 1.2rem; color: var(--vov-blue-deep); font-size: .88rem; font-weight: 700; text-decoration: none; }
+.vov-solutions-page__detail a:hover { color: var(--vov-ink); text-decoration: underline; text-underline-offset: 4px; }
+.vov-solutions-page__detail a:focus-visible { outline: 2px solid var(--vov-blue-deep); outline-offset: 4px; }
+@media (max-width: 767.98px) {
+    .vov-solutions-page__summary-copy { gap: 1rem; }
+    .vov-solutions-page__detail { margin-left: 0; grid-template-columns: 1fr; gap: 1.5rem; }
+}

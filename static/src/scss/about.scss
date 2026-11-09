@@ -50,7 +50,7 @@
 .vov-why-step:focus-visible { outline: 2px solid var(--vov-blue-deep); outline-offset: -2px; }
 .vov-why-step__number { padding-top: 0.12rem; color: var(--vov-blue-deep); font-size: 0.7rem; font-weight: 800; }
 .vov-why-step__copy { display: grid; gap: 0.35rem; }
-.vov-why-step__copy small { color: var(--vov-blue-deep); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.13em; }
+.vov-why-step__copy small { color: var(--vov-blue-deep); font-size: .78rem; font-weight: 800; letter-spacing: 0.13em; }
 .vov-why-step__copy strong { font-size: clamp(1.12rem, 1.6vw, 1.4rem); font-weight: 650; letter-spacing: 0.005em; line-height: 1.3; }
 .vov-why-step__copy > span { max-width: 430px; color: var(--vov-muted); font-size: 0.8rem; line-height: 1.6; }
 .vov-why-step__arrow { color: var(--vov-blue-deep); font-size: 1.1rem; opacity: 0; transform: translate(-3px, 3px); transition: opacity 200ms ease, transform 200ms ease; }
@@ -71,11 +71,11 @@
     animation: vov-why-panel-enter 260ms ease-out both;
 }
 .vov-why-panel[hidden] { display: none; }
-.vov-why-panel__index { margin: 0 0 3.8rem; color: var(--vov-blue-deep); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.15em; }
+.vov-why-panel__index { margin: 0 0 3.8rem; color: var(--vov-blue-deep); font-size: .78rem; font-weight: 800; letter-spacing: 0.15em; }
 .vov-why-panel h3 { max-width: 500px; margin: 0 0 1rem; color: var(--vov-ink); font-size: clamp(2rem, 3vw, 3rem); font-weight: 550; letter-spacing: 0.005em; line-height: 1.12; }
 .vov-why-panel > p:not(.vov-why-panel__index) { max-width: 510px; color: var(--vov-muted); font-size: 0.94rem; line-height: 1.7; }
 .vov-why-flow { display: flex; align-items: center; margin-top: 3rem; gap: 0.65rem; }
-.vov-why-flow span { padding: 0.58rem 0.7rem; border: 1px solid #cbddeb; background: #fff; color: var(--vov-blue-deep); font-size: 0.63rem; font-weight: 750; white-space: nowrap; }
+.vov-why-flow span { padding: 0.58rem 0.7rem; border: 1px solid #cbddeb; background: #fff; color: var(--vov-blue-deep); font-size: .75rem; font-weight: 750; white-space: nowrap; }
 .vov-why-flow i { width: 1rem; height: 1px; background: var(--vov-blue); flex: 1 1 auto; }
 @keyframes vov-why-panel-enter { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 
@@ -230,7 +230,7 @@
 .vov-about-identity__description { max-width: 690px; color: var(--vov-ink); font-size: 1.18rem; line-height: 1.75; }
 .vov-about-identity__description p { margin: 0 0 1.35rem; text-align: justify; text-justify: inter-word; }
 .vov-about-identity__description p:last-child { margin-bottom: 0; }
-.vov-about-identity__description h3 { margin: 2.25rem 0 .65rem; color: var(--vov-blue-deep); font-size: .72rem; font-weight: 800; letter-spacing: .12em; line-height: 1.4; text-transform: uppercase; }
+.vov-about-identity__description h3 { margin: 2.25rem 0 .65rem; color: var(--vov-blue-deep); font-size: .82rem; font-weight: 800; letter-spacing: .12em; line-height: 1.4; text-transform: uppercase; }
 .vov-about-identity__description h3:first-child { margin-top: 0; }
 .vov-about-identity__description .vov-about-identity__lead { color: inherit; font-size: inherit; }
 
@@ -282,7 +282,7 @@
 }
 
 .vov-about-capabilities { display: flex; flex-wrap: wrap; margin-top: 2rem; gap: 0.55rem; }
-.vov-about-capabilities span { padding: 0.65rem 0.8rem; border: 1px solid var(--vov-line); color: var(--vov-blue-deep); font-size: 0.7rem; font-weight: 750; }
+.vov-about-capabilities span { padding: 0.65rem 0.8rem; border: 1px solid var(--vov-line); color: var(--vov-blue-deep); font-size: .84rem; font-weight: 750; }
 /* Founder's Note: transparent WebP portrait and company message. */
 .vov-about-founder { padding: clamp(3rem, 6vw, 5rem) 0; background: #fff; }
 .vov-about-founder__layout { display: grid; grid-template-columns: minmax(260px, 350px) minmax(0, 1fr); align-items: stretch; gap: clamp(2.5rem, 6vw, 6rem); }
@@ -351,7 +351,7 @@
     .vov-why-panel__index { margin-bottom: 2rem; }
     .vov-why-flow { flex-wrap: wrap; gap: 0.4rem; }
     .vov-why-flow i { width: 8px; flex: 0 0 8px; }
-    .vov-why-flow span { font-size: 0.55rem; }
+    .vov-why-flow span { font-size: .72rem; }
 }
 
 /* Keep the engagement stages in one consistently aligned reading column on phones.

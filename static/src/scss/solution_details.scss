@@ -2,7 +2,7 @@
 .vov-solution-detail {
     color: var(--vov-ink);
     background: #fff;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--vov-font-body);
 }
 .vov-solution-detail *, .vov-solution-detail *::before, .vov-solution-detail *::after { box-sizing: border-box; }
 .vov-solution-detail section { scroll-margin-top: 100px; }
@@ -13,7 +13,7 @@
 .vov-solution-detail__hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(310px, .65fr); align-items: start; gap: clamp(3rem, 7vw, 7rem); }
 .vov-solution-detail__hero-copy { min-width: 0; }
 .vov-solution-detail__hero .vov-kicker { margin-bottom: 1.45rem; }
-.vov-solution-detail h1 { max-width: 800px; margin: 0; color: #142039; font-size: clamp(3rem, 4.6vw, 5.25rem); font-weight: 600; line-height: 1.14; letter-spacing: 0.012em; }
+.vov-solution-detail h1 { max-width: 800px; margin: 0; color: #142039; font-size: clamp(3rem, 4.6vw, 5.25rem); font-weight: 600; line-height: 1.14; letter-spacing: var(--vov-heading-letter-spacing); }
 .vov-solution-detail__lead { max-width: 690px; margin: 1.65rem 0 2rem; color: #506376; font-size: clamp(1.03rem, 1.4vw, 1.22rem); line-height: 1.72; }
 .vov-solution-detail__hero .vov-button, .vov-solution-detail__cta .vov-button { margin: 0; border-radius: 14px; }
 .vov-solution-detail__flow { min-width: 0; border: 1px solid #dbe7f3; border-radius: 16px; padding: clamp(1.5rem, 3vw, 2.25rem); background: #fff; box-shadow: 0 16px 45px rgba(35, 89, 139, .045); }
@@ -26,7 +26,7 @@
 .vov-solution-detail__flow > p:last-child { margin: 1.55rem 0 0; color: var(--vov-muted); font-size: .79rem; line-height: 1.55; }
 .vov-solution-detail__challenge, .vov-solution-detail__outcomes { padding: clamp(4.5rem, 8vw, 8rem) 0; }
 .vov-solution-detail__split { display: grid; grid-template-columns: minmax(0, .83fr) minmax(0, 1.17fr); gap: clamp(2.5rem, 8vw, 8rem); }
-.vov-solution-detail h2 { margin: 0; font-size: clamp(2.25rem, 3.6vw, 4rem); line-height: 1.17; letter-spacing: 0.012em; font-weight: 600; }
+.vov-solution-detail h2 { margin: 0; font-size: clamp(2.25rem, 3.6vw, 4rem); line-height: 1.17; letter-spacing: var(--vov-heading-letter-spacing); font-weight: 600; }
 .vov-solution-detail__prose p { max-width: 710px; margin: 0 0 1.25rem; color: #536272; font-size: 1.02rem; line-height: 1.82; }
 .vov-solution-detail__prose p:last-child { margin-bottom: 0; }
 .vov-solution-detail__prose h3 { margin: 2rem 0 .7rem; font-size: 1.14rem; font-weight: 650; }

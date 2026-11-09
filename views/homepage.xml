@@ -8,6 +8,10 @@
 
     <template id="vorevia_brand_assets" inherit_id="website.layout" name="Vorevia Brand Assets" priority="100">
         <xpath expr="//link[@rel='shortcut icon']" position="replace">
+            <!-- Open Font License typefaces, loaded once for every public Vorevia page. -->
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=Inter:opsz,wght@14..32,400..800&amp;display=swap"/>
             <link rel="shortcut icon" type="image/x-icon" href="/website_vorevia/static/src/img/favicon/favicon.ico"/>
             <link rel="icon" type="image/png" sizes="32x32" href="/website_vorevia/static/src/img/favicon/favicon-32x32.png"/>
             <link rel="icon" type="image/png" sizes="16x16" href="/website_vorevia/static/src/img/favicon/favicon-16x16.png"/>

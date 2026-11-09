@@ -1,8 +1,19 @@
-/* Vorevia public typography: consistent, readable tracking across website, blog and portal. */
+/*
+ * Vorevia public typography.
+ *
+ * Inter is used for interface and body copy; Bricolage Grotesque is reserved
+ * for headings. Both are loaded in website.layout with font-display: swap.
+ * Keep the fallbacks metric-compatible enough for a stable first render.
+ */
 :root {
-    --vov-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --vov-letter-spacing: 0.012em;
+    --vov-font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+    --vov-font-heading: "Bricolage Grotesque", "Arial", sans-serif;
+    --vov-font-family: var(--vov-font-body);
+    --vov-letter-spacing: normal;
+    --vov-heading-letter-spacing: -0.018em;
+    --vov-eyebrow-letter-spacing: 0.1em;
 }
+
 #wrap,
 .vov-site-header,
 .vov-site-footer,
@@ -13,22 +24,71 @@
     font-family: var(--vov-font-family);
     letter-spacing: var(--vov-letter-spacing);
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 #wrap :is(h1, h2, h3, h4, h5, h6),
 .vov-site-footer :is(h1, h2, h3, h4, h5, h6),
 .vov-cw-panel :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--vov-font-family);
-    letter-spacing: 0.012em;
+    font-family: var(--vov-font-heading);
+    font-weight: 600;
+    letter-spacing: var(--vov-heading-letter-spacing);
+    line-height: 1.15;
     overflow-wrap: break-word;
 }
+
+#wrap :is(p, li, dd, dt, figcaption),
+.vov-site-footer :is(p, li, dd, dt),
+.vov-cw-panel :is(p, li, dd, dt) {
+    letter-spacing: normal;
+}
+
 #wrap :is(button, input, select, textarea),
 .vov-site-header :is(button, input, select),
 .vov-cw-panel :is(button, input, select, textarea) {
-    font-family: var(--vov-font-family);
-    letter-spacing: 0.012em;
+    font-family: var(--vov-font-body);
+    letter-spacing: normal;
+    line-height: 1.35;
 }
-#wrap .vov-kicker { letter-spacing: 0.12em; }
+
+#wrap .vov-kicker,
+#wrap :is(.vov-services-mega__eyebrow, .vov-service-panel__label, .vov-portal-eyebrow),
+.vov-site-footer :is(.vov-kicker, .vov-footer-links h2) {
+    font-family: var(--vov-font-body);
+    font-weight: 700;
+    letter-spacing: var(--vov-eyebrow-letter-spacing);
+    line-height: 1.35;
+}
+
+#wrap :is(.vov-button, .vov-nav-cta, .vov-nav-signin, .vov-services-faq summary, .vov-accordion .accordion-button, .vov-portal-button),
+.vov-cw-panel button {
+    font-weight: 600;
+    letter-spacing: normal;
+}
+
 .website_blog :is(.o_wblog_post_title, .o_wblog_post_content h1, .o_wblog_post_content h2, .o_wblog_post_content h3) {
-    letter-spacing: 0.012em;
-    line-height: 1.2;
+    font-family: var(--vov-font-heading);
+    letter-spacing: var(--vov-heading-letter-spacing);
+    line-height: 1.16;
+}
+
+/* Increase dense component copy without changing the surrounding layout. */
+#wrap :is(.vov-capability-list p, .vov-value-list p, .vov-process-step p, .vov-industry-card p, .vov-accordion .accordion-body, .vov-solutions-page__detail p, .vov-solutions-page__detail li) {
+    font-size: .875rem;
+    line-height: 1.65;
+}
+
+@media (max-width: 575.98px) {
+    #wrap :is(h1, h2, h3, h4, h5, h6),
+    .vov-site-footer :is(h1, h2, h3, h4, h5, h6),
+    .vov-cw-panel :is(h1, h2, h3, h4, h5, h6) {
+        letter-spacing: -0.014em;
+    }
+
+    #wrap :is(button, input, select, textarea),
+    .vov-site-header :is(button, input, select),
+    .vov-cw-panel :is(button, input, select, textarea) {
+        font-size: .875rem;
+    }
 }

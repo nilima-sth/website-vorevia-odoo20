@@ -52,8 +52,35 @@ $cw-row-email:       #ea4335;
     transition:      transform 0.22s ease, filter 0.22s ease;
     outline:         none;
     -webkit-tap-highlight-color: transparent;
+    isolation:        isolate;
+
+    &::before,
+    &::after {
+        position:       absolute;
+        z-index:        -1;
+        content:        '';
+        pointer-events: none;
+    }
+
+    // CSS-only glow: the artwork stays crisp while the light ripples outward.
+    &::before {
+        inset:          13% 8% 27%;
+        border-radius:  50%;
+        background:     radial-gradient(circle, rgba(78, 183, 255, 0.48) 0%, rgba(78, 183, 255, 0.18) 42%, transparent 72%);
+        filter:         blur(5px);
+        animation:      vov-cw-glow 2.8s ease-in-out infinite;
+    }
+
+    &::after {
+        inset:          18% 13% 32%;
+        border:         1px solid rgba(116, 205, 255, 0.5);
+        border-radius:  50%;
+        animation:      vov-cw-ripple 2.8s ease-out infinite;
+    }
 
     .vov-cw-robot {
+        position:    relative;
+        z-index:     1;
         display:     block;
         width:       100%;
         height:      auto;
@@ -61,6 +88,8 @@ $cw-row-email:       #ea4335;
     }
 
     svg.vov-cw-icon-close {
+        position:    relative;
+        z-index:     1;
         width:       48px;
         height:      48px;
         padding:     12px;
@@ -73,6 +102,8 @@ $cw-row-email:       #ea4335;
     // Opened state — show X
     &.is-open .vov-cw-robot { display: none; }
     &:not(.is-open) svg.vov-cw-icon-close { display: none; }
+    &.is-open::before,
+    &.is-open::after { display: none; }
 
     &:hover {
         transform:   scale(1.04);
@@ -90,6 +121,17 @@ $cw-row-email:       #ea4335;
 @keyframes vov-cw-float {
     0%, 100% { transform: translateY(0); }
     50%      { transform: translateY(-2px); }
+}
+
+@keyframes vov-cw-glow {
+    0%, 100% { opacity: 0.52; transform: scale(0.94); }
+    50%      { opacity: 0.8; transform: scale(1.04); }
+}
+
+@keyframes vov-cw-ripple {
+    0%   { opacity: 0.65; transform: scale(0.86); }
+    70%  { opacity: 0; transform: scale(1.52); }
+    100% { opacity: 0; transform: scale(1.52); }
 }
 
 // ─── Backdrop ─────────────────────────────────────────────────────────────────
@@ -497,7 +539,9 @@ $cw-row-email:       #ea4335;
     .vov-cw-submit { transition: none !important; }
 
     .vov-cw-spinner,
-    .vov-cw-launcher { animation: none !important; }
+    .vov-cw-launcher,
+    .vov-cw-btn::before,
+    .vov-cw-btn::after { animation: none !important; }
 }
 
 // ─── Print ────────────────────────────────────────────────────────────────────

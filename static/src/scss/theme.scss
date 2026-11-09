@@ -1064,6 +1064,19 @@
     .vov-order-flow__steps article:not(:first-child) { padding: 1.5rem 0 1.7rem; border-right: 0; }
     .vov-order-flow__steps article:not(:first-child) { border-top: 1px solid rgba(220, 239, 250, 0.18); }
     .vov-order-flow__steps article:not(:first-child)::before { left: 0; }
+    .vov-order-flow__steps article {
+        display: grid;
+        gap: .85rem .75rem;
+        grid-template-areas:
+            "number icon"
+            "title title"
+            "copy copy";
+        grid-template-columns: max-content 1fr;
+    }
+    .vov-order-flow__number { grid-area: number; align-self: center; margin: 0; }
+    .vov-order-flow__icon { grid-area: icon; justify-self: start; }
+    .vov-order-flow h3 { grid-area: title; margin: .3rem 0 0; }
+    .vov-order-flow__steps p { grid-area: copy; }
     .vov-order-flow__steps p { max-width: 100%; }
     .vov-order-flow__foot { align-items: flex-start; flex-direction: column; }
     .vov-case-study-slot a { white-space: normal; }

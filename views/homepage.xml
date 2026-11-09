@@ -451,10 +451,10 @@
                             <div class="vov-mobile-stepper" data-mobile-stepper="showcase" role="group" aria-label="Navigate business functions" hidden="hidden">
                                 <button class="vov-mobile-stepper__arrow" type="button" data-mobile-prev="showcase" aria-label="Previous item">←</button>
                                 <div class="vov-mobile-stepper__current" role="status" aria-live="polite" aria-atomic="true">
-                                    <strong data-mobile-title>Sales and CRM</strong>
-                                    <span data-mobile-subtitle>Opportunity to order</span>
+                                    <strong data-mobile-title="true">Sales and CRM</strong>
+                                    <span data-mobile-subtitle="true">Opportunity to order</span>
                                 </div>
-                                <span class="vov-mobile-stepper__count" data-mobile-count>01 / 05</span>
+                                <span class="vov-mobile-stepper__count" data-mobile-count="true">01 / 05</span>
                                 <button class="vov-mobile-stepper__arrow" type="button" data-mobile-next="showcase" aria-label="Next item">→</button>
                             </div>
                             <div class="vov-showcase-tabs" role="tablist" aria-label="Odoo business functions">
@@ -507,10 +507,10 @@
                             <div class="vov-mobile-stepper" data-mobile-stepper="process" role="group" aria-label="Navigate implementation stages" hidden="hidden">
                                 <button class="vov-mobile-stepper__arrow" type="button" data-mobile-prev="process" aria-label="Previous item">←</button>
                                 <div class="vov-mobile-stepper__current" role="status" aria-live="polite" aria-atomic="true">
-                                    <strong data-mobile-title>Discover</strong>
-                                    <span data-mobile-subtitle>Understand business processes, friction and priorities.</span>
+                                    <strong data-mobile-title="true">Discover</strong>
+                                    <span data-mobile-subtitle="true">Understand business processes, friction and priorities.</span>
                                 </div>
-                                <span class="vov-mobile-stepper__count" data-mobile-count>01 / 05</span>
+                                <span class="vov-mobile-stepper__count" data-mobile-count="true">01 / 05</span>
                                 <button class="vov-mobile-stepper__arrow" type="button" data-mobile-next="process" aria-label="Next item">→</button>
                             </div>
                             <div class="vov-process-steps" role="tablist" aria-label="Implementation stages">
@@ -579,10 +579,10 @@
                             <div class="vov-mobile-stepper" data-mobile-stepper="why" role="group" aria-label="Navigate how Vorevia works" hidden="hidden">
                                 <button class="vov-mobile-stepper__arrow" type="button" data-mobile-prev="why" aria-label="Previous item">←</button>
                                 <div class="vov-mobile-stepper__current" role="status" aria-live="polite" aria-atomic="true">
-                                    <strong data-mobile-title>UNDERSTAND</strong>
-                                    <span data-mobile-subtitle>Start with the way you work</span>
+                                    <strong data-mobile-title="true">UNDERSTAND</strong>
+                                    <span data-mobile-subtitle="true">Start with the way you work</span>
                                 </div>
-                                <span class="vov-mobile-stepper__count" data-mobile-count>01 / 04</span>
+                                <span class="vov-mobile-stepper__count" data-mobile-count="true">01 / 04</span>
                                 <button class="vov-mobile-stepper__arrow" type="button" data-mobile-next="why" aria-label="Next item">→</button>
                             </div>
                             <div class="vov-why-steps" role="tablist" aria-label="How Vorevia works">

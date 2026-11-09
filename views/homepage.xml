@@ -448,6 +448,15 @@
                     <div class="vov-container">
                         <div class="vov-section-heading vov-section-heading-center"><p class="vov-kicker">SEE THE HANDOFFS</p><h2>What each team needs to see.</h2><p>Explore an illustrative Odoo workspace for sales, stock, manufacturing, finance and people. The views show how information can stay connected as work moves forward.</p></div>
                         <div class="vov-showcase" data-vov-showcase="true">
+                            <div class="vov-mobile-stepper" data-mobile-stepper="showcase" role="group" aria-label="Navigate business functions" hidden="hidden">
+                                <button class="vov-mobile-stepper__arrow" type="button" data-mobile-prev="showcase" aria-label="Previous item">←</button>
+                                <div class="vov-mobile-stepper__current" role="status" aria-live="polite" aria-atomic="true">
+                                    <strong data-mobile-title>Sales and CRM</strong>
+                                    <span data-mobile-subtitle>Opportunity to order</span>
+                                </div>
+                                <span class="vov-mobile-stepper__count" data-mobile-count>01 / 05</span>
+                                <button class="vov-mobile-stepper__arrow" type="button" data-mobile-next="showcase" aria-label="Next item">→</button>
+                            </div>
                             <div class="vov-showcase-tabs" role="tablist" aria-label="Odoo business functions">
                                 <button id="vov-tab-sales" class="vov-showcase-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="vov-panel-sales" tabindex="0" data-showcase-target="sales"><i class="fa fa-handshake-o" aria-hidden="true"/><span><strong>Sales and CRM</strong><small>Opportunity to order</small></span><em>01</em></button>
                                 <button id="vov-tab-inventory" class="vov-showcase-tab" type="button" role="tab" aria-selected="false" aria-controls="vov-panel-inventory" tabindex="-1" data-showcase-target="inventory"><i class="fa fa-cubes" aria-hidden="true"/><span><strong>Inventory and Operations</strong><small>Demand to movement</small></span><em>02</em></button>
@@ -495,6 +504,15 @@
                     <div class="vov-container">
                         <div class="vov-section-heading vov-section-heading-split"><div><p class="vov-kicker">HOW WE WORK</p><h2>Five clear stages. One connected system.</h2></div><p>Progress stays visible from initial discovery through deployment and ongoing support.</p></div>
                         <div class="vov-process" data-vov-process="true">
+                            <div class="vov-mobile-stepper" data-mobile-stepper="process" role="group" aria-label="Navigate implementation stages" hidden="hidden">
+                                <button class="vov-mobile-stepper__arrow" type="button" data-mobile-prev="process" aria-label="Previous item">←</button>
+                                <div class="vov-mobile-stepper__current" role="status" aria-live="polite" aria-atomic="true">
+                                    <strong data-mobile-title>Discover</strong>
+                                    <span data-mobile-subtitle>Understand business processes, friction and priorities.</span>
+                                </div>
+                                <span class="vov-mobile-stepper__count" data-mobile-count>01 / 05</span>
+                                <button class="vov-mobile-stepper__arrow" type="button" data-mobile-next="process" aria-label="Next item">→</button>
+                            </div>
                             <div class="vov-process-steps" role="tablist" aria-label="Implementation stages">
                                 <button id="vov-process-tab-discover" class="vov-process-step is-active" type="button" role="tab" aria-selected="true" aria-controls="vov-process-panel-discover" data-process-target="discover"><span>01</span><div><h3>Discover</h3><p>Understand business processes, friction and priorities.</p></div></button>
                                 <button id="vov-process-tab-configure" class="vov-process-step" type="button" role="tab" aria-selected="false" aria-controls="vov-process-panel-configure" data-process-target="configure"><span>02</span><div><h3>Configure</h3><p>Adapt Odoo modules, roles and workflows to the operating model.</p></div></button>
@@ -558,6 +576,15 @@
                             <p>Every business operates differently. Vorevia implements and customizes connected ERP systems around the processes your team actually follows—reducing manual work, improving information flow, and making daily operations easier to manage.</p>
                         </div>
                         <div class="vov-why-story" data-vov-why-story="">
+                            <div class="vov-mobile-stepper" data-mobile-stepper="why" role="group" aria-label="Navigate how Vorevia works" hidden="hidden">
+                                <button class="vov-mobile-stepper__arrow" type="button" data-mobile-prev="why" aria-label="Previous item">←</button>
+                                <div class="vov-mobile-stepper__current" role="status" aria-live="polite" aria-atomic="true">
+                                    <strong data-mobile-title>UNDERSTAND</strong>
+                                    <span data-mobile-subtitle>Start with the way you work</span>
+                                </div>
+                                <span class="vov-mobile-stepper__count" data-mobile-count>01 / 04</span>
+                                <button class="vov-mobile-stepper__arrow" type="button" data-mobile-next="why" aria-label="Next item">→</button>
+                            </div>
                             <div class="vov-why-steps" role="tablist" aria-label="How Vorevia works">
                                 <button class="vov-why-step is-active" id="vov-why-tab-understand" type="button" role="tab" aria-controls="vov-why-panel-understand" aria-selected="true" data-vov-why-tab="understand">
                                     <span class="vov-why-step__number">01</span><span class="vov-why-step__copy"><small>UNDERSTAND</small><strong>Start with the way you work</strong><span>We examine processes and priorities before recommending a system plan.</span></span><span class="vov-why-step__arrow" aria-hidden="true">↗</span>

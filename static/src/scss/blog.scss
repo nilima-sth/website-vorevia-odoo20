@@ -1,6 +1,6 @@
 .website_blog {
     color: var(--vov-ink);
-    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .vov-blog-hero {
@@ -23,9 +23,9 @@
     margin: 0;
     color: var(--vov-ink);
     font-size: clamp(3.2rem, 6vw, 6rem);
-    font-weight: 700;
-    letter-spacing: 0.005em;
-    line-height: 1.08;
+    font-weight: 650;
+    letter-spacing: 0.012em;
+    line-height: 1.14;
 }
 .vov-blog-hero__subtitle {
     max-width: 610px;
@@ -41,7 +41,7 @@
     color: rgba(54, 127, 209, 0.06);
     font-size: clamp(15rem, 30vw, 28rem);
     font-weight: 800;
-    letter-spacing: -0.12em;
+    letter-spacing: 0.012em;
     line-height: 0.8;
     pointer-events: none;
     user-select: none;
@@ -79,8 +79,8 @@
     color: var(--vov-ink);
     font-size: clamp(2.2rem, 4vw, 4rem);
     font-weight: 650;
-    letter-spacing: 0.005em;
-    line-height: 1.12;
+    letter-spacing: 0.012em;
+    line-height: 1.17;
 }
 .vov-blog-empty p:not(.vov-kicker) {
     max-width: 680px;

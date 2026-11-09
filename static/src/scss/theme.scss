@@ -17,7 +17,7 @@
 .o_vorevia_homepage,
 .vov-site-footer {
     color: var(--vov-ink);
-    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
@@ -76,15 +76,15 @@
 .vov-nav-links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.75rem;
     margin: 0 auto;
 }
 
 .vov-nav-links a,
 .vov-mobile-menu a {
     color: var(--vov-ink-soft);
-    font-size: 0.89rem;
-    font-weight: 550;
+    font-size: .94rem;
+    font-weight: 600;
     text-decoration: none;
 }
 
@@ -262,7 +262,7 @@
 .vov-hero-grid { display: grid; align-items: center; gap: clamp(2.5rem, 4vw, 4.5rem); grid-template-columns: minmax(0, 1fr) minmax(420px, .9fr); }
 .vov-hero-copy { position: relative; z-index: 2; }
 .vov-hero .vov-kicker span { padding: 0 0.35rem; color: #9aabb9; }
-.vov-hero h1 { max-width: 590px; margin-bottom: 1.65rem; color: var(--vov-ink); font-size: clamp(3.1rem, 3.4vw, 3.75rem); font-weight: 520; letter-spacing: 0.005em; line-height: 1.08; }
+.vov-hero h1 { max-width: 590px; margin-bottom: 1.65rem; color: var(--vov-ink); font-size: clamp(3.1rem, 3.4vw, 3.75rem); font-weight: 650; letter-spacing: 0.012em; line-height: 1.14; }
 .vov-hero h1 span { color: var(--vov-blue); }
 .vov-hero-lead { max-width: 570px; margin-bottom: 1.8rem; color: var(--vov-muted); font-size: clamp(1rem, 1.15vw, 1.1rem); line-height: 1.72; }
 .vov-actions { display: flex; align-items: center; gap: 0.8rem; }
@@ -374,7 +374,7 @@
 .vov-why h2,
 .vov-faq h2,
 .vov-contact h2,
-.vov-final-cta h2 { margin-bottom: 0; color: var(--vov-ink); font-size: clamp(2.5rem, 4.5vw, 4.7rem); font-weight: 500; letter-spacing: 0.005em; line-height: 1.08; }
+.vov-final-cta h2 { margin-bottom: 0; color: var(--vov-ink); font-size: clamp(2.5rem, 4.5vw, 4.7rem); font-weight: 600; letter-spacing: 0.012em; line-height: 1.14; }
 .vov-section-heading-split { display: grid; align-items: end; gap: 3rem; grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr); }
 .vov-section-heading-split > p { max-width: 440px; margin: 0 0 0.35rem auto; color: var(--vov-muted); font-size: 1rem; line-height: 1.7; }
 .vov-section-heading-center { max-width: 780px; margin-right: auto; margin-left: auto; text-align: center; }
@@ -681,9 +681,9 @@
 .vov-site-footer { border-top: 1px solid var(--vov-line); background: var(--vov-white); }
 .vov-footer-main { padding: clamp(3.5rem, 7vw, 7rem) 0 0; background: var(--vov-white); }
 .vov-footer-editorial { display: grid; gap: clamp(3rem, 8vw, 9rem); grid-template-columns: minmax(0, .82fr) minmax(0, 1fr); }
-.vov-footer-intro { max-width: 510px; }.vov-footer-intro h2 { margin: 0; color: var(--vov-ink); font-size: clamp(2rem, 3.6vw, 3.35rem); font-weight: 600; letter-spacing: -.05em; line-height: 1.06; }.vov-footer-intro p { max-width: 430px; margin: 1.35rem 0 0; color: var(--vov-muted); font-size: 1rem; line-height: 1.7; }
+.vov-footer-intro { max-width: 510px; }.vov-footer-intro h2 { margin: 0; color: var(--vov-ink); font-size: clamp(2rem, 3.6vw, 3.35rem); font-weight: 600; letter-spacing: 0.012em; line-height: 1.15; }.vov-footer-intro p { max-width: 430px; margin: 1.35rem 0 0; color: var(--vov-muted); font-size: 1rem; line-height: 1.7; }
 .vov-footer-conversation-link { display: inline-flex; min-height: 44px; align-items: center; margin-top: 2rem; color: var(--vov-blue-deep); font-size: .94rem; font-weight: 750; text-decoration: none; }.vov-footer-conversation-link span { margin-left: .45rem; transition: transform 180ms ease; }.vov-footer-conversation-link:hover, .vov-footer-conversation-link:focus-visible { color: var(--vov-ink); text-decoration: underline; text-underline-offset: .25em; }.vov-footer-conversation-link:hover span, .vov-footer-conversation-link:focus-visible span { transform: translate(2px, -2px); }
-.vov-footer-navigation { display: grid; align-content: start; gap: clamp(2rem, 6vw, 6rem); grid-template-columns: repeat(2, minmax(0, 1fr)); }.vov-footer-links { display: grid; align-content: start; gap: .9rem; }.vov-footer-links h2 { margin: 0 0 .55rem; color: var(--vov-ink); font-size: .93rem; font-weight: 800; letter-spacing: -.015em; }.vov-footer-links a { width: fit-content; min-height: 28px; color: var(--vov-ink-soft); font-size: .92rem; line-height: 1.45; text-decoration: none; transition: color 180ms ease; }.vov-footer-links a:hover, .vov-footer-links a:focus-visible { color: var(--vov-blue-deep); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .24em; }
+.vov-footer-navigation { display: grid; align-content: start; gap: clamp(2rem, 6vw, 6rem); grid-template-columns: repeat(2, minmax(0, 1fr)); }.vov-footer-links { display: grid; align-content: start; gap: .9rem; }.vov-footer-links h2 { margin: 0 0 .55rem; color: var(--vov-ink); font-size: .93rem; font-weight: 800; letter-spacing: 0.012em; }.vov-footer-links a { width: fit-content; min-height: 28px; color: var(--vov-ink-soft); font-size: .92rem; line-height: 1.45; text-decoration: none; transition: color 180ms ease; }.vov-footer-links a:hover, .vov-footer-links a:focus-visible { color: var(--vov-blue-deep); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .24em; }
 .vov-footer-meta { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin-top: clamp(3rem, 6vw, 5.5rem); padding: 1.4rem 0; border-top: 1px solid var(--vov-line); }.vov-footer-contact-list { display: flex; flex-wrap: wrap; gap: .55rem 1.5rem; margin: 0; font-style: normal; }.vov-footer-contact-list a { color: var(--vov-muted); font-size: .82rem; text-decoration: none; transition: color 180ms ease; }.vov-footer-contact-list a:hover, .vov-footer-contact-list a:focus-visible { color: var(--vov-blue-deep); text-decoration: underline; text-underline-offset: .22em; }
 .vov-footer-social__links { display: flex; flex-wrap: wrap; gap: .65rem; }.vov-footer-social__link { display: inline-flex; width: 2.5rem; height: 2.5rem; align-items: center; justify-content: center; border-radius: .6rem; text-decoration: none; transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }.vov-footer-social__link svg { display: block; width: 2.15rem; height: 2.15rem; }.vov-footer-social__link:hover, .vov-footer-social__link:focus-visible { background: var(--vov-blue-pale); box-shadow: 0 0 0 2px var(--vov-blue); transform: translateY(-1px); }
 .vov-footer-bottom { background: var(--vov-white); }.vov-footer-bottom .vov-container { display: flex; min-height: 58px; align-items: center; color: var(--vov-muted); font-size: .72rem; }

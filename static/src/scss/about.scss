@@ -116,9 +116,9 @@
     margin: 0;
     color: #112039;
     font-size: clamp(3rem, 4.5vw, 4.7rem);
-    font-weight: 600;
-    letter-spacing: -0.035em;
-    line-height: 1.08;
+    font-weight: 650;
+    letter-spacing: 0.012em;
+    line-height: 1.14;
 }
 .vov-about-hero h1 span { color: var(--vov-blue-deep); }
 .vov-about-hero__description {
@@ -127,7 +127,7 @@
     margin: 1.9rem 0 0;
     color: #4f6176;
     font-size: clamp(1rem, 1.25vw, 1.15rem);
-    line-height: 1.75;
+    line-height: 1.78;
 }
 .vov-about-hero__strengths {
     display: grid;
@@ -145,7 +145,7 @@
     align-items: center;
     gap: .7rem;
     color: #172941;
-    font-size: .8rem;
+    font-size: .875rem;
     font-weight: 650;
     line-height: 1.4;
 }
@@ -213,7 +213,7 @@
     .vov-about-hero { padding-top: 3.35rem; }
     .vov-about-hero > .vov-about-hero__content { width: calc(100% - 28px); }
     .vov-about-hero .vov-kicker { margin-bottom: 1.1rem; }
-    .vov-about-hero h1 { font-size: clamp(2.35rem, 10.2vw, 3rem); line-height: 1.1; letter-spacing: -.028em; }
+    .vov-about-hero h1 { font-size: clamp(2.35rem, 10.2vw, 3rem); line-height: 1.1; letter-spacing: 0.012em; }
     .vov-about-hero__description { margin-top: 1.35rem; font-size: 1rem; line-height: 1.7; }
     .vov-about-hero__strengths { grid-template-columns: 1fr; gap: .85rem; margin-top: 1.7rem; }
     .vov-about-hero__strength-icon { width: 38px; height: 38px; flex-basis: 38px; }
@@ -226,7 +226,7 @@
 .vov-about-approach,
 .vov-about-principles { padding: clamp(5rem, 8vw, 8rem) 0; }
 .vov-about-identity__grid { display: grid; gap: clamp(3rem, 7vw, 7rem); grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); }
-.vov-about h2 { margin: 0; font-size: clamp(2.4rem, 4vw, 4.4rem); font-weight: 550; letter-spacing: 0.005em; line-height: 1.12; }
+.vov-about h2 { margin: 0; font-size: clamp(2.4rem, 4vw, 4.4rem); font-weight: 600; letter-spacing: 0.012em; line-height: 1.16; }
 .vov-about-identity__description { max-width: 690px; color: var(--vov-ink); font-size: 1.18rem; line-height: 1.75; }
 .vov-about-identity__description p { margin: 0 0 1.35rem; text-align: justify; text-justify: inter-word; }
 .vov-about-identity__description p:last-child { margin-bottom: 0; }

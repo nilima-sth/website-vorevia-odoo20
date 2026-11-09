@@ -372,9 +372,9 @@
     _triggerBtn.setAttribute('aria-controls', 'vov-cw-panel');
     _triggerBtn.setAttribute('aria-expanded', 'false');
     _triggerBtn.innerHTML = `
-      <svg class="vov-cw-icon-chat" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
-      </svg>
+      <img class="vov-cw-robot"
+           src="/website_vorevia/static/src/img/vorevia-chat-robot.webp"
+           alt="" aria-hidden="true"/>
       <svg class="vov-cw-icon-close" viewBox="0 0 24 24" fill="none"
            stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
            stroke-linejoin="round" aria-hidden="true" style="display:none">
@@ -394,13 +394,13 @@
   // ── Toggle chat/close icon ─────────────────────────────────────────────────
 
   function syncTriggerIcon() {
-    const iconChat  = _triggerBtn.querySelector('.vov-cw-icon-chat');
+    const robot     = _triggerBtn.querySelector('.vov-cw-robot');
     const iconClose = _triggerBtn.querySelector('.vov-cw-icon-close');
     if (_isOpen) {
-      iconChat.style.display  = 'none';
+      robot.style.display     = 'none';
       iconClose.style.display = '';
     } else {
-      iconChat.style.display  = '';
+      robot.style.display     = '';
       iconClose.style.display = 'none';
     }
   }

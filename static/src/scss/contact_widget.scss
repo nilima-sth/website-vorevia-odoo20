@@ -11,7 +11,7 @@
 
 $cw-transition:      all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 $cw-panel-width:     328px;
-$cw-btn-size:        60px;
+$cw-btn-size:        88px;
 $cw-btn-color:       #20364f;
 $cw-z-launcher:      1050;        // above Vorevia header (1040)
 $cw-z-panel:         1049;
@@ -32,6 +32,7 @@ $cw-row-email:       #ea4335;
     display:         flex;
     flex-direction:  column;
     align-items:     center;
+    animation:       vov-cw-float 2.8s ease-in-out infinite;
 }
 
 .vov-cw-btn {
@@ -40,33 +41,42 @@ $cw-row-email:       #ea4335;
     align-items:     center;
     justify-content: center;
     width:           $cw-btn-size;
-    height:          $cw-btn-size;
+    height:          auto;
     padding:         0;
     border:          none;
-    border-radius:   50%;
-    background:      $cw-btn-color;
-    color:           #fff;
+    border-radius:   0;
+    background:      transparent;
+    color:           $cw-btn-color;
     cursor:          pointer;
-    box-shadow:      0 4px 16px rgba(32, 54, 79, 0.35),
-                     0 2px 6px rgba(0, 0, 0, 0.15);
-    transition:      $cw-transition;
+    box-shadow:      none;
+    transition:      transform 0.22s ease, filter 0.22s ease;
     outline:         none;
     -webkit-tap-highlight-color: transparent;
 
-    svg {
-        width:       28px;
-        height:      28px;
+    .vov-cw-robot {
+        display:     block;
+        width:       100%;
+        height:      auto;
+        filter:      drop-shadow(0 5px 10px rgba(32, 54, 79, 0.22));
+    }
+
+    svg.vov-cw-icon-close {
+        width:       48px;
+        height:      48px;
+        padding:     12px;
+        border-radius: 50%;
+        background:  $cw-btn-color;
+        box-shadow:  0 4px 16px rgba(32, 54, 79, 0.35);
         transition:  transform 0.3s ease;
     }
 
     // Opened state — show X
-    &.is-open svg.vov-cw-icon-chat { display: none; }
+    &.is-open .vov-cw-robot { display: none; }
     &:not(.is-open) svg.vov-cw-icon-close { display: none; }
 
     &:hover {
-        transform:   scale(1.08);
-        box-shadow:  0 6px 24px rgba(32, 54, 79, 0.45),
-                     0 4px 10px rgba(0, 0, 0, 0.18);
+        transform:   scale(1.04);
+        filter:      brightness(1.04);
     }
 
     &:focus-visible {
@@ -77,23 +87,9 @@ $cw-row-email:       #ea4335;
     &:active { transform: scale(0.95); }
 }
 
-// Pulse ring
-.vov-cw-btn::before {
-    content:       '';
-    position:      absolute;
-    inset:         0;
-    border-radius: 50%;
-    background:    $cw-btn-color;
-    animation:     vov-cw-pulse 2.2s ease-out infinite;
-    z-index:       -1;
-}
-
-.vov-cw-btn.is-open::before { animation: none; }
-
-@keyframes vov-cw-pulse {
-    0%   { transform: scale(1); opacity: 0.5; }
-    60%  { transform: scale(1.45); opacity: 0; }
-    100% { transform: scale(1.45); opacity: 0; }
+@keyframes vov-cw-float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-2px); }
 }
 
 // ─── Backdrop ─────────────────────────────────────────────────────────────────
@@ -118,7 +114,7 @@ $cw-row-email:       #ea4335;
 .vov-cw-panel {
     position:       fixed;
     right:          24px;
-    bottom:         98px;   // above launcher button (60px + 24px bottom + 14px gap)
+    bottom:         124px;  // above the robot launcher and its screen-edge spacing
     z-index:        $cw-z-panel;
     width:          $cw-panel-width;
     border-radius:  16px;
@@ -475,6 +471,8 @@ $cw-row-email:       #ea4335;
         &.is-panel-open { display: none; }
     }
 
+    .vov-cw-btn { width: 76px; }
+
     .vov-cw-panel {
         right:         0;
         bottom:        0;
@@ -498,8 +496,8 @@ $cw-row-email:       #ea4335;
     .vov-cw-view,
     .vov-cw-submit { transition: none !important; }
 
-    .vov-cw-btn::before,
-    .vov-cw-spinner { animation: none !important; }
+    .vov-cw-spinner,
+    .vov-cw-launcher { animation: none !important; }
 }
 
 // ─── Print ────────────────────────────────────────────────────────────────────

@@ -1,5 +1,6 @@
 import { Interaction } from "@web/public/interaction";
 import { registry } from "@web/core/registry";
+import { setupMobileStepper } from "./mobile_stepper";
 
 const PANEL_TRANSITION_MS = 320;
 
@@ -16,6 +17,7 @@ export class VoreviaHomepage extends Interaction {
         this.processHideTimer = null;
         this.processManualUntil = 0;
         this.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        this.mobileQuery = window.matchMedia("(max-width: 767.98px)");
     }
 
     start() {
@@ -65,8 +67,37 @@ export class VoreviaHomepage extends Interaction {
             this.addListener(tab, "keydown", this.onProcessKeydown.bind(this));
         });
 
+        this.syncShowcaseMobile = setupMobileStepper(
+            this, this.showcase, this.showcaseTabs,
+            (index) => {
+                this.showcaseManual = true;
+                clearTimeout(this.showcaseTimer);
+                this.activateShowcase(index, true);
+            },
+            (tab) => ({
+                title: tab.querySelector("strong")?.textContent.trim(),
+                subtitle: tab.querySelector("small")?.textContent.trim(),
+            })
+        );
+        this.syncProcessMobile = setupMobileStepper(
+            this, this.process, this.processTabs,
+            (index) => {
+                this.processManualUntil = Date.now() + 1500;
+                this.activateProcess(index, true);
+            },
+            (tab) => ({
+                title: tab.querySelector("h3")?.textContent.trim(),
+                subtitle: tab.querySelector("p")?.textContent.trim(),
+            })
+        );
         this.activateShowcase(0, false);
         this.activateProcess(0, false);
+        const onMobileChange = () => {
+            clearTimeout(this.showcaseTimer);
+            if (!this.mobileQuery.matches && !this.reducedMotion) this.scheduleShowcase();
+        };
+        this.mobileQuery.addEventListener("change", onMobileChange);
+        this.registerCleanup(() => this.mobileQuery.removeEventListener("change", onMobileChange));
         this.initializeProcessObserver();
         this.initializeRevealObserver();
 
@@ -148,6 +179,7 @@ export class VoreviaHomepage extends Interaction {
             void targetPanel.offsetWidth;
         }
         targetPanel.classList.add("is-active");
+        this.syncShowcaseMobile?.(index);
 
         this.showcaseHideTimer = this.waitForTimeout(() => {
             this.showcasePanels.forEach((panel) => {
@@ -160,7 +192,7 @@ export class VoreviaHomepage extends Interaction {
 
     scheduleShowcase() {
         clearTimeout(this.showcaseTimer);
-        if (this.showcaseManual || this.reducedMotion || !this.showcaseTabs.length) {
+        if (this.showcaseManual || this.reducedMotion || this.mobileQuery.matches || !this.showcaseTabs.length) {
             return;
         }
         this.showcaseTimer = this.waitForTimeout(() => {
@@ -233,6 +265,7 @@ export class VoreviaHomepage extends Interaction {
             void targetPanel.offsetWidth;
         }
         targetPanel.classList.add("is-active");
+        this.syncProcessMobile?.(index);
 
         this.processHideTimer = this.waitForTimeout(() => {
             this.processPanels.forEach((panel) => {
@@ -249,7 +282,7 @@ export class VoreviaHomepage extends Interaction {
         }
         this.processObserver = new IntersectionObserver(
             (entries) => {
-                if (Date.now() < this.processManualUntil) {
+                if (this.mobileQuery.matches || Date.now() < this.processManualUntil) {
                     return;
                 }
                 const visible = entries

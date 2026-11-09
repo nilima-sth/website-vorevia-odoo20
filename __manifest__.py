@@ -36,6 +36,8 @@
             "website_vorevia/static/src/scss/typography_spacing.scss",
             "website_vorevia/static/src/scss/portal.scss",
             "website_vorevia/static/src/scss/responsive.scss",
+            "website_vorevia/static/src/scss/mobile_stepper.scss",
+            "website_vorevia/static/src/js/mobile_stepper.js",
             "website_vorevia/static/src/js/homepage.js",
             "website_vorevia/static/src/js/services.js",
             "website_vorevia/static/src/js/solutions_mega_menu.js",

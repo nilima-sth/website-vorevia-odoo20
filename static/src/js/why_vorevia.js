@@ -1,5 +1,6 @@
 import { Interaction } from "@web/public/interaction";
 import { registry } from "@web/core/registry";
+import { setupMobileStepper } from "./mobile_stepper";
 
 export class VoreviaWhyStory extends Interaction {
     static selector = "[data-vov-why-story]";
@@ -21,6 +22,14 @@ export class VoreviaWhyStory extends Interaction {
             this.addListener(tab, "click", select);
             this.addListener(tab, "keydown", (event) => this.onKeydown(event, tab));
         }
+        this.syncMobile = setupMobileStepper(
+            this, this.el, this.tabs,
+            (index) => this.select(this.tabs[index].dataset.vovWhyTab),
+            (tab) => ({
+                title: tab.querySelector(".vov-why-step__copy small")?.textContent.trim(),
+                subtitle: tab.querySelector(".vov-why-step__copy strong")?.textContent.trim(),
+            })
+        );
         this.select("understand");
     }
 
@@ -36,6 +45,7 @@ export class VoreviaWhyStory extends Interaction {
             panel.hidden = key !== name;
             panel.classList.toggle("is-active", key === name);
         }
+        this.syncMobile?.(this.tabs.findIndex((tab) => tab.dataset.vovWhyTab === name));
     }
 
     onKeydown(event, tab) {
